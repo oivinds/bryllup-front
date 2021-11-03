@@ -23,18 +23,18 @@ export default {
   methods: {
     save() {
       this.$refs.dialog.save(this.date);
-      this.setWeddingDate(this.date);
+      this.setTimeBeforeWedding(this.date);
     },
     formatDate(date) {
       return date ? this.$moment(date).format("LL") : "";
     },
-    ...mapActions(["setWeddingDate"]),
+    ...mapActions(["setTimeBeforeWedding"]),
   },
   computed: {
     computedDateFormatted() {
       return this.formatDate(this.date);
     },
-    ...mapState(["weddingDate"]),
+    ...mapState(["timeBeforeWedding"]),
   },
 };
 </script>

@@ -2,22 +2,24 @@ import Vue from "vue";
 import Vuex from "vuex";
 import todos from "./todos.json";
 Vue.use(Vuex);
+import moment from "moment";
+moment.locale("nb");
+Object.defineProperty(Vue.prototype, "$moment", { value: moment });
 
 export default new Vuex.Store({
   state: {
     todos: todos,
-    userData: {
-      name: "Kari",
-      weddingDate: "",
-    },
+    name: "Kari",
+    timeBeforeWedding: null,
     editBool: false,
     newBool: false,
   },
   mutations: {
-    setWeddingDate(state, date) {
-      console.log(date);
-      state.userData.weddingDate = date;
+    setTimeBeforeWedding(state, time) {
+      state.timeBeforeWedding = time;
+
     },
+
     setEditBool(state, bool) {
       state.editBool = bool;
     },
@@ -37,8 +39,20 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    setWeddingDate({ commit }, date) {
-      commit("setWeddingDate", date);
+    setTimeBeforeWedding({ commit }, date) {
+      const now = moment();
+      const then = moment(date);
+      const year = then.diff(now, 'year');
+      then.subtract(year, 'year')
+      const months = then.diff(now, 'month');
+      then.subtract(months, 'month')
+      const days = then.diff(now, 'days');
+      const yearText = year !== 0 ? `${year} år,` : '';
+      const monthText = months !== 0 ? `${months} måneder,` : '';
+      const daysText = days !== 0 ? `${days} dager` : '';
+      const timeBeforeWedding = `${yearText} ${monthText} ${daysText}`;
+
+      commit("setTimeBeforeWedding", timeBeforeWedding);
     },
     deleteAction({ commit, getters }, todo) {
       const todos = getters.todos.filter((e) => e !== todo);
@@ -62,12 +76,6 @@ export default new Vuex.Store({
   },
   getters: {
     todos(state) {
-      /* // mmove uncompleted to bottom ..
-      const completed = state.todos.filter((todo) => todo.isCompleted === true);
-      const unCompleted = state.todos.filter(
-        (todo) => todo.isCompleted === false
-      );
-      return [...unCompleted, ...completed]; */
       return state.todos;
     },
     low(state) {

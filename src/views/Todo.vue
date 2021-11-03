@@ -2,21 +2,25 @@
 div
 	v-container
 		p {{ $vuetify.breakpoint.name}}
-		v-card(color="brown" dark)
+		v-card(color="grey darken-3" dark)
 			v-row.pa-4(d-flex justify="center" justify-sm="space-around")
 					v-card-title.title.text-sm-h6.text-md-h5.text-lg-h4 Bryllupsplanleggeren
 					DatePicker
-					v-card-title.title hei {{ userData.name }} 	
+					v-card-title.title hei {{ name }} 	
 		
 		List
-	v-footer(fixed :padless="true" app)
-		v-row(justify="center")
-			v-col(cols="12")
-				v-card.elevation-3(justify="center")
-					v-card-actions.px-12
-						v-card-title.title {{ todosDone }} av  {{ todos.length }} oppgaver fullført
-						v-spacer
+	v-footer.elevation-10(fixed :padless="true" app)
+		v-container
+			v-row
+				v-col
+					v-card-actions
+						v-card-title.title.justify-center  {{ todosDone }} av  {{ todos.length }} oppgaver fullført
+				v-col(align-self="center")
+					v-card-actions.justify-center 
 						NewModal
+				v-col(v-if="timeBeforeWedding" slide-x-transition)
+					v-card-actions
+						v-card-title.title.justify-center  {{ timeBeforeWedding }} til bryllupet
 </template>
 
 <script>
@@ -42,17 +46,17 @@ export default {
       console.log(e);
     },
     /* //    (v-on:update:edit="editById($event)")
-    editById(id) {
-      this.setEditBool(true);
-      const item = this.todos.find((o) => o.id === id);
-      // clone object
-      this.item = { ...item };
-    },
-    ...mapMutations(["setEditBool"]), */
+		editById(id) {
+			this.setEditBool(true);
+			const item = this.todos.find((o) => o.id === id);
+			// clone object
+			this.item = { ...item };
+		},
+		...mapMutations(["setEditBool"]), */
   },
 
   computed: {
-    ...mapState(["userData", "editBool"]),
+    ...mapState(["name", "editBool", "timeBeforeWedding"]),
     ...mapGetters(["todos", "todosDone"]),
     bigTitle() {
       let classString = "";
