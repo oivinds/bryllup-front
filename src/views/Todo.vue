@@ -13,14 +13,16 @@ div
 		v-container
 			v-row
 				v-col
-					v-card-actions
-						v-card-title.title.justify-center  {{ todosDone }} av  {{ todos.length }} oppgaver fullført
+					v-card-actions.justify-center 
+						v-card-title.title  {{ todosDone }} av  {{ todos.length }} oppgaver fullført
 				v-col(align-self="center")
 					v-card-actions.justify-center 
 						NewModal
-				v-col(v-if="timeBeforeWedding" slide-x-transition)
-					v-card-actions
-						v-card-title.title.justify-center  {{ timeBeforeWedding }} til bryllupet
+				v-col(align-self="center")
+					transition(name="fade" mode="out-in")
+						v-card-actions.justify-center(:key="timeBeforeWedding") 
+							v-card-title.title(v-if="timeBeforeWedding") {{ timeBeforeWedding }} til bryllupet
+							v-card-title.title(v-else) sett bryllupsdato!
 </template>
 
 <script>
@@ -82,3 +84,13 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateX(100%);
+}
+</style>
