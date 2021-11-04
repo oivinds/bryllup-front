@@ -26,6 +26,7 @@ export default {
       if (bool) {
         this.todo.title = "";
         this.todo.description = "";
+        this.todo.group = "";
         this.todo.type = "";
         this.todo.comment = "";
         this.todo.isCompleted = false;

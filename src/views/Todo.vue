@@ -1,28 +1,28 @@
 <template lang="pug">
 div
 	v-container
-		p {{ $vuetify.breakpoint.name}}
-		v-card(color="grey darken-3" dark)
+		//- p {{ $vuetify.breakpoint.name}}
+		v-card.pa-4(dark color="tertiary" )
 			v-row.pa-4(d-flex justify="center" justify-sm="space-around")
 					v-card-title.title.text-sm-h6.text-md-h5.text-lg-h4 Bryllupsplanleggeren
 					DatePicker
 					v-card-title.title hei {{ name }} 	
 		
 		List
-	v-footer.elevation-10(fixed :padless="true" app)
+	v-footer.elevation-10(fixed :padless="true" app dark color="tertiary")
 		v-container
 			v-row
-				v-col
+				v-col(align-self="center")
 					v-card-actions.justify-center 
-						v-card-title.title  {{ todosDone }} av  {{ todos.length }} oppgaver fullført
+						.body-1 {{ todosDone }} av  {{ todos.length }} oppgaver fullført
 				v-col(align-self="center")
 					v-card-actions.justify-center 
 						NewModal
 				v-col(align-self="center")
-					transition(name="fade" mode="out-in")
+					transition(name="fade" mode="out-in" appear)
 						v-card-actions.justify-center(:key="timeBeforeWedding") 
-							v-card-title.title(v-if="timeBeforeWedding") {{ timeBeforeWedding }} til bryllupet
-							v-card-title.title(v-else) sett bryllupsdato!
+							.body-1(v-if="timeBeforeWedding") {{ timeBeforeWedding }} til bryllupet
+							.body-1(v-else) sett bryllupsdato!
 </template>
 
 <script>

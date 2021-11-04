@@ -67,6 +67,7 @@ export default new Vuex.Store({
       const created = new Date().toISOString();
       const newTask = { ...task, id, created, isCompleted: false };
       commit("newTodo", newTask);
+      console.log(newTask);
       commit("setNewBool", false);
     },
     editAction({ commit }, task) {

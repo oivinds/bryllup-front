@@ -30,7 +30,8 @@
             
         //- Prioritet
         v-col(cols="12")
-          v-select(:items="group" :item-value="todo.group" label="velg prioritet")
+          p {{todo.group}}
+          v-select(:items="group" @change="groupChange" label="velg gruppe")
         //- COMPLETED
         //- TAG
         v-col(cols="6")
@@ -68,6 +69,10 @@ export default {
   },
 
   methods: {
+    groupChange(e) {
+      console.log(e);
+      this.todo.group = e;
+    },
     ...mapActions(["newAction", "editAction"]),
     submittodo() {
       /* this.$v.todo.$touch(); */
