@@ -61,9 +61,9 @@ export default {
       todoErrorMessage: "",
       tags: ["research", "nice to do", "need to do"],
       group: [
-        { text: "første periode", value: "low" },
-        { text: "andre periode", value: "medium" },
-        { text: "tredje periode", value: "high" },
+        { text: "første periode", value: 1 },
+        { text: "andre periode", value: 2 },
+        { text: "tredje periode", value: 3 },
       ],
     };
   },

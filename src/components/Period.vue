@@ -2,7 +2,7 @@
 div
 	v-row(justify="center")
 		v-col(cols="12" sm="11" md="10" lg="9" )
-			v-card.elevation-0.my-4(dark color="primary darken-3")
+			v-card.elevation-0.my-4(dark color="primary lighten-2")
 				v-card-title.text-button.justify-center {{ title}}
 				v-card-text.text-body-1 {{ description }}
 			v-expansion-panels(hover popout )

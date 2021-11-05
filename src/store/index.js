@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import todos from "./todos.json";
+import todos1 from "./todos-1.json";
+import todos2 from "./todos-2.json";
 Vue.use(Vuex);
 import moment from "moment";
 moment.locale("nb");
@@ -8,7 +9,7 @@ Object.defineProperty(Vue.prototype, "$moment", { value: moment });
 
 export default new Vuex.Store({
   state: {
-    todos: todos,
+    todos: [...todos1, ...todos2],
     name: "Kari",
     timeBeforeWedding: null,
     editBool: false,
@@ -17,9 +18,7 @@ export default new Vuex.Store({
   mutations: {
     setTimeBeforeWedding(state, time) {
       state.timeBeforeWedding = time;
-
     },
-
     setEditBool(state, bool) {
       state.editBool = bool;
     },
@@ -30,7 +29,7 @@ export default new Vuex.Store({
       state.todos = [todo, ...state.todos];
     },
     editTodo(state, todo) {
-      const index = state.todos.findIndex((o) => o.id === todo.id);
+      const index = state.todos.findIndex((o) => o.title === todo.title);
       Vue.set(state.todos, index, todo);
     },
     // ?
@@ -42,16 +41,15 @@ export default new Vuex.Store({
     setTimeBeforeWedding({ commit }, date) {
       const now = moment();
       const then = moment(date);
-      const year = then.diff(now, 'year');
-      then.subtract(year, 'year')
-      const months = then.diff(now, 'month');
-      then.subtract(months, 'month')
-      const days = then.diff(now, 'days');
-      const yearText = year !== 0 ? `${year} år,` : '';
-      const monthText = months !== 0 ? `${months} måneder,` : '';
-      const daysText = days !== 0 ? `${days} dager` : '';
+      const year = then.diff(now, "year");
+      then.subtract(year, "year");
+      const months = then.diff(now, "month");
+      then.subtract(months, "month");
+      const days = then.diff(now, "days");
+      const yearText = year !== 0 ? `${year} år,` : "";
+      const monthText = months !== 0 ? `${months} måneder,` : "";
+      const daysText = days !== 0 ? `${days} dager` : "";
       const timeBeforeWedding = `${yearText} ${monthText} ${daysText}`;
-
       commit("setTimeBeforeWedding", timeBeforeWedding);
     },
     deleteAction({ commit, getters }, todo) {
@@ -59,15 +57,13 @@ export default new Vuex.Store({
       commit("deleteTodo", todos);
     },
 
-    newAction({ commit, getters }, task) {
-      const ids = getters.todos.map((o) => o.id);
+    newAction({ commit }, task) {
+      /* const ids = getters.todos.map((o) => o.id);
       const findMaxId = (acc, o) => Math.max(acc, o);
-      const id = ids.reduce(findMaxId, 0) + 1;
-
+      const id = ids.reduce(findMaxId, 0) + 1; */
       const created = new Date().toISOString();
-      const newTask = { ...task, id, created, isCompleted: false };
+      const newTask = { ...task, created, isCompleted: false };
       commit("newTodo", newTask);
-      console.log(newTask);
       commit("setNewBool", false);
     },
     editAction({ commit }, task) {
@@ -78,18 +74,6 @@ export default new Vuex.Store({
   getters: {
     todos(state) {
       return state.todos;
-    },
-    low(state) {
-      const group = state.todos.filter((todo) => todo.group === "low");
-      return [...group];
-    },
-    medium(state) {
-      const group = state.todos.filter((todo) => todo.group === "medium");
-      return [...group];
-    },
-    high(state) {
-      const group = state.todos.filter((todo) => todo.group === "high");
-      return [...group];
     },
     todosDone(state) {
       const reduce = (ac, item) => ac + (item.isCompleted ? 1 : 0);
