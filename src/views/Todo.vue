@@ -3,8 +3,8 @@ div
 	v-container
 		//- p {{ $vuetify.breakpoint.name}}
 		v-card.pa-4(dark color="tertiary" )
-			v-row.pa-4(d-flex justify="center" justify-sm="space-around")
-					v-card-title.title.text-sm-h6.text-md-h5.text-lg-h4 Bryllupsplanleggeren
+			v-row(d-flex justify="center" justify-sm="space-around")
+					v-card-title.title.text-md-h6.text-lg-h5 Bryllupsplanleggeren
 					DatePicker
 					v-card-title.title hei {{ name }} 	
 		
@@ -27,10 +27,7 @@ div
 
 <script>
 import { mapState, mapGetters } from "vuex";
-
-import Greet from "../components/Greet";
 import DatePicker from "../components/DatePicker";
-
 import NewModal from "../components/NewModal";
 import List from "../components/List";
 
@@ -40,23 +37,7 @@ export default {
     List,
     NewModal,
     DatePicker,
-    Greet,
   },
-
-  methods: {
-    saveWeddingDate(e) {
-      console.log(e);
-    },
-    /* //    (v-on:update:edit="editById($event)")
-		editById(id) {
-			this.setEditBool(true);
-			const item = this.todos.find((o) => o.id === id);
-			// clone object
-			this.item = { ...item };
-		},
-		...mapMutations(["setEditBool"]), */
-  },
-
   computed: {
     ...mapState(["name", "editBool", "timeBeforeWedding"]),
     ...mapGetters(["todos", "todosDone"]),
