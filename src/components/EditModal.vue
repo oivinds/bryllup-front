@@ -28,7 +28,6 @@ export default {
 
   computed: {
     todo() {
-      console.log(this.item);
       return { ...this.item };
     },
     ...mapState(["editBool"]),

@@ -28,12 +28,10 @@
             
         //- group
         v-col(cols="6")
-          p {{todo.group}}
           v-select(:items="group" :value="todo.group" @change="groupChange" label="velg gruppe")
         //- responsability
         v-col(cols="6")
-          p {{todo.group}}
-          v-select(:items="delegates" :value="todo.delegate" @change="groupChange" label="velg gruppe")
+          v-select(:items="getDelegates" :value="todo.delegate" @change="delegateChange" label="velg ansvarlig")
         //- COMPLETED
         //- TAG
         v-col(cols="6")
@@ -52,7 +50,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex";
+import { mapState, mapActions, mapGetters } from "vuex";
 
 export default {
   props: ["todo"],
@@ -75,6 +73,10 @@ export default {
       console.log(e);
       this.todo.group = e;
     },
+    delegateChange(e) {
+      console.log(e);
+      this.todo.delegate = e;
+    },
     ...mapActions(["newAction", "editAction"]),
     submittodo() {
       /* this.$v.todo.$touch(); */
@@ -91,7 +93,8 @@ export default {
     },
   },
   computed: {
-    ...mapState(["editBool", "newBool", "delegates"]),
+    ...mapState(["editBool", "newBool"]),
+    ...mapGetters(["getDelegates"]),
 
     /* commentErrors: {
       get: function () {

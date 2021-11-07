@@ -1,42 +1,22 @@
 <template lang="pug">
-div
 	v-container
-				
 		List
-	v-footer.elevation-10(fixed :padless="true" app color="white")
-			v-row
-				v-col(align-self="center")
-					v-card-actions.justify-center 
-						.body-1 {{ todosDone }} av  {{ todos.length }} oppgaver fullført
-				v-col(align-self="center")
-					transition(name="fade" mode="out-in" appear)
-						v-card-actions.justify-center(:key="timeBeforeWedding") 
-							.body-1(v-if="timeBeforeWedding") {{ timeBeforeWedding }} til bryllupet
-							.body-1(v-else) sett bryllupsdato!
-				v-col(align-self="center")
-					v-card-actions.justify-center 
-						NewModal
-				v-col(align-self="center")
-					v-card-actions.justify-center 
-						DatePicker
+
 </template>
 
 <script>
 import { mapState, mapGetters } from "vuex";
 
-import NewModal from "../components/NewModal";
 import List from "../components/List";
-import DatePicker from "../components/DatePicker";
+
 export default {
   name: "Todo",
   components: {
     List,
-    NewModal,
-    DatePicker,
   },
   computed: {
     ...mapState(["name", "editBool", "timeBeforeWedding"]),
-    ...mapGetters(["todos", "todosDone"]),
+    ...mapGetters(["todos"]),
     bigTitle() {
       let classString = "";
       switch (this.$vuetify.breakpoint.name) {

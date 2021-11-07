@@ -15,6 +15,8 @@
 								v-list-item-title.text-subtitle-1(width="500" v-text="item.title" )
 							v-list-item-action
 								v-list-item-title.text-subtitle-2(v-text="$moment(item.created).format(bp.smAndUp ? 'MMMM YY' : 'MMM YY')")
+							v-list-item-action(v-if="item.delegate")
+								v-chip( color="black" ) {{item.delegate}}
 					v-expansion-panel-content(color="grey darken-1" :key="item.description")
 						v-list-item
 							v-list-item-content

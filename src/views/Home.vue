@@ -6,20 +6,19 @@ v-container
       v-col(cols="12" md="6")
         v-card-actions.justify-center 
           v-text-field(
-
             placeholder="legg til person" label="ansvarlig"
             v-model="delegate")
         v-card-actions.justify-center 
-            v-btn(@click="setDel(delegate)") legg til medhjelper
+            v-btn(@click="setDel(delegate)" color="primary" ) legg til medhjelper
       v-col.pa-8(cols="12" md="6")
-        v-chip.ma-2(v-for="item in delegates" :key="item" 
-        @click:close="removeDelegate(item)" close close-icon="mdi-delete" 
-        color="yellow" label ) {{ item}}
-    v-row
-      v-col    
-        v-card
-          v-card-actions.justify-center 
-            DatePicker
+        v-chip.ma-2.pa-8(dark color="tertiary" label) {{ $store.state.name}}
+        transition-group(name="list-complete")
+          v-chip.ma-2.pa-8(v-for="item in delegates" :key="item" @click:close="removeDelegate(item)" 
+          close close-icon="mdi-delete" 
+          dark color="tertiary" label
+          class="list-complete-item" 
+          ) {{ item}}
+    
     
 </template>
 
@@ -46,3 +45,17 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.list-complete-item {
+  transition: all 0.4s;
+}
+.list-complete-enter,
+.list-complete-leave-to {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.list-complete-leave-active {
+  position: absolute;
+}
+</style>
