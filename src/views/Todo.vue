@@ -16,6 +16,9 @@ div
 				v-col(align-self="center")
 					v-card-actions.justify-center 
 						NewModal
+				v-col(align-self="center")
+					v-card-actions.justify-center 
+						DatePicker
 </template>
 
 <script>
@@ -23,12 +26,13 @@ import { mapState, mapGetters } from "vuex";
 
 import NewModal from "../components/NewModal";
 import List from "../components/List";
-
+import DatePicker from "../components/DatePicker";
 export default {
   name: "Todo",
   components: {
     List,
     NewModal,
+    DatePicker,
   },
   computed: {
     ...mapState(["name", "editBool", "timeBeforeWedding"]),

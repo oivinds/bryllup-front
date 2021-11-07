@@ -16,7 +16,7 @@ v-app#app
             v-tab(to='/todo' color="primary" )
               v-icon mdi-calendar-check
   router-view
-  
+
 </template>
 
 <script>
@@ -33,7 +33,7 @@ export default {
 </script>
 <style lang="scss">
 #app {
-  background-color: var(--v-background-darken2);
+  background-color: var(--v-background-lighten4);
 }
 
 .fade-enter-active,

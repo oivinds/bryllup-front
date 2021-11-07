@@ -14,11 +14,24 @@ export default new Vuex.Store({
     timeBeforeWedding: null,
     editBool: false,
     newBool: false,
-    delegates: ["Kari"],
+    delegates: [],
   },
   mutations: {
     setDelegate(state, delegate) {
+      const isIn = state.delegates.includes(delegate);
+      if (isIn) return;
       state.delegates.push(delegate);
+    },
+    removeDelegate(state, delegate) {
+      const reduce = (ac, item) => {
+        if (item !== delegate) {
+          ac.push(item)
+        };
+        return ac;
+      };
+      const delegates = state.delegates.reduce(reduce, []);
+
+      state.delegates = [...delegates];
     },
     setTimeBeforeWedding(state, time) {
       state.timeBeforeWedding = time;
