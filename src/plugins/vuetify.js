@@ -15,7 +15,7 @@ export default new Vuetify({
         secondary: colors.deepOrange,
         tertiary: colors.pink.accent2,
         accent: colors.grey.darken3,
-        background: colors.grey.lighten4,
+        background: colors.grey,
         info: colors.teal.lighten1,
         warning: colors.amber.base,
         error: colors.deepOrange.accent4,

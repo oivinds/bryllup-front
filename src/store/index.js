@@ -14,8 +14,12 @@ export default new Vuex.Store({
     timeBeforeWedding: null,
     editBool: false,
     newBool: false,
+    delegates: ["Kari"],
   },
   mutations: {
+    setDelegate(state, delegate) {
+      state.delegates.push(delegate);
+    },
     setTimeBeforeWedding(state, time) {
       state.timeBeforeWedding = time;
     },

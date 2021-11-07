@@ -2,7 +2,7 @@
 		div
 			v-dialog(v-model="dialog" :width="bp.mdAndUp  ? '50%' : '95%'" v-on:click:outside="setEditBool(false)")
 				v-card
-					TodoInput(:todo="item")
+					TodoInput(:todo="todo")
 </template>
 
 <script>
@@ -13,7 +13,6 @@ export default {
   data() {
     return {
       dialog: false,
-      todo: null,
       bp: this.$vuetify.breakpoint,
     };
   },
@@ -26,7 +25,12 @@ export default {
   methods: {
     ...mapMutations(["setEditBool"]),
   },
+
   computed: {
+    todo() {
+      console.log(this.item);
+      return { ...this.item };
+    },
     ...mapState(["editBool"]),
     ...mapGetters(["todos"]),
   },

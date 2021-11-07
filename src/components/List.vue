@@ -24,9 +24,9 @@ export default {
   },
   components: { Period, EditModal },
   methods: {
-    editById(id) {
+    editById(title) {
       this.setEditBool(true);
-      const item = this.todos.find((o) => o.id === id);
+      const item = this.todos.find((o) => o.title === title);
       // clone object
       this.item = { ...item };
     },

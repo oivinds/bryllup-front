@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       modal: false,
-      date: new Date().toISOString().substr(0, 10),
+      date: this.$moment().add(1, "year").toISOString().substring(0, 10),
     };
   },
   methods: {
@@ -35,7 +35,7 @@ export default {
       return this.$moment().add(3, "month").toISOString();
     },
     max() {
-      return this.$moment().add(4, "year").toISOString();
+      return this.$moment().add(5, "year").toISOString();
     },
     computedDateFormatted() {
       return this.formatDate(this.date);

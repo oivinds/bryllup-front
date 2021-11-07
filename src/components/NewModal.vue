@@ -1,7 +1,12 @@
 <template lang="pug">
 
 div
-	v-btn(v-if="!dialog" @click="doNew()" color="primary") lag ny todo
+	v-btn(v-if="!dialog" @click="doNew()" color="primary" 
+  :x-large="bp.xl" 
+  :large="bp.lg" 
+  :md="bp.md" 
+  :sm="bp.sm" 
+  ) lag ny todo
 	v-dialog(v-model="dialog" :width="bp.mdAndUp  ? '50%' : '95%'" v-on:click:outside="setNewBool(false)")
 		TodoInput(v-if="newBool" :todo="todo")
 

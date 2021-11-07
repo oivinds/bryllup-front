@@ -5,11 +5,9 @@
           v-col
             v-text-field(
               :readonly="todo.readonly"
-              placeholder=" "
-              persistent-placeholder
+              :placeholder="!todo.readonly ? 'Skriv navn på oppgave' : ''"
               v-model="todo.title"
-              type="title"
-              label="tittel"
+              :label="!todo.readonly ? 'tittel' : '' "
               required
              )
       //- COMMENT
@@ -28,10 +26,14 @@
             multi-line)
             //- v-if="commentEnabled || todo.comment !== '' "
             
-        //- Prioritet
-        v-col(cols="12")
+        //- group
+        v-col(cols="6")
           p {{todo.group}}
-          v-select(:items="group" @change="groupChange" label="velg gruppe")
+          v-select(:items="group" :value="todo.group" @change="groupChange" label="velg gruppe")
+        //- responsability
+        v-col(cols="6")
+          p {{todo.group}}
+          v-select(:items="delegates" :value="todo.delegate" @change="groupChange" label="velg gruppe")
         //- COMPLETED
         //- TAG
         v-col(cols="6")
@@ -89,7 +91,7 @@ export default {
     },
   },
   computed: {
-    ...mapState(["editBool", "newBool"]),
+    ...mapState(["editBool", "newBool", "delegates"]),
 
     /* commentErrors: {
       get: function () {
