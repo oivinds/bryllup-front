@@ -1,24 +1,27 @@
 <template lang="pug">
 v-container
-    v-card
-      v-card-title.justify-center Innstillinger for  bryllupsplanleggeren
+  v-card(align-self="center")
+      v-card-title.justify-center.headline Velkommen til  bryllupsplanleggeren
+      v-card-text.title - Et verktøy for å forenkle planleggingen av bryllupet ditt -
+  v-row
+    v-col
+        v-card-actions
+          v-text-field( placeholder="legg til person" label="ansvarlig" v-model="delegate")
+        v-card-actions
+          v-btn(@click="setDel(delegate)" color="primary" ) legg til ansvarlig person her
     v-row
-      v-col(cols="12" md="6")
-        v-card-actions.justify-center 
-          v-text-field(
-            placeholder="legg til person" label="ansvarlig"
-            v-model="delegate")
-        v-card-actions.justify-center 
-            v-btn(@click="setDel(delegate)" color="primary" ) legg til medhjelper
-      v-col.pa-8(cols="12" md="6")
-        v-chip.ma-2.pa-8(dark color="tertiary" label) {{ $store.state.name}}
-        transition-group(name="list-complete")
-          v-chip.ma-2.pa-8(v-for="item in delegates" :key="item" @click:close="removeDelegate(item)" 
-          close close-icon="mdi-delete" 
-          dark color="tertiary" label
-          class="list-complete-item" 
-          ) {{ item}}
-    
+      v-col.pa-8(cols="12" align-self="center")
+        v-card-actions.justify-center  Ansvarlige
+        v-card-actions.justify-center
+          transition-group(name="list-complete")
+            v-chip.ma-2.pa-3.justify-center(key="0" class="list-complete-item"  
+            dark color="tertiary darken-2" label) {{ $store.state.name}}
+            v-chip.ma-2.pa-3.justify-center(v-for="item in delegates" :key="item" @click:close="removeDelegate(item)" 
+            close close-icon="mdi-delete" 
+            dark color="tertiary" label
+            class="list-complete-item" 
+            ) {{ item}}
+      
     
 </template>
 

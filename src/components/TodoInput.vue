@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-card.pa-5
+  v-card.pa-5(color="grey lighten-3" )
       v-form(v-if="newBool || editBool")
         v-row
           v-col
@@ -9,6 +9,14 @@
               v-model="todo.title"
               :label="!todo.readonly ? 'tittel' : '' "
               required
+             )
+        v-row
+          //- CONTENT
+          v-col
+            v-textarea(
+              :readonly="todo.readonly"
+              v-model="todo.content"
+              :label="!todo.readonly ? 'innhold' : '' "
              )
       //- COMMENT
       //- v-row(v-if="todo.comment === '' && !commentEnabled")

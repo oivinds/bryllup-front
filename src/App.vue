@@ -54,7 +54,7 @@ export default {
 </script>
 <style lang="scss">
 #app {
-  background-color: var(--v-background-lighten4);
+  background-color: var(--v-background-lighten2);
 }
 
 .fade-enter-active,

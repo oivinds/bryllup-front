@@ -18,11 +18,14 @@ export default new Vuex.Store({
   },
   mutations: {
     setDelegate(state, delegate) {
+      if (delegate === null) return;
       const isIn = state.delegates.includes(delegate);
       if (isIn) return;
       state.delegates.push(delegate);
     },
     removeDelegate(state, delegate) {
+      const usedDelegate = state.todos.find(e => e.delegate === delegate)
+      if (usedDelegate) { return };
       const reduce = (ac, item) => {
         if (item !== delegate) {
           ac.push(item)
@@ -30,7 +33,6 @@ export default new Vuex.Store({
         return ac;
       };
       const delegates = state.delegates.reduce(reduce, []);
-
       state.delegates = [...delegates];
     },
     setTimeBeforeWedding(state, time) {
