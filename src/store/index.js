@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import todos1 from "./todos-1.json";
 import todos2 from "./todos-2.json";
+import todos3 from "./todos-3.json";
 Vue.use(Vuex);
 import moment from "moment";
 moment.locale("nb");
@@ -9,7 +10,7 @@ Object.defineProperty(Vue.prototype, "$moment", { value: moment });
 
 export default new Vuex.Store({
   state: {
-    todos: [...todos1, ...todos2],
+    todos: [...todos1, ...todos2, ...todos3],
     name: "Kari",
     timeBeforeWedding: null,
     editBool: false,

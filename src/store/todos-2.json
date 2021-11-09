@@ -4,8 +4,12 @@
     "group": 2,
     "comment": "",
     "content": "",
+    "category": {
+      "name": "Praktisk",
+      "emoji": "👩‍⚖️"
+    },
+    "tools": [],
     "readonly": true,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "isCompleted": false,
     "created": "2021-10-16T23:01:13.506Z"
   },
@@ -14,8 +18,12 @@
     "group": 2,
     "comment": "",
     "content": "",
+    "category": {
+      "name": "Praktisk",
+      "emoji": "🏰"
+    },
+    "tools": [],
     "readonly": true,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "isCompleted": false,
     "created": "2021-10-16T23:01:13.506Z"
   },
@@ -24,8 +32,12 @@
     "group": 2,
     "comment": "",
     "content": "",
+    "category": {
+      "name": "Festen",
+      "emoji": "🥡"
+    },
+    "tools": [],
     "readonly": true,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "isCompleted": false,
     "created": "2021-10-16T23:01:13.506Z"
   },
@@ -34,8 +46,12 @@
     "group": 2,
     "comment": "",
     "content": "",
+    "category": {
+      "name": "Praktisk",
+      "emoji": "🛏️"
+    },
+    "tools": [],
     "readonly": true,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "isCompleted": false,
     "created": "2021-10-16T23:01:13.506Z"
   },
@@ -43,9 +59,13 @@
     "title": "Book fotograf/videograf",
     "group": 2,
     "comment": "",
-    "content": "",
+    "content": "Husk å booke inn for forlovelsesfotografering og vurder om dere også ønsker videograf.",
+    "category": {
+      "name": "Praktisk",
+      "emoji": "📷"
+    },
+    "tools": [],
     "readonly": true,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "isCompleted": false,
     "created": "2021-10-16T23:01:13.506Z"
   },
@@ -54,8 +74,12 @@
     "group": 2,
     "comment": "",
     "content": "",
+    "category": {
+      "name": "Antrekk  og tilbehør",
+      "emoji": "💇"
+    },
+    "tools": [],
     "readonly": true,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "isCompleted": false,
     "created": "2021-10-16T23:01:13.506Z"
   },
@@ -63,9 +87,13 @@
     "title": "Blomsterdekoratør eller -stylist?",
     "group": 2,
     "comment": "",
-    "content": "",
+    "content": "Dersom dere ønsker profesjonelle til å fikse blomster, kan dette være lurt å booke inn nå slik at de holder av datoen.",
+    "category": {
+      "name": "Dekorasjon",
+      "emoji": "✨"
+    },
+    "tools": [],
     "readonly": true,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "isCompleted": false,
     "created": "2021-10-16T23:01:13.506Z"
   },
@@ -73,9 +101,13 @@
     "title": "Lage, trykke opp og sende Save The Date",
     "group": 2,
     "comment": "",
-    "content": "",
+    "content": "Husk å ta utgangspunkt i bryllupstemaet dere har valgt i utformingen av STD-kort. Psst: Spar tid og miljøet og velg digitale STD-kort. ",
+    "category": {
+      "name": "Dekorasjon",
+      "emoji": "✉️"
+    },
+    "tools": [],
     "readonly": true,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "isCompleted": false,
     "created": "2021-10-16T23:01:13.506Z"
   },
@@ -83,9 +115,13 @@
     "title": "Brudekjoleprøving!",
     "group": 2,
     "comment": "",
-    "content": "",
+    "content": "Sett opp prøvetimer i ønskede salonger. Psst: Det er innafor å spørre forloveren sin om hjelp her!",
+    "category": {
+      "name": "Antrekk  og tilbehør",
+      "emoji": "👰"
+    },
+    "tools": [],
     "readonly": true,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "isCompleted": false,
     "created": "2021-10-16T23:01:13.506Z"
   },
@@ -93,9 +129,55 @@
     "title": "Lage hjemmeside",
     "group": 2,
     "comment": "",
-    "content": "",
+    "content": "Det er like greit å få opp en nettside eller Facebook-gruppe først som sist! En idé er også å lage en egen epostkonto for bryllupet for å skille dette fra din private epost.",
+    "category": {
+      "name": "Praktisk",
+      "emoji": "🔍"
+    },
+    "tools": [],
     "readonly": true,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "isCompleted": false,
+    "created": "2021-10-16T23:01:13.506Z"
+  },
+  {
+    "title": "Research: Gifteringer",
+    "group": 2,
+    "comment": "",
+    "content": "",
+    "category": {
+      "name": "DAntrekk  og tilbehørekorasjon",
+      "emoji": "🔍"
+    },
+    "tools": [],
+    "readonly": true,
+    "isCompleted": false,
+    "created": "2021-10-16T23:01:13.506Z"
+  },
+  {
+    "title": "Research: Transport",
+    "group": 2,
+    "comment": "",
+    "content": "",
+    "category": {
+      "name": "Praktisk",
+      "emoji": "🔍"
+    },
+    "tools": [],
+    "readonly": true,
+    "isCompleted": false,
+    "created": "2021-10-16T23:01:13.506Z"
+  },
+  {
+    "title": "Research: Tilbehør",
+    "group": 2,
+    "comment": "",
+    "content": "Orienter deg om sko og tilbehør til dagen",
+    "category": {
+      "name": "Antrekk  og tilbehør",
+      "emoji": "🔍"
+    },
+    "tools": [],
+    "readonly": true,
     "isCompleted": false,
     "created": "2021-10-16T23:01:13.506Z"
   },
@@ -104,38 +186,68 @@
     "group": 2,
     "comment": "",
     "content": "",
+    "category": {
+      "name": "Antrekk  og tilbehør",
+      "emoji": "🎀"
+    },
+    "tools": [],
     "readonly": true,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "isCompleted": false,
     "created": "2021-10-16T23:01:13.506Z"
   },
   {
-    "title": "Alkoholservering",
+    "title": "Legg en plan for drikke-og alkoholservering",
     "group": 2,
     "comment": "",
     "content": "",
+    "category": {
+      "name": "Festen",
+      "emoji": "🥂"
+    },
+    "tools": [],
     "readonly": true,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "isCompleted": false,
     "created": "2021-10-16T23:01:13.506Z"
   },
   {
-    "title": "Research hvilke aktiviteter som kan være gøy",
+    "title": "Research: Invitasjoner",
     "group": 2,
     "comment": "",
-    "content": "",
+    "content": "Lag skisser på hvordan dere ønsker dem - husk å beholde tematikken fra Save The Date",
+    "category": {
+      "name": "Dekorasjon",
+      "emoji": "✉️"
+    },
+    "tools": [],
     "readonly": true,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "isCompleted": false,
     "created": "2021-10-16T23:01:13.506Z"
   },
   {
-    "title": "Research dekorasjon",
+    "title": "Research hvilke aktiviteter som kan være gøy ",
     "group": 2,
     "comment": "",
     "content": "",
+    "category": {
+      "name": "Festen",
+      "emoji": "🎉"
+    },
+    "tools": [],
     "readonly": true,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "isCompleted": false,
+    "created": "2021-10-16T23:01:13.506Z"
+  },
+  {
+    "title": "Research: Dekorasjon",
+    "group": 2,
+    "comment": "",
+    "content": "",
+    "category": {
+      "name": "Dekorasjon",
+      "emoji": "🎈"
+    },
+    "tools": [],
+    "readonly": true,
     "isCompleted": false,
     "created": "2021-10-16T23:01:13.506Z"
   }

@@ -3,7 +3,7 @@
 		v-col(cols="12" sm="11" md="10" lg="9" )
 			v-card.elevation-0.my-8(rounded color="pink lighten-4")
 				v-card-title.text-button.justify-center {{ title}}
-				v-card-text.px-md-8.text-body-1 {{ description }}
+				v-card-text.px-md-8.title {{ description }}
 			v-expansion-panels(popout hover )
 				v-expansion-panel(v-for="(item, i) in todos" :key="item.title" :class="item.isCompleted ? 'grey lighten-1' : '' ")
 					v-expansion-panel-header.px-1.px-sm-2.px-md-4(color="white" :key="item.title")
