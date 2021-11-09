@@ -1,37 +1,32 @@
 <template lang="pug">
 v-app#app
-  v-container
-    v-card.pa-4(dark color="tertiary")
+  v-app
+    v-app-bar(app dark color="tertiary lighten-1")
+      .title.text-md-h6.text-lg-h5.px-4 Bryllupsplanleggeren
+      v-tabs.px-4(right)
+        v-tab(to='/' color="primary" )
+          v-icon mdi-account-multiple-plus
+        v-tab(to='/todo' color="primary" )
+          v-icon mdi-calendar-check
+
+    v-main
+      router-view
+    v-footer.elevation-10(fixed :padless="true" app color="white")
       v-row
         v-col(align-self="center")
           v-card-actions.justify-center 
-            v-card-title.title.text-md-h6.text-lg-h5 Bryllupsplanleggeren
+            .body-1 {{ todosDone }} av  {{ todos.length }} oppgaver fullført
         v-col(align-self="center")
-          v-card-actions.justify-center(:key="timeBeforeWedding") 
-            v-card-title.title {{ name }}'s liste 
+          transition(name="fade" mode="out-in" appear)
+            v-card-actions.justify-center(:key="timeBeforeWedding") 
+              .body-1(v-if="timeBeforeWedding") {{ timeBeforeWedding }} til bryllupet
+              .body-1(v-else) sett bryllupsdato!
         v-col(align-self="center")
           v-card-actions.justify-center 
-            v-tab(to='/' color="primary" )
-              v-icon mdi-account
-            v-tab(to='/todo' color="primary" )
-              v-icon mdi-calendar-check
-  router-view
-  v-footer.elevation-10(fixed :padless="true" app color="white")
-    v-row
-      v-col(align-self="center")
-        v-card-actions.justify-center 
-          .body-1 {{ todosDone }} av  {{ todos.length }} oppgaver fullført
-      v-col(align-self="center")
-        transition(name="fade" mode="out-in" appear)
-          v-card-actions.justify-center(:key="timeBeforeWedding") 
-            .body-1(v-if="timeBeforeWedding") {{ timeBeforeWedding }} til bryllupet
-            .body-1(v-else) sett bryllupsdato!
-      v-col(align-self="center")
-        v-card-actions.justify-center 
-          NewModal
-      v-col(align-self="center")
-        v-card-actions.justify-center 
-          DatePicker
+            NewModal
+        v-col(align-self="center")
+          v-card-actions.justify-center 
+            DatePicker
 
 </template>
 

@@ -1,27 +1,35 @@
 <template lang="pug">
 v-container
-  v-card(align-self="center")
-      v-card-title.justify-center.headline Velkommen til  bryllupsplanleggeren
-      v-card-text.title - Et verktøy for å forenkle planleggingen av bryllupet ditt -
   v-row
-    v-col
+    v-col(align-self="center")
+      v-card.pa-4(outlined shaped  align-self="center")
+          v-card-title.justify-center.headline Velkommen til  bryllupsplanleggeren
+          v-card-subtitle.text-center.text-button.py-4 - Et verktøy for å forenkle planleggingen av bryllupet ditt -
+          v-card-text.body-1 
+            li Start med å skrive navnet på brudeparet
+            li legg til navn på personer som kan hjelpe deg, under ansvarlig 
+            li Sett bryllupsdatoen
+            li Eller hopp rett til 
+              router-link(to="/todo") oppgavelisten.
+          
+  v-row
+    v-col.pa-8(cols="6" align-self="center")
+      v-card-title
+        v-text-field( placeholder="legg til person" label="ansvarlig" v-model="delegate")
         v-card-actions
-          v-text-field( placeholder="legg til person" label="ansvarlig" v-model="delegate")
-        v-card-actions
-          v-btn(@click="setDel(delegate)" color="primary" ) legg til ansvarlig person her
-    v-row
-      v-col.pa-8(cols="12" align-self="center")
-        v-card-actions.justify-center  Ansvarlige
-        v-card-actions.justify-center
-          transition-group(name="list-complete")
-            v-chip.ma-2.pa-3.justify-center(key="0" class="list-complete-item"  
-            dark color="tertiary darken-2" label) {{ $store.state.name}}
-            v-chip.ma-2.pa-3.justify-center(v-for="item in delegates" :key="item" @click:close="removeDelegate(item)" 
-            close close-icon="mdi-delete" 
-            dark color="tertiary" label
-            class="list-complete-item" 
-            ) {{ item}}
-      
+          v-btn(@click="setDel(delegate)" color="primary" ) legg til 
+    v-col.pa-8(cols="6" align-self="center")
+      v-card-actions.justify-center Ansvarlige
+      v-card-actions.justify-center
+        transition-group(name="list-complete")
+          v-chip.ma-2.pa-3.justify-center(key="0" class="list-complete-item"  
+          dark color="tertiary darken-2" label) {{ $store.state.name}}
+          v-chip.ma-2.pa-3.justify-center(v-for="item in delegates" :key="item" @click:close="removeDelegate(item)" 
+          close close-icon="mdi-delete" 
+          dark color="tertiary" label
+          class="list-complete-item" 
+          ) {{ item}}
+    
     
 </template>
 

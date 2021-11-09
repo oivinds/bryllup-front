@@ -92,7 +92,6 @@ export default new Vuex.Store({
   },
   getters: {
     getDelegates(state) {
-
       const delegates = state.delegates.length ? state.delegates : [];
       return [state.name, ...delegates];
     },

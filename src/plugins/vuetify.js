@@ -13,7 +13,7 @@ export default new Vuetify({
         weddingPink: "#fff1ed", // deepOrange.lighten5
         primary: colors.teal,
         secondary: colors.deepOrange,
-        tertiary: colors.pink.accent2,
+        tertiary: colors.pink,
         accent: colors.grey.darken3,
         background: colors.grey,
         info: colors.teal.lighten1,

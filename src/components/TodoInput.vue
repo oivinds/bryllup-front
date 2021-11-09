@@ -30,16 +30,16 @@
             placeholder="skriv her"
             persistent-placeholder
             v-model="todo.comment"
-            label="Dine kommentarer"
+            label="Dine notater"
             multi-line)
             //- v-if="commentEnabled || todo.comment !== '' "
             
         //- group
         v-col(cols="6")
           v-select(:items="group" :value="todo.group" @change="groupChange" label="velg gruppe")
-        //- responsability
+        //- RESPONSABILITY
         v-col(cols="6")
-          v-select(:items="getDelegates" :value="todo.delegate" @change="delegateChange" label="velg ansvarlig")
+          v-select(:items="delegatesInput" :value="todo.delegate" @change="delegateChange" label="velg ansvarlig")
         //- COMPLETED
         //- TAG
         v-col(cols="6")
@@ -77,19 +77,16 @@ export default {
   },
 
   methods: {
+    ...mapActions(["newAction", "editAction"]),
     groupChange(e) {
-      console.log(e);
       this.todo.group = e;
     },
     delegateChange(e) {
-      console.log(e);
       this.todo.delegate = e;
     },
-    ...mapActions(["newAction", "editAction"]),
     submittodo() {
       /* this.$v.todo.$touch(); */
       /* if (this.$v.todo.$pending || this.$v.todo.$error) return; */
-
       if (this.editBool) {
         this.editAction(this.todo);
       } else if (this.newBool) {
@@ -101,6 +98,10 @@ export default {
     },
   },
   computed: {
+    delegatesInput() {
+      return ["ikke satt", ...this.getDelegates];
+    },
+    //
     ...mapState(["editBool", "newBool"]),
     ...mapGetters(["getDelegates"]),
 
