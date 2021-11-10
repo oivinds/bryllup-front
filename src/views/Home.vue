@@ -3,7 +3,7 @@ v-container
   v-row
     v-col(align-self="center")
       v-card.pa-4(outlined shaped  align-self="center")
-          v-card-title.justify-center.headline Velkommen til  bryllupsplanleggeren
+          v-card-title.justify-center.headline Velkommen til  bryllupsplanleggeren 🖼
           v-card-subtitle.text-center.text-button.py-4 - Et verktøy for å forenkle planleggingen av bryllupet ditt -
           v-card-text.body-1 
             li Start med å skrive navnet på brudeparet

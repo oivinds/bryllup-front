@@ -1,6 +1,6 @@
 <template lang="pug">
 v-container
-	Period(:todos="getGroup(1)" v-on:update:edit="editById($event)" title="12 mnd før" description="Research fasen,  Hent inspirasjon og finn ut av deres stil, ønsker og behov for den store dagen")
+	Period(:sizes="sizes" :todos="getGroup(1)" v-on:update:edit="editById($event)" title="12 mnd før" description="Research fasen,  Hent inspirasjon og finn ut av deres stil, ønsker og behov for den store dagen")
 	v-spacer.py-4
 	Period(:todos="getGroup(2)" v-on:update:edit="editById($event)" title="9 mnd før" description="Book det viktigste. Og etter det: Ha det gøy med planleggingsfasens morsomste research!")
 	v-spacer.py-4
@@ -19,6 +19,7 @@ export default {
   data() {
     return {
       item: null,
+      bp: this.$vuetify.breakpoint,
     };
   },
   components: { Period, EditModal },
@@ -36,6 +37,13 @@ export default {
     ...mapMutations(["setEditBool"]),
   },
   computed: {
+    sizes() {
+      return {
+        "x-small": this.bp.xs,
+        small: this.bp.sm,
+        medium: this.bp.md,
+      };
+    },
     ...mapGetters(["todos"]),
   },
 };
