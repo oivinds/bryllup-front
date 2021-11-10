@@ -12,7 +12,7 @@
 							v-list-item-action
 								v-btn.elevation-1(@click.stop="isCompletedToggleAction(item)" fab 
 								:color="item.isCompleted ? 'primary' : 'grey lighten-1'"
-								v-bind="sizes"  
+								v-bind="iconSize"  
 								)
 									v-icon(:color="item.isCompleted ? 'white' : 'grey lighten-4'") mdi-check
 							v-list-item-content
@@ -45,7 +45,7 @@ import DeleteModal from "../components/DeleteModal";
 import EditModal from "../components/EditModal";
 
 export default {
-  props: ["todos", "title", "description", "sizes"],
+  props: ["todos", "title", "description", "iconSize"],
   data() {
     return {
       selected: null,
