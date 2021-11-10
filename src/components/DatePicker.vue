@@ -17,8 +17,12 @@ export default {
   data() {
     return {
       modal: false,
-      date: this.$moment().add(1, "year").toISOString().substring(0, 10),
+      date: "",
     };
+  },
+  mounted() {
+    this.date = this.weddingDate;
+    this.$refs.dialog.save(this.date);
   },
   methods: {
     save() {
@@ -40,7 +44,7 @@ export default {
     computedDateFormatted() {
       return this.formatDate(this.date);
     },
-    ...mapState(["timeBeforeWedding"]),
+    ...mapState(["timeBeforeWedding", "weddingDate"]),
   },
 };
 </script>

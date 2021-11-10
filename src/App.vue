@@ -20,10 +20,8 @@ v-app#app
           transition(name="fade" mode="out-in" appear)
             v-card-actions.justify-center(:key="timeBeforeWedding") 
               .body-1(v-if="timeBeforeWedding") {{ timeBeforeWedding }} til bryllupet
-              .body-1(v-else) sett bryllupsdato!
-        v-col(align-self="center")
-          v-card-actions.justify-center 
-            NewModal
+              .body-1(v-else) foreslått tid 12 mnd!
+        
         v-col(align-self="center")
           v-card-actions.justify-center 
             DatePicker

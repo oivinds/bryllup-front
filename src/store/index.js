@@ -12,7 +12,8 @@ export default new Vuex.Store({
   state: {
     todos: [...todos1, ...todos2, ...todos3],
     name: "Kari",
-    timeBeforeWedding: null,
+    weddingDate: moment().add(1, "year").toISOString().substring(0, 10),
+    timeBeforeWedding: null,//moment().add(1, "year").toISOString().substring(0, 10),
     editBool: false,
     newBool: false,
     delegates: [],
@@ -59,6 +60,7 @@ export default new Vuex.Store({
   },
   actions: {
     setTimeBeforeWedding({ commit }, date) {
+
       const now = moment();
       const then = moment(date);
       const year = then.diff(now, "year");

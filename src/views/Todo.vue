@@ -1,18 +1,21 @@
 <template lang="pug">
 	v-container
+		div(position="center center" )
+			NewModal
 		List
-
 </template>
 
 <script>
 import { mapState, mapGetters } from "vuex";
 
 import List from "../components/List";
+import NewModal from "../components/NewModal";
 
 export default {
   name: "Todo",
   components: {
     List,
+    NewModal,
   },
   computed: {
     ...mapState(["name", "editBool", "timeBeforeWedding"]),
