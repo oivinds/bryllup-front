@@ -17,6 +17,8 @@
 									v-icon(:color="item.isCompleted ? 'white' : 'grey lighten-4'") mdi-check
 							v-list-item-content
 								v-list-item-title.text-subtitle-1(width="500" v-text="item.title" )
+							v-list-item-content
+								h2 {{ item.category.emoji}}
 							v-list-item-action
 								v-list-item-title.text-subtitle-2(v-text="$moment(item.created).format(bp.smAndUp ? 'MMMM YY' : 'MMM YY')")
 							v-list-item-action(v-if="item.delegate && item.delegate !== 'ikke satt'")
@@ -31,13 +33,16 @@
 							v-list-item-content
 								v-list-item-title.title Mine notater
 								v-textarea.body-1(v-text="item.comment")
-						transition(name="fade")
-							v-list-item(v-show="!item.isCompleted")
-								v-list-item-action
-									v-btn(@click="$emit('update:edit', item.title)")
-										v-icon(color="success") mdi-pencil
-								v-list-item-action
-									DeleteModal(:item="item")
+						v-list-item
+							v-list-item-content
+								v-list-item-title.text-button {{ item.category.name}}
+						
+						v-list-item(v-show="!item.isCompleted")
+							v-list-item-action
+								v-btn(@click="$emit('update:edit', item.title)")
+									v-icon(color="success") mdi-pencil
+							v-list-item-action
+								DeleteModal(:item="item")
 </template>
 <script>
 import { mapState, mapActions } from "vuex";
