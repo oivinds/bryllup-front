@@ -3,7 +3,10 @@
     "title": "Budsjett",
     "group": 1,
     "comment": "",
-    "category": "💰",
+    "category": {
+      "name": "Praktisk",
+      "emoji": "💰"
+    },
     "content": "Det aller viktigste og første! Skisser et budsjett ",
     "tools": [
       "mal for budsjett",
@@ -18,7 +21,10 @@
     "title": "Skriv gjesteliste",
     "group": 1,
     "comment": "",
-    "category": "🕺💃",
+    "category": {
+      "name": "Praktisk",
+      "emoji": "🕺💃"
+    },
     "content": "Ah - hvem vil dere dele den store dagen med?",
     "tools": [
       "gjestelisteoversikt"
@@ -31,7 +37,10 @@
     "title": "Bestem tema for bryllupet",
     "group": 1,
     "comment": "",
-    "category": "🎉",
+    "category": {
+      "name": "Praktisk",
+      "emoji": "🎉"
+    },
     "content": "Vil dere ha romantisk, boho- avslappet? Det er gøy å starte å få inspirasjon og kanskje bestemme seg for tema nå",
     "tools": [
       "tema på Pinterest?"
@@ -44,7 +53,10 @@
     "title": "Velg forlovere! ",
     "group": 1,
     "comment": "",
-    "category": "💛",
+    "category": {
+      "name": "Praktisk",
+      "emoji": "🎉"
+    },
     "content": "Finn ut hvem du ønsker skal være din forlover - og overrask vedkommende med en liten gaveeske, kort eller et brev hvor du uttrykker hva vedkommende betyr for deg.",
     "readonly": true,
     "isCompleted": false,
@@ -53,7 +65,10 @@
   {
     "title": "Sett dato for bryllupet",
     "comment": "",
-    "category": "📆",
+    "category": {
+      "name": "Praktisk",
+      "emoji": "📆"
+    },
     "group": 1,
     "content": "Når datoen er satt - da er det bare å begynne å glede seg!!",
     "readonly": true,
@@ -104,7 +119,10 @@
     "title": "Research:Blomsterleverandører",
     "group": 1,
     "comment": "",
-    "category": {},
+    "category": {
+      "name": "Praktisk",
+      "emoji": "📷"
+    },
     "tools": [],
     "content": "Til borddekorasjoner, bukett og som dekorasjon under vielsen?",
     "readonly": true,
