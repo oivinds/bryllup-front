@@ -12,6 +12,8 @@ export default new Vuex.Store({
   state: {
     todos: [...todos1, ...todos2, ...todos3],
     name: "Kari",
+    owner: null,
+    partner: null,
     weddingDate: moment().add(1, "year").toISOString().substring(0, 10),
     timeBeforeWedding: null,//moment().add(1, "year").toISOString().substring(0, 10),
     editBool: false,
@@ -19,6 +21,12 @@ export default new Vuex.Store({
     delegates: [],
   },
   mutations: {
+    setOwner(state, owner) {
+      state.owner = owner;
+    },
+    setPartner(state, partner) {
+      state.partner = partner;
+    },
     setDelegate(state, delegate) {
       if (delegate === null) return;
       const isIn = state.delegates.includes(delegate);
@@ -60,7 +68,6 @@ export default new Vuex.Store({
   },
   actions: {
     setTimeBeforeWedding({ commit }, date) {
-
       const now = moment();
       const then = moment(date);
       const year = then.diff(now, "year");
@@ -95,8 +102,11 @@ export default new Vuex.Store({
   },
   getters: {
     getDelegates(state) {
-      const delegates = state.delegates.length ? state.delegates : [];
-      return [state.name, ...delegates];
+      let delegates = state.delegates.length ? state.delegates : []
+      let owner = state.owner ? state.owner : "ikke satt";
+      let partner = state.partner ? state.partner : "ikke satt";
+      delegates = [owner, partner, ...delegates]
+      return [...delegates];
     },
     todos(state) {
       return state.todos;

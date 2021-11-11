@@ -21,7 +21,15 @@ export default {
   data() {
     return {
       dialog: false,
-      todo: {},
+      todo: {
+        title: "",
+        content: "",
+        group: "",
+        type: "",
+        comment: "",
+        isCompleted: false,
+        readonly: false,
+      },
       bp: this.$vuetify.breakpoint,
     };
   },
@@ -30,7 +38,7 @@ export default {
       this.dialog = bool;
       if (bool) {
         this.todo.title = "";
-        this.todo.description = "";
+        this.todo.content = "";
         this.todo.group = "";
         this.todo.type = "";
         this.todo.comment = "";

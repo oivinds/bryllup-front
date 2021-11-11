@@ -1,7 +1,7 @@
 <template lang="pug">
 	v-row(justify="center")
 		v-col(cols="12" sm="11" md="10" lg="9" )
-			v-card.elevation-0.my-8(rounded color="pink lighten-4")
+			v-card.elevation-0.mb-8(rounded color="pink lighten-4")
 				v-card-title.text-button.justify-center {{ title}}
 				v-card-text.px-md-8.title {{ description }}
 			v-expansion-panels(popout hover )

@@ -1,7 +1,4 @@
 <template lang="pug">
-	v-container
-		div(position="center center" )
-			NewModal
 		List
 </template>
 

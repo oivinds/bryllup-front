@@ -38,15 +38,15 @@
         v-col(cols="6")
           v-select(:items="group" :value="todo.group" @change="groupChange" label="velg gruppe")
         //- RESPONSABILITY
-        v-col(cols="6")
-          v-select(:items="delegatesInput" :value="todo.delegate" @change="delegateChange" label="velg ansvarlig")
+        v-col(cols="6" v-if="getDelegates.length > 1")
+          v-select(:items="getDelegates" :value="todo.delegate" @change="delegateChange" label="velg ansvarlig")
         //- COMPLETED
         //- TAG
         v-col(cols="6")
           v-select(:items="tags" label="velg 'type' oppgave")
         //- COMPLETED
-        v-col(cols="6")
-          v-checkbox(v-model="todo.isCompleted" :label="todo.isCompleted ? 'fullført!' : 'Uferdig'")
+        //- v-col(cols="6")
+        //-   v-checkbox(v-model="todo.isCompleted" :label="todo.isCompleted ? 'fullført!' : 'Uferdig'")
         //- SAVE
         v-col(cols="12")
           v-btn(
@@ -99,7 +99,16 @@ export default {
   },
   computed: {
     delegatesInput() {
-      return ["ikke satt", ...this.getDelegates];
+      console.log(this.getDelegates);
+      if (this.getDelegates === [null]) {
+        console.log("empty");
+        return ["empty"];
+      } else {
+        return [...this.getDelegates];
+      }
+      /* const delegates =
+        this.getDelegates === null ? ["ikke satt"] : ;
+      console.log(delegates); */
     },
     //
     ...mapState(["editBool", "newBool"]),
