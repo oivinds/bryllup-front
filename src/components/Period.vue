@@ -36,7 +36,6 @@
 						v-list-item
 							v-list-item-content
 								v-list-item-title.text-button {{ item.category.name}}
-						
 						v-list-item(v-show="!item.isCompleted")
 							v-list-item-action
 								v-btn(@click="$emit('update:edit', item.title)")
