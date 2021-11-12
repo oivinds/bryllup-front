@@ -17,7 +17,7 @@
 									v-icon(:color="item.isCompleted ? 'white' : 'grey lighten-4'") mdi-check
 							v-list-item-content
 								v-list-item-title.text-subtitle-1(width="500" v-text="item.title" )
-							v-list-item-content
+							v-list-item-content(v-if="item.category")
 								h2 {{ item.category.emoji}}
 							v-list-item-action
 								v-list-item-title.text-subtitle-2(v-text="$moment(item.created).format(bp.smAndUp ? 'MMMM YY' : 'MMM YY')")
@@ -34,7 +34,7 @@
 								v-list-item-title.title Mine notater
 								v-textarea.body-1(v-text="item.comment")
 						v-list-item
-							v-list-item-content
+							v-list-item-content(v-if="item.category")
 								v-list-item-title.text-button {{ item.category.name}}
 						v-list-item(v-show="!item.isCompleted")
 							v-list-item-action
