@@ -3,19 +3,17 @@ v-app#app
 	v-app
 		v-app-bar(app dark color="tertiary lighten-1")
 			.title.text-md-h6.text-lg-h5.px-12 Bryllupsplanleggeren
-			v-tabs.px-4(centered hide-slider)
+			v-tabs.px-4( hide-slider)
 				v-tab(to='/' color="primary" )
 					v-icon mdi-cog
 				v-tab(to='/todo' color="primary" )
 					v-icon mdi-calendar-check
-			transition(name="fade" appear mode="out-in")
-				div.px-12
-					div(v-if="$route.path === '/todo'")
-						NewModal
-					div(v-else style="opacity:0;")
-						NewModal
+			transition(name="fadeSlide" appear mode="out-in")
+				div.pr-12(v-show="$route.path === '/todo'")
+					NewModal
 		v-main
-			router-view
+			transition(name="fade" appear mode="out-in")
+				router-view
 		v-footer.elevation-10(app dark color="pink lighten-2")
 			v-row
 				v-col(align-self="center")

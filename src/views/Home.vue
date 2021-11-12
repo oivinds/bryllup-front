@@ -18,10 +18,10 @@ v-container.mb-12
 					v-card-actions
 						v-text-field(  placeholder="Skriv ditt fornavn" label="meg" v-model="ownerLocal")
 						v-card-actions
-							v-btn.mx-2(@click="setOwnerLocal(ownerLocal)" color="primary" ) legg til
+							v-btn.mx-auto(@click="setOwnerLocal(ownerLocal)" color="primary" ) legg til
 						v-text-field( placeholder="Skriv fornavn" label="blivende ektefelle" v-model="partnerLocal")
 						v-card-actions
-							v-btn.mx-2(@click="setPartnerLocal(partnerLocal)" color="primary" ) legg til
+							v-btn.mx-auto(@click="setPartnerLocal(partnerLocal)" color="primary" ) legg til
 				
 					 
 				
@@ -31,7 +31,7 @@ v-container.mb-12
 					v-card-title.title Legg til ansvarlige
 					v-card-actions
 						v-text-field.shrink( placeholder="legg til person" label="ansvarlig" v-model="delegate")
-						v-btn.mx-2(@click="setDel(delegate)" color="primary" ) legg til
+						v-btn.mx-auto(@click="setDel(delegate)" color="primary" ) legg til
 		v-col
 			v-card-actions.justify-center
 				transition-group(name="list-complete" )
