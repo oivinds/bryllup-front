@@ -1,43 +1,50 @@
 <template lang="pug">
 v-container.mb-12
-  v-row.pa-4(justify="center")
-    v-card.justify-center(  shaped)
-      v-card-title.justify-center.headline Velkommen til  bryllupsplanleggeren
-      v-card-subtitle.text-center.text-button.py-4 - Et verktøy for å forenkle planleggingen av bryllupet ditt -
-      v-card-text.body-1 
-        li Start med å skrive inn navnene på brudeparet
-        li legg til navn på personer som kan hjelpe deg, under ansvarlig 
-        li Sett bryllupsdatoen
-        li Eller hopp rett til 
-          router-link(to="/todo") oppgavelisten. 
-      v-col.pa-8(cols="12" align-self="center")
-        v-card-title Hva er Brudeparets navn?
-        v-card-actions
-          v-text-field( placeholder="Skriv ditt fornavn" label="meg" v-model="owner")
-          v-card-actions
-            v-btn(@click="setOwnerLocal(owner)" color="primary" ) legg til 
-      v-col.pa-8(cols="12" align-self="center")
-        v-card-title
-          v-text-field( placeholder="Skriv fornavn" label="blivende ektefelle" v-model="partner")
-          v-card-actions
-            v-btn(@click="setPartnerLocal(partner)" color="primary" ) legg til  
-      v-col.pa-8(cols="12" align-self="center")
-        v-card-title
-          v-text-field( placeholder="legg til person" label="ansvarlig" v-model="delegate")
-          v-card-actions
-            v-btn(@click="setDel(delegate)" color="primary" ) legg til 
-      v-col.pa-8(cols="12" align-self="center")
-      
-        v-card-actions.justify-center
-          transition-group(name="list-complete")
-            v-chip.ma-2.pa-3.justify-center(key="0" class="list-complete-item"  
-            dark color="tertiary darken-2" label) {{ $store.state.owner}}
-            v-chip.ma-2.pa-3.justify-center(v-for="item in delegates" :key="item" @click:close="removeDelegate(item)" 
-            close close-icon="mdi-delete" 
-            dark color="tertiary" label
-            class="list-complete-item" 
-            ) {{ item}}
-    
+	v-row.py-4(justify="center")
+		v-col(cols="12")
+			v-card.pa-4.justify-center(  shaped)
+				v-card-title.justify-center.headline Velkommen til  bryllupsplanleggeren
+				v-card-subtitle.text-center.text-button.py-4 - Et verktøy for å forenkle planleggingen av bryllupet ditt -
+				v-card-text.body-1 
+					li Start med å skrive inn navnene på brudeparet
+					li legg til navn på personer som kan hjelpe deg, under ansvarlig 
+					li Sett bryllupsdatoen
+					li Utålmodig? hopp rett til 
+						router-link(to="/todo") oppgavelisten. 
+		v-col(cols="12" md="8")
+			v-card.justify-center(  rounded class="rounded-xl")
+				v-col.px-8(cols="12" align-self="center")
+					v-card-title.title Hva er Brudeparets navn?
+					v-card-actions
+						v-text-field(  placeholder="Skriv ditt fornavn" label="meg" v-model="ownerLocal")
+						v-card-actions
+							v-btn.mx-2(@click="setOwnerLocal(ownerLocal)" color="primary" ) legg til
+						v-text-field( placeholder="Skriv fornavn" label="blivende ektefelle" v-model="partnerLocal")
+						v-card-actions
+							v-btn.mx-2(@click="setPartnerLocal(partnerLocal)" color="primary" ) legg til
+				
+					 
+				
+		v-col(cols="12" md="4")
+			v-card.justify-center(  rounded class="rounded-xl")
+				v-col.px-8(cols="12" align-self="center")
+					v-card-title.title Legg til ansvarlige
+					v-card-actions
+						v-text-field.shrink( placeholder="legg til person" label="ansvarlig" v-model="delegate")
+						v-btn.mx-2(@click="setDel(delegate)" color="primary" ) legg til
+		v-col
+			v-card-actions.justify-center
+				transition-group(name="list-complete" )
+					v-chip.ma-2.pa-3.justify-center(v-if="owner" outlined key="0" class="list-complete-item"  
+					dark color="tertiary darken-2" label) {{ owner}}
+					v-chip.ma-2.pa-3.justify-center(v-if="partner" outlined key="1" class="list-complete-item"  
+					dark color="tertiary darken-2" label) {{ partner}}
+					v-chip.ma-2.pa-3.justify-center(v-for="item in delegates" :key="item" @click:close="removeDelegate(item)" 
+					close 
+					dark color="tertiary" label
+					class="list-complete-item" 
+					) {{ item}}
+				
 </template>
 
 <script>
@@ -48,8 +55,8 @@ export default {
   data() {
     return {
       delegate: "",
-      owner: "",
-      partner: "",
+      ownerLocal: "",
+      partnerLocal: "",
     };
   },
   components: { DatePicker },
@@ -60,11 +67,11 @@ export default {
     },
     setOwnerLocal(o) {
       this.setOwner(o);
-      this.owner = "";
+      this.ownerLocal = "";
     },
     setPartnerLocal(o) {
       this.setPartner(o);
-      this.partner = "";
+      this.partnerLocal = "";
     },
     ...mapMutations([
       "setDelegate",
@@ -74,7 +81,13 @@ export default {
     ]),
   },
   computed: {
-    ...mapState(["name", "editBool", "timeBeforeWedding", "delegates"]),
+    ...mapState([
+      "owner",
+      "partner",
+      "editBool",
+      "timeBeforeWedding",
+      "delegates",
+    ]),
   },
 };
 </script>
