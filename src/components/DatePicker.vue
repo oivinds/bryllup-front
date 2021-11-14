@@ -22,17 +22,18 @@ export default {
   },
   mounted() {
     this.date = this.weddingDate;
-    this.$refs.dialog.save(this.date);
+    this.save(this.date);
   },
   methods: {
     save() {
       this.$refs.dialog.save(this.date);
+      this.setDuration(this.date);
       this.setTimeBeforeWedding(this.date);
     },
     formatDate(date) {
       return date ? this.$moment(date).format("LL") : "";
     },
-    ...mapActions(["setTimeBeforeWedding"]),
+    ...mapActions(["setDuration", "setTimeBeforeWedding"]),
   },
   computed: {
     min() {

@@ -3,6 +3,15 @@ import Vuex from "vuex";
 import todos1 from "./todos-1.json";
 import todos2 from "./todos-2.json";
 import todos3 from "./todos-3.json";
+import todos4 from "./todos-4.json";
+import todos5 from "./todos-5.json";
+import todos6 from "./todos-6.json";
+import todos7 from "./todos-7.json";
+import todos8 from "./todos-8.json";
+import todos9 from "./todos-9.json";
+import todos10 from "./todos-10.json";
+import todos11 from "./todos-11.json";
+
 Vue.use(Vuex);
 import moment from "moment";
 moment.locale("nb");
@@ -10,7 +19,7 @@ Object.defineProperty(Vue.prototype, "$moment", { value: moment });
 
 export default new Vuex.Store({
   state: {
-    todos: [...todos1, ...todos2, ...todos3],
+    todos: [...todos1, ...todos2, ...todos3, ...todos4, ...todos5, ...todos6, ...todos7, ...todos8, ...todos9, ...todos10, ...todos11],
     name: "Kari",
     owner: null,
     partner: null,
@@ -19,6 +28,7 @@ export default new Vuex.Store({
     editBool: false,
     newBool: false,
     delegates: [],
+    duration: null,
   },
   mutations: {
     setOwner(state, owner) {
@@ -48,6 +58,9 @@ export default new Vuex.Store({
     setTimeBeforeWedding(state, time) {
       state.timeBeforeWedding = time;
     },
+    setDuration(state, duration) {
+      state.duration = duration;
+    },
     setEditBool(state, bool) {
       state.editBool = bool;
     },
@@ -67,6 +80,13 @@ export default new Vuex.Store({
     },
   },
   actions: {
+    setDuration({ commit }, date) {
+      const now = moment();
+      const then = moment(date);
+      const duration = then - now;
+      //
+      commit("setDuration", duration);
+    },
     setTimeBeforeWedding({ commit }, date) {
       const now = moment();
       const then = moment(date);
@@ -101,6 +121,10 @@ export default new Vuex.Store({
     },
   },
   getters: {
+    getDuration(state) {
+      return state.duration;
+
+    },
     getDelegates(state) {
       let delegates = state.delegates.length ? state.delegates : []
       let owner = state.owner ? state.owner : "ikke satt";
