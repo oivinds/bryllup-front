@@ -55,7 +55,7 @@ export default {
       const duration = this.getDuration - (index * this.getDuration) / 6;
 
       let d = this.$moment.duration(duration);
-      console.log(d.humanize());
+
       const years = d.years();
       d = d.subtract({ years });
 

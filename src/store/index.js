@@ -95,8 +95,8 @@ export default new Vuex.Store({
       const months = then.diff(now, "month");
       then.subtract(months, "month");
       const days = then.diff(now, "days");
-      const yearText = year !== 0 ? `${year} år,` : "";
-      const monthText = months !== 0 ? `${months} måneder,` : "";
+      const yearText = year !== 0 ? `${year} år ` : "";
+      const monthText = months !== 0 ? `${months} måneder ` : "";
       const daysText = days !== 0 ? `${days} dager` : "";
       const timeBeforeWedding = `${yearText} ${monthText} ${daysText}`;
       commit("setTimeBeforeWedding", timeBeforeWedding);
