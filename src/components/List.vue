@@ -1,26 +1,27 @@
 <template lang="pug">
 v-container.my-8
+	EditModal(:item="item")
 	v-row(justify="center")
 		v-col(cols="12" sm="11" md="10" lg="9")
-			div(v-for="item, index in 6")
-				PeriodHeader(:title="title(index)" 
+			div(v-for="todo, index in 6")
+				PeriodHeader(:title="title(index)" :inc="index" 
 				:description="getGroupDescription(index)")
-				Period(:todos="getGroup(index + 1)" v-on:update:edit="editById($event)" :iconSize="iconSize")
+				Period(:dates="dates(index+1)" :todos="getGroup(index + 1)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 				v-spacer.py-4
 			div
-				PeriodHeader( title="En uke før" :description="getGroupDescription(6)")
-				Period(:todos="getGroup(7)" v-on:update:edit="editById($event)" :iconSize="iconSize")
+				PeriodHeader(inc="6" title="En uke før" :description="getGroupDescription(6)")
+				Period(:dates="dates(7)" :todos="getGroup(7)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 				v-spacer.py-4
-				PeriodHeader( title="En dag før" :description="getGroupDescription(7)")
-				Period(:todos="getGroup(8)" v-on:update:edit="editById($event)" :iconSize="iconSize")
+				PeriodHeader(inc="7" title="En dag før" :description="getGroupDescription(7)")
+				Period(  :todos="getGroup(8)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 				v-spacer.py-4
-				PeriodHeader( title="Bryllupsdagen" :description="getGroupDescription(8)")
+				PeriodHeader(inc="8" title="Bryllupsdagen" :description="getGroupDescription(8)")
 				Period(:todos="getGroup(9)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 				v-spacer.py-4
-				PeriodHeader( title="I etterkant av bryllupet 1-3 mnd" :description="getGroupDescription(9)")
+				PeriodHeader(inc="9" title="I etterkant av bryllupet 1-3 mnd" :description="getGroupDescription(9)")
 				Period(:todos="getGroup(10)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 				v-spacer.py-4
-				PeriodHeader( title="Innen 6 måneder etter bryllupet" :description="getGroupDescription(10)")
+				PeriodHeader(inc="10" title="Innen 6 måneder etter bryllupet" :description="getGroupDescription(10)")
 				Period(:todos="getGroup(11)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 				v-spacer.py-4
 				 
@@ -29,6 +30,7 @@ v-container.my-8
 <script>
 import Period from "../components/Period";
 import PeriodHeader from "../components/PeriodHeader";
+import EditModal from "../components/EditModal";
 
 import { mapGetters, mapMutations } from "vuex";
 
@@ -39,8 +41,13 @@ export default {
       bp: this.$vuetify.breakpoint,
     };
   },
-  components: { Period, PeriodHeader },
+  components: { Period, PeriodHeader, EditModal },
   methods: {
+    dates(index) {
+      const duration = this.getDuration - (index * this.getDuration) / 6;
+
+      return this.$moment().add(duration, "milliseconds").format("MMMM YY");
+    },
     editById(title) {
       this.setEditBool(true);
       const item = this.todos.find((o) => o.title === title);
@@ -51,6 +58,7 @@ export default {
       const group = this.todos.filter((todo) => todo.group === nr);
       return [...group];
     },
+
     title(index) {
       const duration = this.getDuration - (index * this.getDuration) / 6;
 
@@ -80,19 +88,6 @@ export default {
       const dayText = days !== 0 ? `${Math.round(days)} ${dagPlur} ` : "";
       return yearText + monthText + weekText + dayText + " før";
     },
-
-    /* title(index){
-			
-      const year = then.diff(now, "year");
-      then.subtract(year, "year");
-      const months = then.diff(now, "month");
-      then.subtract(months, "month");
-      const days = then.diff(now, "days");
-      const yearText = year !== 0 ? `${year} år,` : "";
-      const monthText = months !== 0 ? `${months} måneder,` : "";
-      const daysText = days !== 0 ? `${days} dager` : "";
-      return `${yearText} ${monthText} ${daysText}`;
-		}, */
 
     getGroupDescription(no) {
       const desc = [

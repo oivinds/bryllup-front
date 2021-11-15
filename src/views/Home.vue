@@ -2,9 +2,8 @@
 v-container.mb-12
 	v-row.py-4(justify="center")
 		v-col(cols="12")
-			v-card.pa-4.justify-center(  shaped)
-				v-card-title.justify-center.headline Velkommen til  bryllupsplanleggeren
-				v-card-subtitle.text-center.text-button.py-4 - Et verktøy for å forenkle planleggingen av bryllupet ditt -
+			v-card.pa-8.justify-center(shaped)
+				v-card-title.justify-center.headline Velkommen til  bryllupsplanleggeren {{ owner }} {{ andText }}  {{  partner}}
 				v-card-text.body-1 
 					li Start med å skrive inn navnene på brudeparet
 					li legg til navn på personer som kan hjelpe deg, under ansvarlig 
@@ -19,7 +18,7 @@ v-container.mb-12
 						v-text-field(  placeholder="Skriv ditt fornavn" label="meg" v-model="ownerLocal")
 						v-card-actions
 							v-btn.mx-auto(@click="setOwnerLocal(ownerLocal)" color="primary" ) legg til
-						v-text-field( placeholder="Skriv fornavn" label="blivende ektefelle" v-model="partnerLocal")
+						v-text-field( placeholder="Skriv fornavn" label="brudgom / brud" v-model="partnerLocal")
 						v-card-actions
 							v-btn.mx-auto(@click="setPartnerLocal(partnerLocal)" color="primary" ) legg til
 				
@@ -81,6 +80,12 @@ export default {
     ]),
   },
   computed: {
+    andText() {
+      if (this.partner && this.owner) {
+        return "og";
+      }
+      return "";
+    },
     ...mapState([
       "owner",
       "partner",

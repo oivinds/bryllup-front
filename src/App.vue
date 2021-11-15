@@ -1,7 +1,7 @@
 <template lang="pug">
 v-app#app
 	v-app
-		v-app-bar(app dark color="tertiary lighten-1")
+		v-app-bar.elevation-4(app)
 			.title.text-md-h6.text-lg-h5.px-12 Bryllupsplanleggeren
 			v-tabs.px-4( hide-slider)
 				v-tab(to='/' color="primary" )
@@ -14,7 +14,7 @@ v-app#app
 		v-main
 			transition(name="fade" appear mode="out-in")
 				router-view
-		v-footer.elevation-10(app dark color="pink")
+		v-footer.elevation-3(app)
 			v-row
 				v-col(align-self="center")
 					v-card-actions.justify-center 
@@ -24,7 +24,6 @@ v-app#app
 						v-card-actions.justify-center(:key="timeBeforeWedding") 
 							.body-1(v-if="timeBeforeWedding") {{ timeBeforeWedding }} til bryllupet
 							.body-1(v-else) foreslått tid 12 mnd!
-				
 				v-col(align-self="center")
 					v-card-actions.justify-center 
 						DatePicker

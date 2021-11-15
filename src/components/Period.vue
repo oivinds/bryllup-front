@@ -17,7 +17,8 @@ v-expansion-panels(popout hover )
         v-list-item-content(v-if="item.category")
           h2 {{ item.category.emoji}}
         v-list-item-action
-          v-list-item-title.text-subtitle-2(v-text="$moment(item.created).format(bp.smAndUp ? 'MMMM YY' : 'MMM YY')")
+          v-list-item-title.text-subtitle-2(v-text="dates")
+          //-v-list-item-title.text-subtitle-2(v-text="$moment(item.created).format(bp.smAndUp ? 'MMMM YY' : 'MMM YY')")
         v-list-item-action(v-if="item.delegate && item.delegate !== 'ikke satt'")
           v-chip.pa-4(dark color="secondary") {{item.delegate}}
     
@@ -35,7 +36,6 @@ v-expansion-panels(popout hover )
           v-list-item-title.text-button {{ item.category.name}}
       v-list-item(v-show="!item.isCompleted")
         v-list-item-action
-          EditModal(:item="item")
           v-btn(@click="$emit('update:edit', item.title)")
             v-icon(color="success") mdi-pencil
         v-list-item-action
@@ -44,10 +44,9 @@ v-expansion-panels(popout hover )
 <script>
 import { mapState, mapActions } from "vuex";
 import DeleteModal from "../components/DeleteModal";
-import EditModal from "../components/EditModal";
 
 export default {
-  props: ["todos", "title", "description", "iconSize"],
+  props: ["todos", "title", "description", "iconSize", "dates"],
   data() {
     return {
       selected: null,
@@ -65,7 +64,7 @@ export default {
     },
     ...mapActions(["editAction"]),
   },
-  components: { DeleteModal, EditModal },
+  components: { DeleteModal },
 };
 </script>
 <style lang="scss" scoped>
