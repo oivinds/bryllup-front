@@ -52,15 +52,47 @@ export default {
       return [...group];
     },
     title(index) {
-      console.log(index);
-      return (
-        Math.floor(
-          this.$moment
-            .duration(this.getDuration - (index * this.getDuration) / 6)
-            .asMonths()
-        ).toString() + " mnd før"
-      );
+      const duration = this.getDuration - (index * this.getDuration) / 6;
+
+      let d = this.$moment.duration(duration);
+      console.log(d.humanize());
+      const years = d.years();
+      d = d.subtract({ years });
+
+      const months = d.asMonths();
+      d = d.subtract({ months });
+
+      const weeks = d.weeks();
+      d = d.subtract({ weeks });
+
+      const days = d.days();
+      d = d.subtract({ days });
+
+      const ukePlur = weeks === 1 ? "uke" : "uker";
+      const dagPlur = days === 1 ? "dag" : "dager";
+
+      let yearText = years !== 0 ? `${Math.round(years)} år ` : "";
+
+      let monthText = months !== 0 ? `${Math.round(months)} mnd ` : "";
+
+      let weekText = weeks !== 0 ? `${Math.round(weeks)} ${ukePlur} ` : "";
+
+      const dayText = days !== 0 ? `${Math.round(days)} ${dagPlur} ` : "";
+      return yearText + monthText + weekText + dayText + " før";
     },
+
+    /* title(index){
+			
+      const year = then.diff(now, "year");
+      then.subtract(year, "year");
+      const months = then.diff(now, "month");
+      then.subtract(months, "month");
+      const days = then.diff(now, "days");
+      const yearText = year !== 0 ? `${year} år,` : "";
+      const monthText = months !== 0 ? `${months} måneder,` : "";
+      const daysText = days !== 0 ? `${days} dager` : "";
+      return `${yearText} ${monthText} ${daysText}`;
+		}, */
 
     getGroupDescription(no) {
       const desc = [

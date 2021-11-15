@@ -14,7 +14,7 @@ v-app#app
 		v-main
 			transition(name="fade" appear mode="out-in")
 				router-view
-		v-footer.elevation-10(app dark color="pink lighten-2")
+		v-footer.elevation-10(app dark color="pink")
 			v-row
 				v-col(align-self="center")
 					v-card-actions.justify-center 

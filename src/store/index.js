@@ -55,8 +55,8 @@ export default new Vuex.Store({
       const delegates = state.delegates.reduce(reduce, []);
       state.delegates = [...delegates];
     },
-    setTimeBeforeWedding(state, time) {
-      state.timeBeforeWedding = time;
+    setTimeBeforeWedding(state, str) {
+      state.timeBeforeWedding = str;
     },
     setDuration(state, duration) {
       state.duration = duration;
@@ -83,12 +83,12 @@ export default new Vuex.Store({
     setDuration({ commit }, date) {
       const now = moment();
       const then = moment(date);
-      const duration = then - now;
+      const duration = then.diff(now);
       //
       commit("setDuration", duration);
     },
     setTimeBeforeWedding({ commit }, date) {
-      const now = moment();
+      const now = moment().subtract(1, 'day');
       const then = moment(date);
       const year = then.diff(now, "year");
       then.subtract(year, "year");
