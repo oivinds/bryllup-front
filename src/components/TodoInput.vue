@@ -68,11 +68,6 @@ export default {
       commentEnabled: false,
       todoErrorMessage: "",
       tags: ["research", "nice to do", "need to do"],
-      group: [
-        { text: "første periode", value: 1 },
-        { text: "andre periode", value: 2 },
-        { text: "tredje periode", value: 3 },
-      ],
     };
   },
 
@@ -98,10 +93,24 @@ export default {
     },
   },
   computed: {
+    group() {
+      return [
+        { text: this.groupTitles[0], value: 1 },
+        { text: this.groupTitles[1], value: 2 },
+        { text: this.groupTitles[2], value: 3 },
+        { text: this.groupTitles[3], value: 4 },
+        { text: this.groupTitles[4], value: 5 },
+        { text: this.groupTitles[5], value: 6 },
+        { text: this.groupTitles[6], value: 7 },
+        { text: this.groupTitles[7], value: 8 },
+        { text: this.groupTitles[8], value: 9 },
+        { text: this.groupTitles[9], value: 10 },
+        { text: this.groupTitles[10], value: 11 },
+      ];
+    },
+
     delegatesInput() {
-      console.log(this.getDelegates);
       if (this.getDelegates === [null]) {
-        console.log("empty");
         return ["empty"];
       } else {
         return [...this.getDelegates];
@@ -111,7 +120,7 @@ export default {
       console.log(delegates); */
     },
     //
-    ...mapState(["editBool", "newBool"]),
+    ...mapState(["editBool", "newBool", "groupTitles"]),
     ...mapGetters(["getDelegates"]),
 
     /* commentErrors: {

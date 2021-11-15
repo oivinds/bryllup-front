@@ -29,8 +29,12 @@ export default new Vuex.Store({
     newBool: false,
     delegates: [],
     duration: null,
+    groupTitles: [],
   },
   mutations: {
+    setGroupTitles(state, titles) {
+      state.groupTitles = [...titles];
+    },
     setOwner(state, owner) {
       state.owner = owner;
     },

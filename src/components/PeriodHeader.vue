@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-card.elevation-0.mb-8(  rounded :color="cl(inc)")
+  v-card.elevation-0.mb-8( dark rounded :color="cl(inc)")
     v-card-title.text-button.justify-center {{ title}}
     v-card-text.px-md-8.title {{ description }}
 </template>
@@ -8,7 +8,6 @@ export default {
   props: ["title", "description", "inc"],
   methods: {
     cl(i) {
-      console.log(i);
       const colors = [
         "pink",
         "purple",
@@ -22,7 +21,7 @@ export default {
         "light-green",
         "lime",
         "amber darken-1",
-        "orange",
+        "orange darken-1",
       ];
       colors.reverse();
       return colors[i];

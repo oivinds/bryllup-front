@@ -25,7 +25,7 @@ v-expansion-panels(popout hover )
     v-expansion-panel-content(:key="item.description")
       v-list-item
         v-list-item-content
-          .body-1 {{ item.content}}
+          .title {{ item.content}}
       v-divider.pt-4(v-if="item.comment !== ''" )
       v-list-item(v-if="item.comment !== ''" )
         v-list-item-content
@@ -34,9 +34,10 @@ v-expansion-panels(popout hover )
       v-list-item
         v-list-item-content(v-if="item.category")
           v-list-item-title.text-button {{ item.category.name}}
-      v-list-item(v-show="!item.isCompleted")
+      v-list-item
+        //-(v-show="!item.isCompleted")
         v-list-item-action
-          v-btn(@click="$emit('update:edit', item.title)")
+          v-btn(color="primary" outlined dark @click="$emit('update:edit', item.title)") Rediger
             v-icon(color="success") mdi-pencil
         v-list-item-action
           DeleteModal(:item="item")
