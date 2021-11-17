@@ -4,10 +4,8 @@
     "group": 11,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "✉️"
-    },
+    "category": "Praktisk",
+    "emoji": "✉️",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -18,10 +16,8 @@
     "group": 11,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "✉️"
-    },
+    "category": "Praktisk",
+    "emoji": "✉️",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -32,10 +28,8 @@
     "group": 11,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "🖼️"
-    },
+    "category": "Praktisk",
+    "emoji": "🖼️",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -46,10 +40,8 @@
     "group": 11,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "🗑️"
-    },
+    "category": "Praktisk",
+    "emoji": "🗑️",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -60,10 +52,8 @@
     "group": 11,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "💌"
-    },
+    "category": "Praktisk",
+    "emoji": "💌",
     "tools": [],
     "readonly": true,
     "isCompleted": false,

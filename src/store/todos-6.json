@@ -4,10 +4,8 @@
     "group": 6,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Festen",
-      "emoji": "🥂"
-    },
+    "category": "Festen",
+    "emoji": "🥂",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -18,10 +16,8 @@
     "group": 6,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Festen",
-      "emoji": "🎈"
-    },
+    "category": "Festen",
+    "emoji": "🎈",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -32,10 +28,8 @@
     "group": 6,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "📋"
-    },
+    "category": "Praktisk",
+    "emoji": "📋",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -46,10 +40,8 @@
     "group": 6,
     "comment": "",
     "content": "Skal du ha sminkebilder/overnatting osv bør dette planlegges nå. Kjøp inn spruddel sov",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "✨"
-    },
+    "category": "Praktisk",
+    "emoji": "✨",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -60,10 +52,8 @@
     "group": 6,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Festen",
-      "emoji": "✨"
-    },
+    "category": "Festen",
+    "emoji": "✨",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -74,10 +64,8 @@
     "group": 6,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "✍️"
-    },
+    "category": "Praktisk",
+    "emoji": "✍️",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -88,10 +76,8 @@
     "group": 6,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "✍️"
-    },
+    "category": "Praktisk",
+    "emoji": "✍️",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -102,10 +88,8 @@
     "group": 6,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Festen",
-      "emoji": "🧾"
-    },
+    "category": "Festen",
+    "emoji": "🧾",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -116,10 +100,8 @@
     "group": 6,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Gaver",
-      "emoji": "🎁"
-    },
+    "category": "Gaver",
+    "emoji": "🎁",
     "tools": [],
     "readonly": true,
     "isCompleted": false,

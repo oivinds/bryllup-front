@@ -11,7 +11,7 @@ export default new Vuetify({
       light: {
         weddingTeal: "#88d8c6", // teal.lighten2
         weddingPink: "#fff1ed", // deepOrange.lighten5
-        primary: colors.deepOrange,
+        primary: colors.teal.accent4,
         secondary: colors.deepOrange,
         tertiary: colors.pink,
         accent: colors.grey.darken3,

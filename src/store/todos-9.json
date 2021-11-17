@@ -4,10 +4,8 @@
     "group": 9,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Festen",
-      "emoji": "🔔"
-    },
+    "category": "Festen",
+    "emoji": "🔔",
     "tools": [],
     "readonly": true,
     "isCompleted": false,

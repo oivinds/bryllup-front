@@ -4,10 +4,8 @@
     "group": 8,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Antrekk og tilbehør",
-      "emoji": "💅"
-    },
+    "category": "Antrekk og tilbehør",
+    "emoji": "💅",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -18,10 +16,8 @@
     "group": 8,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "📋"
-    },
+    "category": "Praktisk",
+    "emoji": "📋",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -32,10 +28,8 @@
     "group": 8,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "😴"
-    },
+    "category": "Praktisk",
+    "emoji": "😴",
     "tools": [],
     "readonly": true,
     "isCompleted": false,

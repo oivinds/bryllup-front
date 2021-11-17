@@ -41,6 +41,7 @@ export default {
         this.todo.content = "";
         this.todo.group = "";
         this.todo.type = "";
+        this.todo.category = "";
         this.todo.comment = "";
         this.todo.isCompleted = false;
         this.todo.readonly = false;

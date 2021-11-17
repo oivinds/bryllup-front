@@ -30,6 +30,15 @@ export default new Vuex.Store({
     delegates: [],
     duration: null,
     groupTitles: [],
+    categories: [
+      "Praktisk",
+      "Festen",
+      "Dekorasjon",
+      "Antrekk  og tilbehør",
+      "Gaver",
+      "Bryllupsreise",
+      "Hvetebrødsdagene"
+    ]
   },
   mutations: {
     setGroupTitles(state, titles) {
@@ -127,7 +136,6 @@ export default new Vuex.Store({
   getters: {
     getDuration(state) {
       return state.duration;
-
     },
     getDelegates(state) {
       let delegates = state.delegates.length ? state.delegates : []

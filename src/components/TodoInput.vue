@@ -31,6 +31,9 @@
             multi-line)
             //- v-if="commentEnabled || todo.comment !== '' "
             
+        //- categories
+        v-col(cols="6")
+          v-select(:items="categories" :value="todo.category" @change="categoryChange" label="velg periode for å utføre oppgaven")
         //- group
         v-col(cols="6")
           v-select(:items="group" :value="todo.group" @change="groupChange" label="velg periode for å utføre oppgaven")
@@ -73,6 +76,9 @@ export default {
     groupChange(e) {
       this.todo.group = e;
     },
+    categoryChange(e) {
+      this.todo.category = e;
+    },
     delegateChange(e) {
       this.todo.delegate = e;
     },
@@ -105,7 +111,7 @@ export default {
       }
     },
     //
-    ...mapState(["editBool", "newBool", "groupTitles"]),
+    ...mapState(["editBool", "newBool", "groupTitles", "categories"]),
     ...mapGetters(["getDelegates"]),
 
     /* commentErrors: {

@@ -4,10 +4,8 @@
     "group": 2,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "👩‍⚖️"
-    },
+    "category": "Praktisk",
+    "emoji": "👩‍⚖️",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -18,10 +16,8 @@
     "group": 2,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "🏰"
-    },
+    "category": "Praktisk",
+    "emoji": "🏰",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -32,10 +28,8 @@
     "group": 2,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Festen",
-      "emoji": "🥡"
-    },
+    "category": "Festen",
+    "emoji": "🥡",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -46,10 +40,8 @@
     "group": 2,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "🛏️"
-    },
+    "category": "Praktisk",
+    "emoji": "🛏️",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -60,10 +52,8 @@
     "group": 2,
     "comment": "",
     "content": "Husk å booke inn for forlovelsesfotografering og vurder om dere også ønsker videograf.",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "📷"
-    },
+    "category": "Praktisk",
+    "emoji": "📷",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -74,10 +64,8 @@
     "group": 2,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Antrekk  og tilbehør",
-      "emoji": "💇"
-    },
+    "category": "Antrekk  og tilbehør",
+    "emoji": "💇",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -88,10 +76,8 @@
     "group": 2,
     "comment": "",
     "content": "Dersom dere ønsker profesjonelle til å fikse blomster, kan dette være lurt å booke inn nå slik at de holder av datoen.",
-    "category": {
-      "name": "Dekorasjon",
-      "emoji": "✨"
-    },
+    "category": "Dekorasjon",
+    "emoji": "✨",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -102,10 +88,8 @@
     "group": 2,
     "comment": "",
     "content": "Husk å ta utgangspunkt i bryllupstemaet dere har valgt i utformingen av STD-kort. Psst: Spar tid og miljøet og velg digitale STD-kort. ",
-    "category": {
-      "name": "Dekorasjon",
-      "emoji": "✉️"
-    },
+    "category": "Dekorasjon",
+    "emoji": "✉️",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -116,10 +100,8 @@
     "group": 2,
     "comment": "",
     "content": "Sett opp prøvetimer i ønskede salonger. Psst: Det er innafor å spørre forloveren sin om hjelp her!",
-    "category": {
-      "name": "Antrekk  og tilbehør",
-      "emoji": "👰"
-    },
+    "category": "Antrekk  og tilbehør",
+    "emoji": "👰",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -130,10 +112,8 @@
     "group": 2,
     "comment": "",
     "content": "Det er like greit å få opp en nettside eller Facebook-gruppe først som sist! En idé er også å lage en egen epostkonto for bryllupet for å skille dette fra din private epost.",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "🔍"
-    },
+    "category": "Praktisk",
+    "emoji": "🔍",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -144,10 +124,8 @@
     "group": 2,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "DAntrekk  og tilbehørekorasjon",
-      "emoji": "🔍"
-    },
+    "category": "DAntrekk  og tilbehørekorasjon",
+    "emoji": "🔍",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -158,10 +136,8 @@
     "group": 2,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Praktisk",
-      "emoji": "🔍"
-    },
+    "category": "Praktisk",
+    "emoji": "🔍",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -172,10 +148,8 @@
     "group": 2,
     "comment": "",
     "content": "Orienter deg om sko og tilbehør til dagen",
-    "category": {
-      "name": "Antrekk  og tilbehør",
-      "emoji": "🔍"
-    },
+    "category": "Antrekk  og tilbehør",
+    "emoji": "🔍",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -186,10 +160,8 @@
     "group": 2,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Antrekk  og tilbehør",
-      "emoji": "🎀"
-    },
+    "category": "Antrekk  og tilbehør",
+    "emoji": "🎀",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -200,10 +172,8 @@
     "group": 2,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Festen",
-      "emoji": "🥂"
-    },
+    "category": "Festen",
+    "emoji": "🥂",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -214,10 +184,8 @@
     "group": 2,
     "comment": "",
     "content": "Lag skisser på hvordan dere ønsker dem - husk å beholde tematikken fra Save The Date",
-    "category": {
-      "name": "Dekorasjon",
-      "emoji": "✉️"
-    },
+    "category": "Dekorasjon",
+    "emoji": "✉️",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -228,10 +196,8 @@
     "group": 2,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Festen",
-      "emoji": "🎉"
-    },
+    "category": "Festen",
+    "emoji": "🎉",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
@@ -242,10 +208,8 @@
     "group": 2,
     "comment": "",
     "content": "",
-    "category": {
-      "name": "Dekorasjon",
-      "emoji": "🎈"
-    },
+    "category": "Dekorasjon",
+    "emoji": "🎈",
     "tools": [],
     "readonly": true,
     "isCompleted": false,
