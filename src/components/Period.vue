@@ -16,11 +16,10 @@ v-expansion-panels(popout hover )
           v-list-item-title.text-subtitle-1(width="500" v-text="item.title" )
         v-list-item-content(v-if="item.emoji")
           h2 {{ item.emoji}}
+        v-list-item-action(v-if="item.delegate && item.delegate !== 'ikke satt'")
+          v-chip.pa-4(dark color="grey") {{item.delegate}}
         v-list-item-action
           v-list-item-title.text-subtitle-2(v-text="dates")
-          //-v-list-item-title.text-subtitle-2(v-text="$moment(item.created).format(bp.smAndUp ? 'MMMM YY' : 'MMM YY')")
-        v-list-item-action(v-if="item.delegate && item.delegate !== 'ikke satt'")
-          v-chip.pa-4(dark color="secondary") {{item.delegate}}
     
     v-expansion-panel-content(:key="item.description")
       v-list-item
@@ -34,9 +33,10 @@ v-expansion-panels(popout hover )
       v-list-item
         v-list-item-content(v-if="item.category")
           v-list-item-title.text-button {{ item.category}}
-        //-(v-show="!item.isCompleted")
+        v-list-item-content(v-if="item.tag")
+          v-list-item-title.text-button {{ item.tag}}
         v-list-item-action
-          v-btn(color="primary" @click="$emit('update:edit', item.title)") Rediger
+          v-btn(color="primary" outlined  @click="$emit('update:edit', item.title)") Rediger
             v-icon(color="success") mdi-pencil
         v-list-item-action
           DeleteModal(:item="item")

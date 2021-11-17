@@ -4,58 +4,58 @@ v-container.my-8
 	v-row(justify="center")
 		v-col(cols="12" sm="11" md="10" lg="9")
 			PeriodHeader(v-on:update:showToggle="toggle($event)" :title="titleZero" :inc="0" :description="getGroupDescription( 0 )")
-			transition(name="fade")
-				Period(v-show="shows[0].show" :dates="dates(1)" :todos="getGroup(1)" v-on:update:edit="editById($event)" :iconSize="iconSize")
+			transition(name="list-complete")
+				Period(class="list-complete-item" :key="0" v-show="shows[0].show" :dates="dates(1)" :todos="getGroup(1)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 			v-spacer.pb-4
 			
 			PeriodHeader(v-on:update:showToggle="toggle($event)" :title="titleOne" :inc="1" :description="getGroupDescription( 1 )")
-			transition(name="fade")
-				Period(v-show="shows[1].show" :dates="dates(2)" :todos="getGroup( 2)" v-on:update:edit="editById($event)" :iconSize="iconSize")
+			transition(name="list-complete")
+				Period(class="list-complete-item" :key="1" v-show="shows[1].show" :dates="dates(2)" :todos="getGroup( 2)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 			v-spacer.pb-4
 			
 			PeriodHeader(v-on:update:showToggle="toggle($event)" :title="titleTwo" :inc="2" :description="getGroupDescription( 2 )")
-			transition(name="fade")
-				Period(v-show="shows[2].show" :dates="dates(3)" :todos="getGroup( 3)" v-on:update:edit="editById($event)" :iconSize="iconSize")
+			transition(name="list-complete")
+				Period(class="list-complete-item" :key="2" v-show="shows[2].show" :dates="dates(3)" :todos="getGroup( 3)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 			v-spacer.pb-4
 			
 			PeriodHeader(v-on:update:showToggle="toggle($event)" :title="titleThree" :inc="3" :description="getGroupDescription( 3 )")
-			transition(name="fade")
-				Period(v-show="shows[3].show" :dates="dates(4)" :todos="getGroup( 4)" v-on:update:edit="editById($event)" :iconSize="iconSize")
-				v-spacer.pb-4
+			transition(name="list-complete")
+				Period(class="list-complete-item" :key="3" v-show="shows[3].show" :dates="dates(4)" :todos="getGroup( 4)" v-on:update:edit="editById($event)" :iconSize="iconSize")
+			v-spacer.pb-4
 			
 			PeriodHeader(v-on:update:showToggle="toggle($event)" :title="titleFour" :inc="4" :description="getGroupDescription( 4 )")
-			transition(name="fade")
-				Period(v-show="shows[4].show" :dates="dates(5)" :todos="getGroup( 5)" v-on:update:edit="editById($event)" :iconSize="iconSize")
+			transition(name="list-complete")
+				Period(class="list-complete-item" :key="4" v-show="shows[4].show" :dates="dates(5)" :todos="getGroup( 5)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 			v-spacer.pb-4
 			
 			PeriodHeader(v-on:update:showToggle="toggle($event)" :title="titleFive" :inc="5" :description="getGroupDescription( 5 )")
-			transition(name="fade")
-				Period(v-show="shows[5].show" :dates="dates(6)" :todos="getGroup( 6)" v-on:update:edit="editById($event)" :iconSize="iconSize")
+			transition(name="list-complete")
+				Period(class="list-complete-item" :key="5" v-show="shows[5].show" :dates="dates(6)" :todos="getGroup( 6)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 			v-spacer.pb-4
 			
 			PeriodHeader(v-on:update:showToggle="toggle($event)" :title="titleSix" inc="6" :description="getGroupDescription(6)")
-			transition(name="fade")
-				Period(v-show="shows[6].show"   :todos="getGroup(7)" v-on:update:edit="editById($event)" :iconSize="iconSize")
+			transition(name="list-complete")
+				Period(class="list-complete-item" :key="6" v-show="shows[6].show"   :todos="getGroup(7)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 			v-spacer.pb-4
 
 			PeriodHeader(v-on:update:showToggle="toggle($event)" :title="titleSeven" inc="7" :description="getGroupDescription(7)")
-			transition(name="fade")
-				Period(v-show="shows[7].show"   :todos="getGroup(8)" v-on:update:edit="editById($event)" :iconSize="iconSize")
+			transition(name="list-complete")
+				Period(class="list-complete-item" :key="7" v-show="shows[7].show"   :todos="getGroup(8)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 			v-spacer.pb-4
 
 			PeriodHeader(v-on:update:showToggle="toggle($event)" inc="8" :title="titleEight" :description="getGroupDescription(8)")
-			transition(name="fade")
-				Period(v-show="shows[8].show" :todos="getGroup(9)" v-on:update:edit="editById($event)" :iconSize="iconSize")
+			transition(name="list-complete")
+				Period(class="list-complete-item" :key="8" v-show="shows[8].show" :todos="getGroup(9)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 			v-spacer.pb-4
 
 			PeriodHeader(v-on:update:showToggle="toggle($event)" inc="9" :title="titleNine"  :description="getGroupDescription(9)")
-			transition(name="fade")
-				Period(v-show="shows[9].show" :todos="getGroup(10)" v-on:update:edit="editById($event)" :iconSize="iconSize")
+			transition(name="list-complete")
+				Period(class="list-complete-item" :key="9" v-show="shows[9].show" :todos="getGroup(10)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 			v-spacer.pb-4
 
 			PeriodHeader(v-on:update:showToggle="toggle($event)" inc="10" :title="titleTen"  :description="getGroupDescription(10)")
-			transition(name="fade")
-				Period(v-show="shows[10].show" :todos="getGroup(11)" v-on:update:edit="editById($event)" :iconSize="iconSize")
+			transition(name="list-complete")
+				Period(class="list-complete-item" :key="10" v-show="shows[10].show" :todos="getGroup(11)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 			v-spacer.pb-4
 				 
 </template>
@@ -243,3 +243,16 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.list-complete-item {
+  transition: all 0.4s;
+}
+.list-complete-enter,
+.list-complete-leave-to {
+  opacity: 0;
+  transform: translateY(100px);
+}
+.list-complete-leave-active {
+  position: absolute;
+}
+</style>

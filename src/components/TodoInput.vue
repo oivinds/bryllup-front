@@ -33,7 +33,7 @@
             
         //- categories
         v-col(cols="6")
-          v-select(:items="categories" :value="todo.category" @change="categoryChange" label="velg periode for å utføre oppgaven")
+          v-select(:items="categories" :value="todo.category" @change="categoryChange" label="velg kategori")
         //- group
         v-col(cols="6")
           v-select(:items="group" :value="todo.group" @change="groupChange" label="velg periode for å utføre oppgaven")
@@ -43,7 +43,7 @@
         //- COMPLETED
         //- TAG
         v-col(cols="6")
-          v-select(:items="tags" label="sett viktighet")
+          v-select(:items="tags" @change="tagChange" label="sett viktighet")
         //- COMPLETED
         //- v-col(cols="6")
         //-   v-checkbox(v-model="todo.isCompleted" :label="todo.isCompleted ? 'fullført!' : 'Uferdig'")
@@ -75,6 +75,9 @@ export default {
     ...mapActions(["newAction", "editAction"]),
     groupChange(e) {
       this.todo.group = e;
+    },
+    tagChange(e) {
+      this.todo.tag = e;
     },
     categoryChange(e) {
       this.todo.category = e;

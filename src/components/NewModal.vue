@@ -25,7 +25,7 @@ export default {
         title: "",
         content: "",
         group: "",
-        type: "",
+        tag: "",
         comment: "",
         isCompleted: false,
         readonly: false,
@@ -40,7 +40,7 @@ export default {
         this.todo.title = "";
         this.todo.content = "";
         this.todo.group = "";
-        this.todo.type = "";
+        this.todo.tag = "";
         this.todo.category = "";
         this.todo.comment = "";
         this.todo.isCompleted = false;
