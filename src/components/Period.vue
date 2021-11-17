@@ -25,7 +25,7 @@ v-expansion-panels(popout hover )
       v-list-item
         v-list-item-content
           .title {{ item.content}}
-      v-divider.pt-4(v-if="item.comment !== ''" )
+      v-divider.pt-8(v-if="item.comment !== ''" )
       v-list-item(v-if="item.comment !== ''" )
         v-list-item-content
           v-list-item-title.text-button Mine notater

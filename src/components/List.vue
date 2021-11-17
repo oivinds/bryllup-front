@@ -250,7 +250,7 @@ export default {
 .list-complete-enter,
 .list-complete-leave-to {
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateY(-100px);
 }
 .list-complete-leave-active {
   position: absolute;

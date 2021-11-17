@@ -14,6 +14,7 @@
           //- CONTENT
           v-col(v-if="!todo.readonly")
             v-textarea(
+              rows="3"
               :readonly="todo.readonly"
               v-model="todo.content"
               :label="!todo.readonly ? 'innhold' : '' " )
@@ -23,7 +24,7 @@
       v-row
         v-col(cols="12")
           v-textarea(
-            rows="3" 
+            rows="2" 
             placeholder="skriv her"
             persistent-placeholder
             v-model="todo.comment"
