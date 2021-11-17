@@ -2,13 +2,13 @@
 
 v-expansion-panels(popout hover )
   
-  v-expansion-panel(v-for="(item, i) in todos" :key="item.title" :class="item.isCompleted ? 'grey lighten-1' : '' ")
+  v-expansion-panel(v-for="(item, i) in todos" :key="item.title" :class="item.isCompleted ? 'grey lighten-2' : 'white' ")
     
-    v-expansion-panel-header.px-1.px-sm-2.px-md-4(color="white" :key="item.title")
+    v-expansion-panel-header.px-1.px-sm-2.px-md-4(:key="item.title")
       v-list-item.overflow-hidden 
         v-list-item-action
           v-btn.elevation-1(@click.stop="isCompletedToggleAction(item)" fab 
-          :color="item.isCompleted ? 'primary' : 'grey lighten-1'"
+          :color="item.isCompleted ? 'green' : 'grey lighten-1'"
           v-bind="iconSize"  
           )
             v-icon(:color="item.isCompleted ? 'white' : 'grey lighten-4'") mdi-check
@@ -29,15 +29,14 @@ v-expansion-panels(popout hover )
       v-divider.pt-4(v-if="item.comment !== ''" )
       v-list-item(v-if="item.comment !== ''" )
         v-list-item-content
-          v-list-item-title.title Mine notater
+          v-list-item-title.text-button Mine notater
           v-textarea.body-1(v-text="item.comment")
       v-list-item
         v-list-item-content(v-if="item.category")
           v-list-item-title.text-button {{ item.category.name}}
-      v-list-item
         //-(v-show="!item.isCompleted")
         v-list-item-action
-          v-btn(color="primary" outlined dark @click="$emit('update:edit', item.title)") Rediger
+          v-btn(color="primary" @click="$emit('update:edit', item.title)") Rediger
             v-icon(color="success") mdi-pencil
         v-list-item-action
           DeleteModal(:item="item")

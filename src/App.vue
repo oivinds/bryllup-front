@@ -1,7 +1,7 @@
 <template lang="pug">
 v-app#app
 	v-app
-		v-app-bar.elevation-4(app)
+		v-app-bar.elevation-4(app hide-on-scroll)
 			.title.text-md-h6.text-lg-h5.px-12 Bryllupsplanleggeren
 			v-tabs.px-4( hide-slider)
 				v-tab(to='/' color="primary" )
@@ -49,7 +49,7 @@ export default {
 </script>
 <style lang="scss">
 #app {
-  background-color: var(--v-background-lighten2);
+  background-color: var(--v-background-darken1);
 }
 
 .fade-enter-active,

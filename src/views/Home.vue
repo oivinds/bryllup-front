@@ -31,19 +31,21 @@ v-container.mb-12
 					v-card-actions
 						v-text-field.shrink( placeholder="legg til person" label="ansvarlig" v-model="delegate")
 						v-btn.mx-auto(@click="setDel(delegate)" color="primary" ) legg til
-		v-col
-			v-card-actions.justify-center
-				transition-group(name="list-complete" )
-					v-chip.ma-2.pa-3.justify-center(v-if="owner" outlined key="0" class="list-complete-item"  
-					dark color="tertiary darken-2" label) {{ owner}}
-					v-chip.ma-2.pa-3.justify-center(v-if="partner" outlined key="1" class="list-complete-item"  
-					dark color="tertiary darken-2" label) {{ partner}}
-					v-chip.ma-2.pa-3.justify-center(v-for="item in delegates" :key="item" @click:close="removeDelegate(item)" 
-					close 
-					dark color="tertiary" label
-					class="list-complete-item" 
-					) {{ item}}
-				
+		v-col(cols="12" md="4")
+			v-card( rounded class="rounded-xl" v-if="owner || partner || delegates.length")
+				v-card-title.title Personer
+				v-card-actions.justify-center
+					transition-group(name="list-complete" )
+						v-chip.ma-2.pa-3.justify-center(v-if="owner" key="0" class="list-complete-item"  
+						dark color="deep-orange" label) {{ owner}}
+						v-chip.ma-2.pa-3.justify-center(v-if="partner"  key="1" class="list-complete-item"  
+						dark color="blue" label) {{ partner}}
+						v-chip.ma-2.pa-3.justify-center(v-for="item in delegates" :key="item" @click:close="removeDelegate(item)" 
+						close 
+						dark color="tertiary" label
+						class="list-complete-item" 
+						) {{ item}}
+					
 </template>
 
 <script>
