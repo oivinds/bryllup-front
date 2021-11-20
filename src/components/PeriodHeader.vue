@@ -1,8 +1,7 @@
 <template lang="pug">
-	v-card.elevation-0.mb-8( dark rounded :color="cl(inc)")
+	v-card.elevation-3(dark rounded :color="cl(inc)")
 		v-card-title.text-button.justify-center {{ title }}
-			v-btn.ml-4(x-small fab color="white" @click="toggle()" )
-				v-icon(dense color="primary" ) {{ showGroup ? 'mdi-eye' : 'mdi-eye-off' }} 
+			v-icon.ml-5(dark ) {{ $parent.isActive ? 'mdi-eye-off' : 'mdi-eye' }} 
 		v-card-text.px-md-8.title {{ description }}
 </template>
 <script>

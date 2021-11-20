@@ -3,61 +3,13 @@ v-container.my-8
 	EditModal(:item="item")
 	v-row(justify="center")
 		v-col(cols="12" sm="11" md="10" lg="9")
-			PeriodHeader(v-on:update:showToggle="toggle($event)" :title="titleZero" :inc="0" :description="getGroupDescription( 0 )")
-			transition(name="list-complete")
-				Period(class="list-complete-item" :key="0" v-show="shows[0].show" :dates="dates(1)" :todos="getGroup(1)" v-on:update:edit="editById($event)" :iconSize="iconSize")
-			v-spacer.pb-4
-			
-			PeriodHeader(v-on:update:showToggle="toggle($event)" :title="titleOne" :inc="1" :description="getGroupDescription( 1 )")
-			transition(name="list-complete")
-				Period(class="list-complete-item" :key="1" v-show="shows[1].show" :dates="dates(2)" :todos="getGroup( 2)" v-on:update:edit="editById($event)" :iconSize="iconSize")
-			v-spacer.pb-4
-			
-			PeriodHeader(v-on:update:showToggle="toggle($event)" :title="titleTwo" :inc="2" :description="getGroupDescription( 2 )")
-			transition(name="list-complete")
-				Period(class="list-complete-item" :key="2" v-show="shows[2].show" :dates="dates(3)" :todos="getGroup( 3)" v-on:update:edit="editById($event)" :iconSize="iconSize")
-			v-spacer.pb-4
-			
-			PeriodHeader(v-on:update:showToggle="toggle($event)" :title="titleThree" :inc="3" :description="getGroupDescription( 3 )")
-			transition(name="list-complete")
-				Period(class="list-complete-item" :key="3" v-show="shows[3].show" :dates="dates(4)" :todos="getGroup( 4)" v-on:update:edit="editById($event)" :iconSize="iconSize")
-			v-spacer.pb-4
-			
-			PeriodHeader(v-on:update:showToggle="toggle($event)" :title="titleFour" :inc="4" :description="getGroupDescription( 4 )")
-			transition(name="list-complete")
-				Period(class="list-complete-item" :key="4" v-show="shows[4].show" :dates="dates(5)" :todos="getGroup( 5)" v-on:update:edit="editById($event)" :iconSize="iconSize")
-			v-spacer.pb-4
-			
-			PeriodHeader(v-on:update:showToggle="toggle($event)" :title="titleFive" :inc="5" :description="getGroupDescription( 5 )")
-			transition(name="list-complete")
-				Period(class="list-complete-item" :key="5" v-show="shows[5].show" :dates="dates(6)" :todos="getGroup( 6)" v-on:update:edit="editById($event)" :iconSize="iconSize")
-			v-spacer.pb-4
-			
-			PeriodHeader(v-on:update:showToggle="toggle($event)" :title="titleSix" inc="6" :description="getGroupDescription(6)")
-			transition(name="list-complete")
-				Period(class="list-complete-item" :key="6" v-show="shows[6].show"   :todos="getGroup(7)" v-on:update:edit="editById($event)" :iconSize="iconSize")
-			v-spacer.pb-4
-
-			PeriodHeader(v-on:update:showToggle="toggle($event)" :title="titleSeven" inc="7" :description="getGroupDescription(7)")
-			transition(name="list-complete")
-				Period(class="list-complete-item" :key="7" v-show="shows[7].show"   :todos="getGroup(8)" v-on:update:edit="editById($event)" :iconSize="iconSize")
-			v-spacer.pb-4
-
-			PeriodHeader(v-on:update:showToggle="toggle($event)" inc="8" :title="titleEight" :description="getGroupDescription(8)")
-			transition(name="list-complete")
-				Period(class="list-complete-item" :key="8" v-show="shows[8].show" :todos="getGroup(9)" v-on:update:edit="editById($event)" :iconSize="iconSize")
-			v-spacer.pb-4
-
-			PeriodHeader(v-on:update:showToggle="toggle($event)" inc="9" :title="titleNine"  :description="getGroupDescription(9)")
-			transition(name="list-complete")
-				Period(class="list-complete-item" :key="9" v-show="shows[9].show" :todos="getGroup(10)" v-on:update:edit="editById($event)" :iconSize="iconSize")
-			v-spacer.pb-4
-
-			PeriodHeader(v-on:update:showToggle="toggle($event)" inc="10" :title="titleTen"  :description="getGroupDescription(10)")
-			transition(name="list-complete")
-				Period(class="list-complete-item" :key="10" v-show="shows[10].show" :todos="getGroup(11)" v-on:update:edit="editById($event)" :iconSize="iconSize")
-			v-spacer.pb-4
-				 
+			v-expansion-panels.pb-16(flat accordion)
+				v-expansion-panel(:key="index" v-for="(group, index) in 11" )
+					v-expansion-panel-header.px-0.pt-0(hide-actions color="background darken-1" v-bind="$attrs")
+						PeriodHeader( :title="titleZero(index)" :inc="index" :description="getGroupDescription(index)")
+					v-expansion-panel-content(color="background darken-1")
+						Period(class="group-expand-item" :key="index"  :dates="dates(index+1)" :todos="getGroup(index+1)" v-on:update:edit="editById($event)" :iconSize="iconSize")
+			 
 </template>
 
 <script>
@@ -70,29 +22,35 @@ import { mapGetters, mapMutations } from "vuex";
 export default {
   data() {
     return {
+      list: 1,
       item: null,
       bp: this.$vuetify.breakpoint,
       titles: [],
-      shows: [
-        { show: true },
-        { show: true },
-        { show: true },
-        { show: true },
-        { show: true },
-        { show: true },
-        { show: true },
-        { show: true },
-        { show: true },
-        { show: true },
-        { show: true },
-      ],
     };
   },
   components: { Period, PeriodHeader, EditModal },
+
   methods: {
-    toggle(no) {
-      this.shows[no].show = !this.shows[no].show;
+    titleZero(i) {
+      if (i > 5) {
+        switch (i) {
+          case 6:
+            return "En uke før";
+          case 7:
+            return "En dag før";
+          case 8:
+            return "Bryllupsdagen";
+          case 9:
+            return "I etterkant av bryllupet 1-3 mnd";
+          case 10:
+            return "Innen 6 måneder etter bryllupet";
+        }
+      }
+      const duration = this.getDuration - (i * this.getDuration) / 6;
+      /* const title = this.formatter(duration); */
+      return this.$moment.duration(duration).humanize();
     },
+
     ...mapMutations(["setEditBool", "setGroupTitles"]),
 
     dates(index) {
@@ -112,7 +70,7 @@ export default {
       const desc = [
         "Research-fasen. Hent inspirasjon og finn ut av deres stil, ønsker og behov for den store dagen.",
         "Book det viktigste. Og etter det: Ha det gøy med planleggingsfasens morsomste research!",
-        "...",
+        "Nyt!! Kanskje en av de herligste periodene er nettopp nå: Gaveliste, brudekjoleprøving, gifteringer, forlovelsesfotografering mm!",
         "Hold hodet kaldt! Dette er månedene hvor dere skal fikse alt det praktiske. Book inn det som gjenstår.",
         "Kom i feststemning! Det er på tiden å legge vekt på de gøyale tingene ved bryllupet, festen og reisen.",
         "Siste innkjøp. Bekreft til leverandører og senk skuldrene!",
@@ -130,7 +88,7 @@ export default {
       const years = d.years();
       d = d.subtract({ years });
 
-      const months = d.asMonths();
+      const months = d.months();
       d = d.subtract({ months });
 
       const weeks = d.weeks();
@@ -153,14 +111,14 @@ export default {
       return yearText + monthText + weekText + dayText + " før";
     },
   },
-  watch: {
+  /* watch: {
     "$store.getters.getDuration"() {
       this.setGroupTitles(this.titleArray);
     },
-  },
-  mounted() {
+  }, */
+  /* mounted() {
     this.setGroupTitles(this.titleArray);
-  },
+  }, */
   computed: {
     titleArray() {
       return [
@@ -177,61 +135,6 @@ export default {
         this.titleTen,
       ];
     },
-    titleZero() {
-      const duration = this.getDuration - (0 * this.getDuration) / 6;
-      const title = this.formatter(duration);
-      return title;
-    },
-    titleOne() {
-      const duration = this.getDuration - (1 * this.getDuration) / 6;
-      const title = this.formatter(duration);
-      return title;
-    },
-    titleTwo() {
-      const duration = this.getDuration - (2 * this.getDuration) / 6;
-      const title = this.formatter(duration);
-      return title;
-    },
-    titleThree() {
-      const duration = this.getDuration - (3 * this.getDuration) / 6;
-      const title = this.formatter(duration);
-      return title;
-    },
-    titleFour() {
-      const duration = this.getDuration - (4 * this.getDuration) / 6;
-      const title = this.formatter(duration);
-      return title;
-    },
-    titleFive() {
-      const duration = this.getDuration - (5 * this.getDuration) / 6;
-      const title = this.formatter(duration);
-      return title;
-    },
-    titleSix() {
-      /* const duration = this.getDuration - (5 * this.getDuration) / 6;
-			const title = this.formatter(duration); */
-      return "En uke før";
-    },
-    titleSeven() {
-      /* const duration = this.getDuration - (5 * this.getDuration) / 6;
-			const title = this.formatter(duration); */
-      return "En dag før";
-    },
-    titleEight() {
-      /* const duration = this.getDuration - (5 * this.getDuration) / 6;
-			const title = this.formatter(duration); */
-      return "Bryllupsdagen";
-    },
-    titleNine() {
-      /* const duration = this.getDuration - (5 * this.getDuration) / 6;
-			const title = this.formatter(duration); */
-      return "I etterkant av bryllupet 1-3 mnd";
-    },
-    titleTen() {
-      /* const duration = this.getDuration - (5 * this.getDuration) / 6;
-			const title = this.formatter(duration); */
-      return "Innen 6 måneder etter bryllupet";
-    },
 
     iconSize() {
       return {
@@ -243,16 +146,9 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-.list-complete-item {
-  transition: all 0.4s;
-}
-.list-complete-enter,
-.list-complete-leave-to {
-  opacity: 0;
-  transform: translateY(-100px);
-}
-.list-complete-leave-active {
-  position: absolute;
+<style lang="scss" scoped>
+.expand-transition-enter-active,
+.expand-transition-leave-active {
+  transition: 1s ease-in-out !important;
 }
 </style>

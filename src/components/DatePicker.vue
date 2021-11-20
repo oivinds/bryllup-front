@@ -1,7 +1,7 @@
 <template lang="pug">
     v-dialog(ref='dialog', v-model='modal', :return-value.sync='date', persistent='', width='290px')
       template(v-slot:activator='{ on, attrs }')
-        v-text-field.title(  style="max-width:190px;" v-model='computedDateFormatted',  label='velg bryllupsdato', append-icon='mdi-calendar', :readonly='true', v-bind='attrs', v-on='on')
+        v-text-field.title(style="max-width:190px;" v-model='computedDateFormatted',  label='velg bryllupsdato', append-icon='mdi-calendar', :readonly='true', v-bind='attrs', v-on='on')
       v-date-picker( color="primary" v-model='date' locale="nb-no" :min="min" :max="max")
         v-spacer
         v-btn(text='', color='primary', @click='modal = false')
