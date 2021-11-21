@@ -3,10 +3,10 @@ v-container.my-8
 	EditModal(:item="item")
 	v-row(justify="center")
 		v-col(cols="12" sm="11" md="10" lg="9")
-			v-expansion-panels.pb-16(flat accordion)
+			v-expansion-panels.pb-16(flat accordion  )
 				v-expansion-panel(:key="index" v-for="(group, index) in 11" )
-					v-expansion-panel-header.px-0.pt-0(hide-actions color="background darken-1" v-bind="$attrs")
-						PeriodHeader( :title="titleZero(index)" :inc="index" :description="getGroupDescription(index)")
+					v-expansion-panel-header.px-0.pt-0(hide-actions color="background darken-1")
+						PeriodHeader( :title="createTitles(index)" :inc="index" :description="getGroupDescription(index)")
 					v-expansion-panel-content(color="background darken-1")
 						Period(class="group-expand-item" :key="index"  :dates="dates(index+1)" :todos="getGroup(index+1)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 			 
@@ -29,7 +29,7 @@ export default {
   components: { Period, PeriodHeader, EditModal },
 
   methods: {
-    titleZero(i) {
+    createTitles(i) {
       let title;
       title = i;
       if (i > 5) {
@@ -85,7 +85,7 @@ export default {
         "Siste innkjøp. Bekreft til leverandører og senk skuldrene!",
         "Det kribler! Site touch og pakking til både bryllupshelg, selve dagen og bryllupsreisen!",
         "Pust med magen, nyt en manikyr og pedikyr - smil til hverandre og gå tidlig i seng.",
-        "...",
+        " ",
         "Hvetebrødsdager og bryllupsreise <3",
         "Rydd opp, si takk og se fremover",
       ];
@@ -93,31 +93,42 @@ export default {
     },
     formatter(duration) {
       let d = this.$moment.duration(duration);
+      d.add({ day: 2 });
+
+      console.log("years");
 
       const years = d.years();
-      d = d.subtract({ years });
+      console.log(years);
+      d.subtract({ years });
+
+      console.log("asMonths");
 
       const months = d.months();
-      d = d.subtract({ months });
+      /* const months = d.months(); */
+      d.subtract({ months: Math.floor(months) });
+      console.log(months);
 
+      console.log("weeks");
       const weeks = d.weeks();
-      d = d.subtract({ weeks });
+      /* d = d.subtract({ weeks }); */
+      console.log(weeks);
 
+      /* 
       const days = d.days();
-      d = d.subtract({ days });
+      const asDays = d.asDays();
+      d = d.subtract({ days }); */
 
       const ukePlur = weeks === 1 ? "uke" : "uker";
-      const dagPlur = days === 1 ? "dag" : "dager";
+      /* const dagPlur = days === 1 ? "dag" : "dager" */ let yearText =
+        years !== 0 ? `${years} år ` : "";
 
-      let yearText = years !== 0 ? `${Math.round(years)} år ` : "";
+      let monthText = months !== 0 ? `${months} mnd ` : "";
 
-      let monthText = months !== 0 ? `${Math.round(months)} mnd ` : "";
+      let weekText = weeks !== 0 ? `${weeks} ${ukePlur} ` : "";
 
-      let weekText = weeks !== 0 ? `${Math.round(weeks)} ${ukePlur} ` : "";
+      /* const dayText = asDays !== 0 ? `${days} ${dagPlur} ` : ""; */
 
-      const dayText = days !== 0 ? `${Math.round(days)} ${dagPlur} ` : "";
-
-      return yearText + monthText + weekText + dayText + " før";
+      return yearText + monthText + weekText + " før";
     },
   },
   watch: {
