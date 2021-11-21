@@ -49,7 +49,7 @@ export default {
 </script>
 <style lang="scss">
 #app {
-  background-color: var(--v-background-darken1);
+  background-color: var(--v-background-base);
 }
 
 .fade-enter-active,

@@ -5,9 +5,9 @@ v-container.my-8
 		v-col(cols="12" sm="11" md="10" lg="9")
 			v-expansion-panels.pb-16(flat accordion  )
 				v-expansion-panel(:key="index" v-for="(group, index) in 11" )
-					v-expansion-panel-header.px-0.pt-0(hide-actions color="background darken-1")
+					v-expansion-panel-header.px-0.pt-0(hide-actions color="background")
 						PeriodHeader( :title="createTitles(index)" :inc="index" :description="getGroupDescription(index)")
-					v-expansion-panel-content(color="background darken-1")
+					v-expansion-panel-content(color="background")
 						Period(class="group-expand-item" :key="index"  :dates="dates(index+1)" :todos="getGroup(index+1)" v-on:update:edit="editById($event)" :iconSize="iconSize")
 			 
 </template>
