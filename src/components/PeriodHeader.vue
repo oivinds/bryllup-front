@@ -13,18 +13,12 @@ export default {
   },
   props: ["title", "description", "inc"],
   methods: {
-    toggle() {
-      this.showGroup = !this.showGroup;
-      this.$emit("update:showToggle", this.inc);
-    },
     cl(i) {
       const colors = [
-        "pink",
         "purple",
         "deep-purple",
         "indigo",
         "blue",
-        "light-blue",
         "cyan",
         "teal",
         "green",

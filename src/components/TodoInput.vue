@@ -101,7 +101,7 @@ export default {
   },
   computed: {
     group() {
-      return this.groupTitles.map((item, index) => ({
+      return this.getGroupTitles.map((item, index) => ({
         text: item,
         value: index + 1,
       }));
@@ -116,7 +116,7 @@ export default {
     },
     //
     ...mapState(["editBool", "newBool", "groupTitles", "categories"]),
-    ...mapGetters(["getDelegates"]),
+    ...mapGetters(["getDelegates", "getGroupTitles"]),
 
     /* commentErrors: {
       get: function () {

@@ -17,41 +17,50 @@ import Period from "../components/Period";
 import PeriodHeader from "../components/PeriodHeader";
 import EditModal from "../components/EditModal";
 
-import { mapGetters, mapMutations } from "vuex";
-
+import { mapActions, mapGetters, mapMutations } from "vuex";
+let titleArray = [];
 export default {
   data() {
     return {
-      list: 1,
       item: null,
       bp: this.$vuetify.breakpoint,
-      titles: [],
     };
   },
   components: { Period, PeriodHeader, EditModal },
 
   methods: {
     titleZero(i) {
+      let title;
+      title = i;
       if (i > 5) {
         switch (i) {
           case 6:
-            return "En uke før";
+            title = "En uke før";
+            break;
           case 7:
-            return "En dag før";
+            title = "En dag før";
+            break;
           case 8:
-            return "Bryllupsdagen";
+            title = "Bryllupsdagen";
+            break;
           case 9:
-            return "I etterkant av bryllupet 1-3 mnd";
+            title = "I etterkant av bryllupet 1-3 mnd";
+            break;
           case 10:
-            return "Innen 6 måneder etter bryllupet";
+            title = "Innen 6 måneder etter bryllupet";
+            break;
         }
+      } else {
+        const duration = this.getDuration - (i * this.getDuration) / 6;
+        title = this.formatter(duration);
       }
-      const duration = this.getDuration - (i * this.getDuration) / 6;
-      /* const title = this.formatter(duration); */
-      return this.$moment.duration(duration).humanize();
+      titleArray.push(title);
+
+      return title;
     },
 
-    ...mapMutations(["setEditBool", "setGroupTitles"]),
+    ...mapMutations(["setEditBool"]),
+    ...mapActions(["setGroupTitles"]),
 
     dates(index) {
       const duration = (index * this.getDuration) / 6;
@@ -111,31 +120,20 @@ export default {
       return yearText + monthText + weekText + dayText + " før";
     },
   },
-  /* watch: {
-    "$store.getters.getDuration"() {
-      this.setGroupTitles(this.titleArray);
+  watch: {
+    getDuration() {
+      titleArray = [];
+      this.$nextTick(function () {
+        const titles = [...titleArray];
+        this.setGroupTitles(titles);
+      });
     },
-  }, */
-  /* mounted() {
-    this.setGroupTitles(this.titleArray);
-  }, */
+  },
+  mounted() {
+    const titles = [...titleArray];
+    this.setGroupTitles(titles);
+  },
   computed: {
-    titleArray() {
-      return [
-        this.titleZero,
-        this.titleOne,
-        this.titleTwo,
-        this.titleThree,
-        this.titleFour,
-        this.titleFive,
-        this.titleSix,
-        this.titleSeven,
-        this.titleEight,
-        this.titleNine,
-        this.titleTen,
-      ];
-    },
-
     iconSize() {
       return {
         "x-small": this.bp.xs,

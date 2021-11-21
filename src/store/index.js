@@ -42,7 +42,7 @@ export default new Vuex.Store({
   },
   mutations: {
     setGroupTitles(state, titles) {
-      state.groupTitles = [...titles];
+      state.groupTitles = titles;
     },
     setOwner(state, owner) {
       state.owner = owner;
@@ -93,6 +93,10 @@ export default new Vuex.Store({
     },
   },
   actions: {
+    setGroupTitles({ commit }, titles) {
+      commit("setGroupTitles", [])
+      commit("setGroupTitles", titles)
+    },
     setDuration({ commit }, date) {
       const now = moment();
       const then = moment(date);
@@ -134,6 +138,9 @@ export default new Vuex.Store({
     },
   },
   getters: {
+    getGroupTitles(state) {
+      return state.groupTitles;
+    },
     getDuration(state) {
       return state.duration;
     },
