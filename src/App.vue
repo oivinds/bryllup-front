@@ -1,16 +1,16 @@
 <template lang="pug">
 v-app#app
 	v-app
-		v-app-bar.elevation-4(app hide-on-scroll)
-			.title.text-md-h6.text-lg-h5.px-12 Bryllupsplanleggeren
-			v-tabs.px-4( hide-slider)
-				v-tab(to='/' color="primary" )
-					v-icon mdi-cog
-				v-tab(to='/todo' color="primary" )
-					v-icon mdi-calendar-check
-			transition(name="fadeSlide" appear mode="out-in")
-				div.pr-12(v-show="$route.path === '/todo'")
-					NewModal
+		v-app-bar.elevation-4(app hide-on-scroll dense )
+			v-app-bar-title.title.text-md-h6.text-lg-h5.px-12 Bryllupsplanleggeren
+			v-spacer
+			div
+				v-tabs.px-4( hide-slider)
+					v-tab(to='/' color="primary" )
+						v-icon mdi-cog
+					v-tab(to='/todo' color="primary" )
+						v-icon mdi-calendar-check
+				
 		v-main
 			transition(name="fade" appear mode="out-in")
 				router-view
@@ -24,26 +24,27 @@ v-app#app
 						v-card-actions.justify-center(:key="timeBeforeWedding") 
 							.body-1(v-if="timeBeforeWedding") {{ timeBeforeWedding }} til bryllupet
 							.body-1(v-else) foreslått tid 12 mnd!
-				v-col(align-self="center")
-					v-card-actions.justify-center 
-						DatePicker
+				
 
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
-import DatePicker from "@/components/DatePicker";
-import NewModal from "@/components/NewModal";
+import { mapState, mapGetters, mapActions } from "vuex";
 
 export default {
   name: "App",
-  components: { DatePicker, NewModal },
   data: () => ({
     //
   }),
   computed: {
-    ...mapState(["name", "editBool", "timeBeforeWedding"]),
+    ...mapState(["name", "editBool", "timeBeforeWedding", "weddingDate"]),
     ...mapGetters(["todosDone", "todos"]),
+  },
+  methods: {
+    ...mapActions(["setDuration"]),
+  },
+  mounted() {
+    this.setDuration(this.weddingDate);
   },
 };
 </script>

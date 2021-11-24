@@ -1,42 +1,42 @@
 <template lang="pug">
-div(class="wrapper")
+
   v-expansion-panels.pb-8(popout hover)
-    
     v-expansion-panel(v-for="(item, i) in todos" :key="item.title" :class="item.isCompleted ? 'grey lighten-2' : 'white' ")
-      
-      v-expansion-panel-header.px-1.px-sm-2.px-md-4(:key="item.title")
+      v-expansion-panel-header.px-1.px-sm-4(:key="item.title")
         v-list-item.overflow-hidden 
           v-list-item-action
             v-btn.elevation-1(@click.stop="isCompletedToggleAction(item)" fab 
             :color="item.isCompleted ? 'green' : 'grey lighten-1'"
-            v-bind="iconSize"  
-            )
+            v-bind="iconSize")
               v-icon(:color="item.isCompleted ? 'white' : 'grey lighten-4'") mdi-check
-          v-list-item-content
-            v-list-item-title.text-subtitle-1(width="500" v-text="item.title" )
-          v-list-item-content(v-if="item.emoji")
+          v-list-item-action(v-if="item.emoji")
             h2 {{ item.emoji}}
+          v-list-item-content
+            v-list-item-title.text-subtitle-1.justify-center {{ item.title }}
           v-list-item-action(v-if="item.delegate && item.delegate !== 'ikke satt'")
-            v-chip.pa-4(dark color="grey") {{item.delegate}}
+            v-chip.pa-4(dark color="grey") {{ item.delegate }}
+          
           v-list-item-action
             v-list-item-title.text-subtitle-2(v-text="dates")
       
-      v-expansion-panel-content(:key="item.description")
-        v-list-item
+      v-expansion-panel-content.pa-4(:key="item.description")
+        v-list-item(v-if="item.readonly")
           v-list-item-content
             .title {{ item.content}}
-        v-divider.pt-8(v-if="item.comment !== ''" )
+        v-divider.py-4(v-if="item.readonly")
         v-list-item(v-if="item.comment !== ''" )
-          v-list-item-content
-            v-list-item-title.text-button Mine notater
-            v-textarea.body-1(v-text="item.comment")
+          v-icon.pr-4 mdi-comment-text-outline
+          .body-1 {{item.comment}}
         v-list-item
-          v-list-item-content(v-if="item.category")
-            v-list-item-title.text-button {{ item.category}}
-          v-list-item-content(v-if="item.tag")
-            v-list-item-title.text-button {{ item.tag}}
-          v-list-item-action
-            v-btn(color="primary" outlined  @click="$emit('update:edit', item.title)") Rediger
+          v-list-item-content
+            v-list-item-title.text-button(v-if="!!item.tools") Verktøy:
+        v-list-item(v-if="item.tools")
+          v-list-item-content
+            v-btn.mx-auto(max-width="180"  :href="'//https://'+e" target="_blank" v-for="(e, i) in item.tools" :key="i") {{e}}
+        v-list-item
+          v-list-item-content
+          v-list-item-action.float-right
+            v-btn.mx-2(color="primary" @click="$emit('update:edit', item.title)") Rediger
               v-icon(color="success") mdi-pencil
           v-list-item-action
             DeleteModal(:item="item")
@@ -68,6 +68,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+$expansion-panel-header-padding: 100px 50px;
+
 .expand-transition-enter-active,
 .expand-transition-leave-active {
   transition-duration: 0.4s !important;

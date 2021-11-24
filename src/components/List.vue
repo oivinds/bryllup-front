@@ -1,20 +1,24 @@
 <template lang="pug">
 v-container.my-8
 	EditModal(:item="item")
+	//- p {{ $vuetify.breakpoint.name}}
 	v-row(justify="center")
-		v-col(cols="12" sm="11" md="10" lg="9")
-			v-expansion-panels.pb-16(flat accordion  )
-				v-expansion-panel(:key="index" v-for="(group, index) in 11" )
-					v-expansion-panel-header.px-0.pt-0(hide-actions color="background")
-						PeriodHeader( :title="createTitles(index)" :inc="index" :description="getGroupDescription(index)")
-					v-expansion-panel-content(color="background")
+		v-col(cols="12" sm="11" md="8" lg="7" xl="6")
+			v-expansion-panels(flat accordion)
+				v-expansion-panel.ma-2(:key="index" v-for="(group, index) in 11" )
+					v-expansion-panel-header.elevation-6(class="white--text" rounded :color="cl(index)")
+						v-row
+							v-col.pb-0(cols="12") 
+								v-card-title.text-button.justify-center {{ createTitles(index) }} 
+							v-col.pa-0(cols="12") 
+								v-card-text.pa-md-4.title {{ getGroupDescription(index) }}
+					v-expansion-panel-content.py-4(color="background")
 						Period(class="group-expand-item" :key="index"  :dates="dates(index+1)" :todos="getGroup(index+1)" v-on:update:edit="editById($event)" :iconSize="iconSize")
-			 
+
 </template>
 
 <script>
 import Period from "../components/Period";
-import PeriodHeader from "../components/PeriodHeader";
 import EditModal from "../components/EditModal";
 
 import { mapActions, mapGetters, mapMutations } from "vuex";
@@ -26,9 +30,27 @@ export default {
       bp: this.$vuetify.breakpoint,
     };
   },
-  components: { Period, PeriodHeader, EditModal },
+  components: { Period, EditModal },
 
   methods: {
+    cl(i) {
+      const colors = [
+        "purple darken-3",
+        "deep-purple darken-3",
+        "indigo darken-3",
+        "blue darken-3",
+        "cyan darken-3",
+        "teal darken-3",
+        "green darken-3",
+        "light-green darken-3",
+        "lime darken-3",
+        "amber darken-3",
+        "orange darken-3",
+      ];
+
+      colors.reverse();
+      return colors[i];
+    },
     createTitles(i) {
       let title;
       title = i;
@@ -55,7 +77,6 @@ export default {
         title = this.formatter(duration);
       }
       titleArray.push(title);
-
       return title;
     },
 
@@ -95,28 +116,20 @@ export default {
       let d = this.$moment.duration(duration);
       d.add({ day: 2 });
 
-      console.log("years");
-
       const years = d.years();
-      console.log(years);
       d.subtract({ years });
-
-      console.log("asMonths");
 
       const months = d.months();
       /* const months = d.months(); */
       d.subtract({ months: Math.floor(months) });
-      console.log(months);
 
-      console.log("weeks");
       const weeks = d.weeks();
       /* d = d.subtract({ weeks }); */
-      console.log(weeks);
 
       /* 
-      const days = d.days();
-      const asDays = d.asDays();
-      d = d.subtract({ days }); */
+			const days = d.days();
+			const asDays = d.asDays();
+			d = d.subtract({ days }); */
 
       const ukePlur = weeks === 1 ? "uke" : "uker";
       /* const dagPlur = days === 1 ? "dag" : "dager" */ let yearText =
@@ -158,6 +171,6 @@ export default {
 <style lang="scss" scoped>
 .expand-transition-enter-active,
 .expand-transition-leave-active {
-  transition: 1s ease-in-out !important;
+  transition: 1s ease-out !important;
 }
 </style>

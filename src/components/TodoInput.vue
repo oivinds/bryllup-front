@@ -1,6 +1,8 @@
 <template lang="pug">
-  v-card.pa-5(color="grey lighten-3" )
+
+    v-card.pa-8(color="grey lighten-3" )
       v-form(v-if="newBool || editBool")
+        //- TITLE
         v-row
           v-col(v-if="!todo.readonly")
             v-text-field(
@@ -12,49 +14,44 @@
             .headline {{ todo.title}}
         v-row
           //- CONTENT
-          v-col(v-if="!todo.readonly")
-            v-textarea(
-              rows="3"
-              :readonly="todo.readonly"
-              v-model="todo.content"
-              :label="!todo.readonly ? 'innhold' : '' " )
-          v-col(v-else)
+          v-col(v-if="todo.readonly")
             .title {{ todo.content}}
-      
-      v-row
-        v-col(cols="12")
-          v-textarea(
-            rows="2" 
-            placeholder="skriv her"
-            persistent-placeholder
-            v-model="todo.comment"
-            label="Mine notater"
-            multi-line)
-            //- v-if="commentEnabled || todo.comment !== '' "
-            
-        //- categories
-        v-col(cols="6")
-          v-select(:items="categories" :value="todo.category" @change="categoryChange" label="velg kategori")
-        //- group
-        v-col(cols="6")
-          v-select(:items="group" :value="todo.group" @change="groupChange" label="velg periode for å utføre oppgaven")
-        //- RESPONSABILITY
-        v-col(cols="6" v-if="getDelegates.length > 1")
-          v-select(:items="getDelegates" :value="todo.delegate" @change="delegateChange" label="velg ansvarlig")
-        //- COMPLETED
-        //- TAG
-        v-col(cols="6")
-          v-select(:items="tags" @change="tagChange" label="sett viktighet")
-        //- COMPLETED
-        //- v-col(cols="6")
-        //-   v-checkbox(v-model="todo.isCompleted" :label="todo.isCompleted ? 'fullført!' : 'Uferdig'")
-        //- SAVE
-        v-col(cols="12")
-          v-btn(
-            @click="submittodo"
-            block
-            large
-            class="primary --white-text") lagre oppgave
+        v-row
+          v-col(cols="12")
+            v-textarea(
+              rows="3" 
+              placeholder="skriv her"
+              persistent-placeholder
+              v-model="todo.comment"
+              label="Mine notater"
+              multi-line
+              append-outer-icon="mdi-message-text-outline"
+              )
+              //- v-if="commentEnabled || todo.comment !== '' "
+              
+          //- categories
+          //- v-col(cols="6")
+          //-   v-select(:items="categories" :value="todo.category" @change="categoryChange" label="velg kategori")
+          //- group
+          v-col(cols="6")
+            v-select(:items="group" :value="todo.group" @change="groupChange" label="velg periode for å utføre oppgaven")
+          //- RESPONSABILITY
+          v-col(cols="6" v-if="getDelegates.length > 1")
+            v-select(:items="getDelegates" :value="todo.delegate" @change="delegateChange" label="velg ansvarlig")
+          //- COMPLETED
+          //- TAG
+          v-col(cols="6")
+            v-select(:items="tags" @change="tagChange" label="sett viktighet")
+          //- COMPLETED
+          //- v-col(cols="6")
+          //-   v-checkbox(v-model="todo.isCompleted" :label="todo.isCompleted ? 'fullført!' : 'Uferdig'")
+          //- SAVE
+          v-col(cols="12")
+            v-btn(
+              @click="submittodo"
+              block
+              large
+              class="primary --white-text") lagre oppgave
 
 </template>
 

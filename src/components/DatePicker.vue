@@ -22,7 +22,6 @@ export default {
   },
   mounted() {
     this.date = this.weddingDate;
-    this.save(this.date);
   },
   methods: {
     save() {

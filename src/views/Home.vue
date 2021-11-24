@@ -1,16 +1,17 @@
 <template lang="pug">
-v-container.mb-12
-	v-row.py-4(justify="center")
+v-container.my-8
+	v-row.py-2(justify="center")
 		v-col(cols="12" sm="11" md="10" lg="9")
 			v-card.pa-8.justify-center(shaped class="rounded-xl")
 				v-card-title.justify-center.headline Velkommen til  bryllupsplanleggeren {{ owner }} {{ andText }}  {{  partner}}
 				v-card-text.body-1 
 					li Start med å skrive inn navnene på brudeparet
-					li legg til navn på personer som kan hjelpe deg, under ansvarlig 
 					li Sett bryllupsdatoen
 					li Utålmodig? hopp rett til 
-						router-link(to="/todo") oppgavelisten. 
-		v-col(cols="12"  sm="11" md="6" )
+						v-btn(to="/todo" color="primary") todo listen. 
+							v-icon mdi-ray-start-arrow 
+	v-row(justify="center")
+		v-col(cols="12"  md="6")
 			v-card.justify-center(  rounded class="rounded-xl")
 				v-col.px-8(cols="12" align-self="center")
 					v-card-title.title Hva er Brudeparets navn?
@@ -21,30 +22,35 @@ v-container.mb-12
 						v-text-field( placeholder="Skriv fornavn" label="brudgom / brud" v-model="partnerLocal")
 						v-card-actions
 							v-btn.mx-auto(@click="setPartnerLocal(partnerLocal)" color="primary" ) legg til
-				
-		v-col(cols="12" sm="11" md="3")
-			v-card.justify-center(  rounded class="rounded-xl")
+		v-col(cols="12" md="3" )
+			v-card.justify-center(  rounded class="rounded-xl" )
 				v-col.px-8(cols="12" align-self="center")
-					v-card-title.title Legg til ansvarlige
+					v-card-title.title Bryllupsdato
 					v-card-actions
-						v-text-field.shrink( placeholder="legg til person" label="ansvarlig" v-model="delegate")
-						v-btn.mx-auto(@click="setDel(delegate)" color="primary" ) legg til
+						DatePicker
+		//- v-col(cols="12" sm="11" md="3")
+		//- 	v-card.justify-center(  rounded class="rounded-xl")
+		//- 		v-col.px-8(cols="12" align-self="center")
+		//- 			v-card-title.title Legg til ansvarlige
+		//- 			v-card-actions
+		//- 				v-text-field.shrink( placeholder="legg til person" label="ansvarlig" v-model="delegate")
+		//- 				v-btn.mx-auto(@click="setDel(delegate)" color="primary" ) legg til
 		
-		v-col(cols="12" sm="11" md="10" lg="9")
-			v-card( rounded class="rounded-xl" v-if="owner || partner || delegates.length")
-				v-col.px-8(cols="12" align-self="center")
-					v-card-title.title Personer / ansvarlige
-					v-card-actions.justify-center
-						transition-group(name="list-complete" )
-							v-chip.ma-2.pa-3.justify-center(v-if="owner" key="0" class="list-complete-item"  
-							dark color="deep-orange" label) {{ owner}}
-							v-chip.ma-2.pa-3.justify-center(v-if="partner"  key="1" class="list-complete-item"  
-							dark color="blue" label) {{ partner}}
-							v-chip.ma-2.pa-3.justify-center(v-for="item in delegates" :key="item" @click:close="removeDelegate(item)" 
-							close 
-							dark color="tertiary" label
-							class="list-complete-item" 
-							) {{ item}}
+		//- v-col(cols="12" md="6")
+		//- 	v-card( rounded class="rounded-xl" v-if="owner || partner || delegates.length")
+		//- 		v-col.px-8(cols="12" align-self="center")
+		//- 			v-card-title.title Personer / ansvarlige
+		//- 			v-card-actions.justify-center
+		//- 				transition-group(name="list-complete" )
+		//- 					v-chip.ma-2.pa-3.justify-center(v-if="owner" key="0" class="list-complete-item"  
+		//- 					dark color="deep-orange" label) {{ owner}}
+		//- 					v-chip.ma-2.pa-3.justify-center(v-if="partner"  key="1" class="list-complete-item"  
+		//- 					dark color="blue" label) {{ partner}}
+		//- 					v-chip.ma-2.pa-3.justify-center(v-for="item in delegates" :key="item" @click:close="removeDelegate(item)" 
+		//- 					close 
+		//- 					dark color="tertiary" label
+		//- 					class="list-complete-item" 
+		//- 					) {{ item}}
 					
 </template>
 

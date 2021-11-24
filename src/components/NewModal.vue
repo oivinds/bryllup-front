@@ -7,7 +7,7 @@ div
   :md="bp.md" 
   :sm="bp.sm" 
   ) lag ny todo
-	v-dialog(v-model="dialog" :width="bp.mdAndUp  ? '50%' : '95%'" v-on:click:outside="setNewBool(false)")
+	v-dialog(v-model="dialog" :width="bp.mdAndUp  ? '40%' : '85%'" v-on:click:outside="setNewBool(false)")
 		TodoInput(v-if="newBool" :todo="todo")
 
 </template>

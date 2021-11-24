@@ -1,6 +1,6 @@
 <template lang="pug">
     v-row
-      v-btn(color="primary" outlined dark @click.stop="model = true") slett
+      v-btn(color="primary"  dark @click.stop="model = true") slett
         v-icon(color="warning") mdi-trash-can
       v-dialog(v-model='model', max-width='290')
         v-card

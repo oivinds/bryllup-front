@@ -8,7 +8,7 @@
     "emoji": "💰",
     "content": "Det aller viktigste og første! Skisser et budsjett ",
     "tools": [
-      "mal for budsjett",
+      "mal-for-budsjett",
       "drikke-kalkulator",
       "matkalkulator"
     ],
@@ -40,7 +40,7 @@
     "emoji": "🎉",
     "content": "Vil dere ha romantisk, boho- avslappet? Det er gøy å starte å få inspirasjon og kanskje bestemme seg for tema nå",
     "tools": [
-      "tema på Pinterest?"
+      "tema-paa-pinterest"
     ],
     "readonly": true,
     "isCompleted": false,

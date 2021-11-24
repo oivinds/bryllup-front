@@ -1,6 +1,6 @@
 <template lang="pug">
 		div
-			v-dialog(v-model="dialog" :width="bp.mdAndUp  ? '50%' : '95%'" v-on:click:outside="setEditBool(false)")
+			v-dialog(v-model="dialog" :width="bp.mdAndUp  ? '40%' : '85%'" v-on:click:outside="setEditBool(false)")
 				v-card
 					TodoInput(:todo="todo")
 </template>
