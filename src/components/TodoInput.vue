@@ -12,6 +12,8 @@
               required)
           v-col(v-else)
             .headline {{ todo.title}}
+
+						
         v-row
           //- CONTENT
           v-col(v-if="todo.readonly")

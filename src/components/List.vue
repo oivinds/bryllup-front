@@ -1,5 +1,5 @@
 <template lang="pug">
-v-container.my-8
+div
 	EditModal(:item="item")
 	//- p {{ $vuetify.breakpoint.name}}
 	v-row(justify="center")

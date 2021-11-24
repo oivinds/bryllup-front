@@ -1,12 +1,19 @@
 <template lang="pug">
+	v-container.my-8
+		v-btn( @click="doNew()" color="primary" 
+		:x-large="bp.xl" 
+		:large="bp.lg" 
+		:md="bp.md" 
+		:sm="bp.sm" 
+		) lag ny todo
+		NewModal
 		List
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
-
 import List from "../components/List";
 import NewModal from "@/components/NewModal";
+import { mapMutations, mapState } from "vuex";
 
 export default {
   name: "Todo",
@@ -14,9 +21,20 @@ export default {
     List,
     NewModal,
   },
+  data() {
+    return {
+      bp: this.$vuetify.breakpoint,
+    };
+  },
+  methods: {
+    ...mapMutations(["setNewBool"]),
+
+    doNew() {
+      this.setNewBool(true);
+    },
+  },
   computed: {
-    ...mapState(["name", "editBool", "timeBeforeWedding"]),
-    ...mapGetters(["todos"]),
+    ...mapState(["newBool", "editBool"]),
     bigTitle() {
       let classString = "";
       switch (this.$vuetify.breakpoint.name) {

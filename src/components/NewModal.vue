@@ -1,12 +1,7 @@
 <template lang="pug">
 
 div
-	v-btn(v-if="!dialog" @click="doNew()" color="primary" 
-  :x-large="bp.xl" 
-  :large="bp.lg" 
-  :md="bp.md" 
-  :sm="bp.sm" 
-  ) lag ny todo
+	
 	v-dialog(v-model="dialog" :width="bp.mdAndUp  ? '40%' : '85%'" v-on:click:outside="setNewBool(false)")
 		TodoInput(v-if="newBool" :todo="todo")
 
@@ -21,6 +16,7 @@ export default {
   data() {
     return {
       dialog: false,
+      bp: this.$vuetify.breakpoint,
       todo: {
         title: "",
         content: "",
@@ -30,7 +26,6 @@ export default {
         isCompleted: false,
         readonly: false,
       },
-      bp: this.$vuetify.breakpoint,
     };
   },
   watch: {
@@ -50,9 +45,6 @@ export default {
   },
   components: { TodoInput },
   methods: {
-    doNew() {
-      this.setNewBool(true);
-    },
     ...mapMutations(["setNewBool"]),
   },
   computed: {
