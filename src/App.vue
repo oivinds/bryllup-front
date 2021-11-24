@@ -2,15 +2,14 @@
 v-app#app
 	v-app
 		v-app-bar.elevation-4(app hide-on-scroll dense color="white" )
-			v-app-bar-title.title.text-md-h6.text-lg-h5.px-12 Bryllupsplanleggeren
+			.pa-0.ma-0.title.text-md-h6.text-lg-h5 Bryllupsplanleggeren
 			v-spacer
 			div
-				v-tabs.px-4(color="primary" hide-slider)
-					v-tab(to='/' color="primary"  )
+				v-tabs.px-4.pa-0(color="primary" hide-slider)
+					v-tab(to='/' color="primary")
 						v-icon mdi-cog
 					v-tab(to='/todo')
 						v-icon mdi-calendar-check
-				
 		v-main
 			transition(name="fade" appear mode="out-in")
 				keep-alive

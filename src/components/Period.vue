@@ -32,7 +32,7 @@
             v-list-item-title.text-button(v-if="!!item.tools") Verktøy:
         v-list-item(v-if="item.tools")
           v-list-item-action(v-for="(e, i) in item.tools" :key="i")
-            v-btn.mx-auto(max-width="180"  :href="'//https://'+e" target="_blank" ) {{e}}
+            v-btn.mx-auto(:href="'//https://'+e" target="_blank" ) {{e}}
         v-list-item
           v-list-item-content
           v-list-item-action.float-right

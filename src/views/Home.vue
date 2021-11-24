@@ -4,24 +4,23 @@ v-container.my-8
 		v-col(cols="12" sm="11" md="10" lg="9")
 			v-card.pa-8.justify-center(shaped class="rounded-xl")
 				v-card-title.justify-center.headline Velkommen til  bryllupsplanleggeren {{ owner }} {{ andText }}  {{  partner}}
-				v-card-text.body-1 
+				v-card-text.body-1
 					li Start med å skrive inn navnene på brudeparet
 					li Sett bryllupsdatoen
 				v-card-actions
-					v-btn(x-large to="/todo" color="primary") todo listen. 
-						v-icon mdi-ray-start-arrow 
+					v-btn(x-large to="/todo" color="primary") todo listen.
+						v-icon mdi-ray-start-arrow
 	v-row(justify="center")
 		v-col(cols="12"  sm="7" md="7" lg="6")
 			v-card.justify-center(  rounded class="rounded-xl")
 				v-col.px-8(cols="12" align-self="center")
 					v-card-title.title Hva er Brudeparets navn?
 					v-card-actions
-						v-text-field(  placeholder="Skriv ditt fornavn" label="meg" v-model="ownerLocal")
-						v-card-actions
-							v-btn.mx-auto(@click="setOwnerLocal(ownerLocal)" color="primary" ) legg til
+						v-text-field(placeholder="Skriv ditt fornavn" label="meg" v-model="ownerLocal")
+						v-btn.mx-auto.x-small( @click="setOwnerLocal(ownerLocal)" color="primary" ) legg til
+					v-card-actions
 						v-text-field( placeholder="Skriv fornavn" label="brudgom / brud" v-model="partnerLocal")
-						v-card-actions
-							v-btn.mx-auto(@click="setPartnerLocal(partnerLocal)" color="primary" ) legg til
+						v-btn.mx-auto(@click="setPartnerLocal(partnerLocal)" color="primary" ) legg til
 		v-col(cols="12" sm="4" md="3" lg="3")
 			v-card.justify-center(  rounded class="rounded-xl" )
 				v-col.px-8(cols="12" align-self="center")
@@ -35,23 +34,23 @@ v-container.my-8
 		//- 			v-card-actions
 		//- 				v-text-field.shrink( placeholder="legg til person" label="ansvarlig" v-model="delegate")
 		//- 				v-btn.mx-auto(@click="setDel(delegate)" color="primary" ) legg til
-		
+
 		//- v-col(cols="12" md="6")
 		//- 	v-card( rounded class="rounded-xl" v-if="owner || partner || delegates.length")
 		//- 		v-col.px-8(cols="12" align-self="center")
 		//- 			v-card-title.title Personer / ansvarlige
 		//- 			v-card-actions.justify-center
 		//- 				transition-group(name="list-complete" )
-		//- 					v-chip.ma-2.pa-3.justify-center(v-if="owner" key="0" class="list-complete-item"  
+		//- 					v-chip.ma-2.pa-3.justify-center(v-if="owner" key="0" class="list-complete-item"
 		//- 					dark color="deep-orange" label) {{ owner}}
-		//- 					v-chip.ma-2.pa-3.justify-center(v-if="partner"  key="1" class="list-complete-item"  
+		//- 					v-chip.ma-2.pa-3.justify-center(v-if="partner"  key="1" class="list-complete-item"
 		//- 					dark color="blue" label) {{ partner}}
-		//- 					v-chip.ma-2.pa-3.justify-center(v-for="item in delegates" :key="item" @click:close="removeDelegate(item)" 
-		//- 					close 
+		//- 					v-chip.ma-2.pa-3.justify-center(v-for="item in delegates" :key="item" @click:close="removeDelegate(item)"
+		//- 					close
 		//- 					dark color="tertiary" label
-		//- 					class="list-complete-item" 
+		//- 					class="list-complete-item"
 		//- 					) {{ item}}
-					
+
 </template>
 
 <script>
