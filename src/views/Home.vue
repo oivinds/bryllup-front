@@ -7,9 +7,9 @@ v-container.my-8
 				v-card-text.body-1 
 					li Start med å skrive inn navnene på brudeparet
 					li Sett bryllupsdatoen
-					li Utålmodig? hopp rett til 
-						v-btn(to="/todo" color="primary") todo listen. 
-							v-icon mdi-ray-start-arrow 
+				v-card-actions
+					v-btn(x-large to="/todo" color="primary") todo listen. 
+						v-icon mdi-ray-start-arrow 
 	v-row(justify="center")
 		v-col(cols="12"  sm="7" md="7" lg="6")
 			v-card.justify-center(  rounded class="rounded-xl")

@@ -172,5 +172,23 @@ export default new Vuex.Store({
 			const length = state.todos.reduce(reduce, 0);
 			return length;
 		},
+		groupColors() {
+			const colors = [
+				"purple darken-3",
+				"deep-purple darken-3",
+				"indigo darken-3",
+				"blue darken-3",
+				"cyan darken-3",
+				"teal darken-3",
+				"green darken-3",
+				"light-green darken-3",
+				"lime darken-3",
+				"amber darken-3",
+				"orange darken-3",
+			];
+
+			colors.reverse();
+			return colors;
+		},
 	},
 });

@@ -1,14 +1,14 @@
 <template lang="pug">
 v-app#app
 	v-app
-		v-app-bar.elevation-4(app hide-on-scroll dense )
+		v-app-bar.elevation-4(app hide-on-scroll dense color="white" )
 			v-app-bar-title.title.text-md-h6.text-lg-h5.px-12 Bryllupsplanleggeren
 			v-spacer
 			div
-				v-tabs.px-4( hide-slider)
-					v-tab(to='/' color="primary" )
+				v-tabs.px-4(color="primary" hide-slider)
+					v-tab(to='/' color="primary"  )
 						v-icon mdi-cog
-					v-tab(to='/todo' color="primary" )
+					v-tab(to='/todo')
 						v-icon mdi-calendar-check
 				
 		v-main
@@ -18,8 +18,11 @@ v-app#app
 		v-footer.elevation-3(app)
 			v-row
 				v-col(align-self="center")
-					v-card-actions.justify-center 
-						.body-1 {{ todosDone }} av  {{ todos.length }} oppgaver fullført
+					v-card-actions.justify-center
+						v-progress-linear(height="40" :value="todosDone" :buffer-value="todos.length")
+							template( v-slot:default="{ value }")
+								.body-2 {{ value}} av {{todos.length}} gjort
+					
 				v-col(align-self="center")
 					transition(name="fade" mode="out-in" appear)
 						v-card-actions.justify-center(:key="timeBeforeWedding") 

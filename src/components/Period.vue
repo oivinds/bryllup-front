@@ -10,7 +10,7 @@
             v-bind="iconSize")
               v-icon(:color="item.isCompleted ? 'white' : 'grey lighten-4'") mdi-check
           v-list-item-action(v-if="item.emoji")
-            h2 {{ item.emoji}}
+            h2.pr-4 {{ item.emoji}}
           v-list-item-content
             v-list-item-title.text-subtitle-1.justify-center {{ item.title }}
           v-list-item-action(v-if="item.delegate && item.delegate !== 'ikke satt'")
@@ -31,8 +31,8 @@
           v-list-item-content
             v-list-item-title.text-button(v-if="!!item.tools") Verktøy:
         v-list-item(v-if="item.tools")
-          v-list-item-content
-            v-btn.mx-auto(max-width="180"  :href="'//https://'+e" target="_blank" v-for="(e, i) in item.tools" :key="i") {{e}}
+          v-list-item-action(v-for="(e, i) in item.tools" :key="i")
+            v-btn.mx-auto(max-width="180"  :href="'//https://'+e" target="_blank" ) {{e}}
         v-list-item
           v-list-item-content
           v-list-item-action.float-right

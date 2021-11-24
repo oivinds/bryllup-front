@@ -1,59 +1,67 @@
 <template lang="pug">
 
-    v-card.pa-8(color="grey lighten-3" )
-      v-form(v-if="newBool || editBool")
-        //- TITLE
-        v-row
-          v-col(v-if="!todo.readonly")
-            v-text-field(
-              :placeholder="!todo.readonly ? 'Skriv navn på oppgave' : ''"
-              v-model="todo.title"
-              label="tittel"
-              required)
-          v-col(v-else)
-            .headline {{ todo.title}}
+		v-card.pa-8(color="grey lighten-3" )
+			v-form(v-if="newBool || editBool")
+				//- TITLE
+				v-row
+					v-col(v-if="!todo.readonly")
+						v-text-field(
+							:placeholder="!todo.readonly ? 'Skriv navn på oppgave' : ''"
+							v-model="todo.title"
+							label="tittel"
+							required)
+					v-col(v-else)
+						.headline {{ todo.title}}
 
 						
-        v-row
-          //- CONTENT
-          v-col(v-if="todo.readonly")
-            .title {{ todo.content}}
-        v-row
-          v-col(cols="12")
-            v-textarea(
-              rows="3" 
-              placeholder="skriv her"
-              persistent-placeholder
-              v-model="todo.comment"
-              label="Mine notater"
-              multi-line
-              append-outer-icon="mdi-message-text-outline"
-              )
-              //- v-if="commentEnabled || todo.comment !== '' "
-              
-          //- categories
-          //- v-col(cols="6")
-          //-   v-select(:items="categories" :value="todo.category" @change="categoryChange" label="velg kategori")
-          //- group
-          v-col(cols="6")
-            v-select(:items="group" :value="todo.group" @change="groupChange" label="velg periode for å utføre oppgaven")
-          //- RESPONSABILITY
-          v-col(cols="6" v-if="getDelegates.length > 1")
-            v-select(:items="getDelegates" :value="todo.delegate" @change="delegateChange" label="velg ansvarlig")
-          //- COMPLETED
-          //- TAG
-          v-col(cols="6")
-            v-select(:items="tags" @change="tagChange" label="sett viktighet")
-          //- COMPLETED
-          //- v-col(cols="6")
-          //-   v-checkbox(v-model="todo.isCompleted" :label="todo.isCompleted ? 'fullført!' : 'Uferdig'")
-          //- SAVE
-          v-col(cols="12")
-            v-btn(
-              @click="submittodo"
-              block
-              large
-              class="primary --white-text") lagre oppgave
+				v-row
+					//- CONTENT
+					v-col(v-if="todo.readonly")
+						.title {{ todo.content}}
+				v-row
+					v-col(cols="12")
+						v-textarea(
+							rows="3" 
+							placeholder="skriv her"
+							persistent-placeholder
+							v-model="todo.comment"
+							label="Mine notater"
+							multi-line
+							append-outer-icon="mdi-message-text-outline"
+							)
+							//- v-if="commentEnabled || todo.comment !== '' "
+							
+					//- categories
+					//- v-col(cols="6")
+					//-   v-select(:items="categories" :value="todo.category" @change="categoryChange" label="velg kategori")
+					
+					//- group TODO
+					//- v-col(cols="6")
+					//- 	v-select(:items="group"  :value="todo.group" @change="groupChange" label="velg periode for å utføre oppgaven")
+					//- 		template( v-slot:item="{ active, item, attrs, on }")
+					//- 			v-list-item( item-color="col(1)" v-on="on" v-bind="attrs" #default="{ active }")
+					//- 				v-list-item-content( ) {{item.text}}
+
+					v-col(cols="6")
+						v-select(:items="group" :value="todo.group" @change="groupChange" label="velg periode for å utføre oppgaven")
+					 
+					//- RESPONSABILITY
+					v-col(cols="6" v-if="getDelegates.length > 1")
+						v-select(:items="getDelegates" :value="todo.delegate" @change="delegateChange" label="velg ansvarlig")
+					//- COMPLETED
+					//- TAG
+					v-col(cols="6")
+						v-select(:items="tags" @change="tagChange" label="sett viktighet")
+					//- COMPLETED
+					//- v-col(cols="6")
+					//-   v-checkbox(v-model="todo.isCompleted" :label="todo.isCompleted ? 'fullført!' : 'Uferdig'")
+					//- SAVE
+					v-col(cols="12")
+						v-btn(
+							@click="submittodo"
+							block
+							large
+							class="primary --white-text") lagre oppgave
 
 </template>
 
@@ -72,6 +80,10 @@ export default {
   },
 
   methods: {
+    col(i) {
+      const test = ["red", "green"];
+      return test[i];
+    },
     ...mapActions(["newAction", "editAction"]),
     groupChange(e) {
       this.todo.group = e;
@@ -115,38 +127,38 @@ export default {
     },
     //
     ...mapState(["editBool", "newBool", "groupTitles", "categories"]),
-    ...mapGetters(["getDelegates", "getGroupTitles"]),
+    ...mapGetters(["getDelegates", "getGroupTitles", "groupColors"]),
 
     /* commentErrors: {
-      get: function () {
-        const errors = [];
-        if (!this.$v.todo.comment.$dirty) return errors;
-        const { maxLength, minLength, required, $params } =
-          this.$v.todo.comment;
-        !minLength &&
-          errors.push(
-            `Kommentarer må være minst ${$params.minLength.min} tegn langt`
-          );
-        !maxLength &&
-          errors.push(
-            `Kommentarer må være maks ${$params.maxLength.max} tegn langt`
-          );
-        !required && errors.push("En kommentarer er påkrevet");
+			get: function () {
+				const errors = [];
+				if (!this.$v.todo.comment.$dirty) return errors;
+				const { maxLength, minLength, required, $params } =
+					this.$v.todo.comment;
+				!minLength &&
+					errors.push(
+						`Kommentarer må være minst ${$params.minLength.min} tegn langt`
+					);
+				!maxLength &&
+					errors.push(
+						`Kommentarer må være maks ${$params.maxLength.max} tegn langt`
+					);
+				!required && errors.push("En kommentarer er påkrevet");
 
-        return errors;
-      },
-    },*/
+				return errors;
+			},
+		},*/
     /* titleErrors: {
-      get: function () {
-        const errors = [];
-        if (!this.$v.todo.title.$dirty) return errors;
-        const { maxLength, minLength, required } = this.$v.todo.title;
-        !minLength && errors.push("For få tegn");
-        !maxLength && errors.push("For mange tegn");
-        !required && errors.push("Tittel er påkrevet");
-        return errors;
-      },
-    }, */
+			get: function () {
+				const errors = [];
+				if (!this.$v.todo.title.$dirty) return errors;
+				const { maxLength, minLength, required } = this.$v.todo.title;
+				!minLength && errors.push("For få tegn");
+				!maxLength && errors.push("For mange tegn");
+				!required && errors.push("Tittel er påkrevet");
+				return errors;
+			},
+		}, */
   },
 };
 </script>

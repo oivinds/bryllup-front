@@ -5,15 +5,15 @@ div
 		v-col(cols="12" sm="11" md="8" lg="7" xl="6")
 			v-expansion-panels(flat accordion)
 				v-expansion-panel.ma-2(:key="index" v-for="(group, index) in 11" )
-					v-expansion-panel-header.elevation-6(class="white--text" rounded :color="cl(index)")
+					v-expansion-panel-header.elevation-6(class="white--text" rounded :color="groupColors[index]")
 						v-row
 							v-col.pb-0(cols="12") 
-								//-v-card-title.text-button.justify-center {{ durTitle(index) }} 
 								v-card-title.text-button.justify-center {{ createTitles(index) }} 
 							v-col.pa-0(cols="12") 
 								v-card-text.pa-md-4.title {{ getGroupDescription(index) }}
+								v-card-text.pa-md-4.title {{ getGroupDone(index+1).done  }} / {{getGroupDone(index+1).count}} gjort
 					v-expansion-panel-content.py-4(color="background")
-						Period(class="group-expand-item" :key="index"  :dates="dates(index+1)" :todos="getGroup(index+1)" v-on:update:edit="editById($event)" :iconSize="iconSize")
+						Period(class="group-expand-item" :key="index"  :dates="dates(index+1)" :todos="getGroup(index+1)"  v-on:update:edit="editById($event)" :iconSize="iconSize")
 
 </template>
 
@@ -33,27 +33,10 @@ export default {
   components: { Period, EditModal },
 
   methods: {
-    durTitle(i) {
+    /* durTitle(i) {
       return this.durTitles[i];
-    },
-    cl(i) {
-      const colors = [
-        "purple darken-3",
-        "deep-purple darken-3",
-        "indigo darken-3",
-        "blue darken-3",
-        "cyan darken-3",
-        "teal darken-3",
-        "green darken-3",
-        "light-green darken-3",
-        "lime darken-3",
-        "amber darken-3",
-        "orange darken-3",
-      ];
+    }, */
 
-      colors.reverse();
-      return colors[i];
-    },
     createTitles(i) {
       let title;
       title = i;
@@ -98,6 +81,11 @@ export default {
     getGroup(nr) {
       const group = this.todos.filter((todo) => todo.group === nr);
       return [...group];
+    },
+    getGroupDone(nr) {
+      const group = this.todos.filter((todo) => todo.group === nr);
+      const done = group.filter((o) => o.isCompleted);
+      return { done: done.length, count: group.length };
     },
     getGroupDescription(no) {
       const desc = [
@@ -167,7 +155,7 @@ export default {
         small: this.bp.smAndUp,
       };
     },
-    ...mapGetters(["todos", "getDuration", "durTitles"]),
+    ...mapGetters(["todos", "getDuration", "durTitles", "groupColors"]),
   },
 };
 </script>
