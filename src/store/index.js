@@ -17,7 +17,7 @@ all.map((o, i) => {
 	return Object.assign(o, { id: i });
 });
 
-console.log(all);
+
 
 Vue.use(Vuex);
 import moment from "moment";
@@ -150,6 +150,7 @@ export default new Vuex.Store({
 		},
 	},
 	getters: {
+
 		getGroupTitles(state) {
 			return state.groupTitles;
 		},

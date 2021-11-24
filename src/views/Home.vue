@@ -11,7 +11,7 @@ v-container.my-8
 						v-btn(to="/todo" color="primary") todo listen. 
 							v-icon mdi-ray-start-arrow 
 	v-row(justify="center")
-		v-col(cols="12"  md="6")
+		v-col(cols="12"  sm="7" md="7" lg="6")
 			v-card.justify-center(  rounded class="rounded-xl")
 				v-col.px-8(cols="12" align-self="center")
 					v-card-title.title Hva er Brudeparets navn?
@@ -22,7 +22,7 @@ v-container.my-8
 						v-text-field( placeholder="Skriv fornavn" label="brudgom / brud" v-model="partnerLocal")
 						v-card-actions
 							v-btn.mx-auto(@click="setPartnerLocal(partnerLocal)" color="primary" ) legg til
-		v-col(cols="12" md="3" )
+		v-col(cols="12" sm="4" md="3" lg="3")
 			v-card.justify-center(  rounded class="rounded-xl" )
 				v-col.px-8(cols="12" align-self="center")
 					v-card-title.title Bryllupsdato

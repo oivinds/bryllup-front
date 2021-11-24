@@ -13,7 +13,8 @@ v-app#app
 				
 		v-main
 			transition(name="fade" appear mode="out-in")
-				router-view
+				keep-alive
+					router-view
 		v-footer.elevation-3(app)
 			v-row
 				v-col(align-self="center")

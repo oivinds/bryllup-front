@@ -1,7 +1,6 @@
 <template lang="pug">
 div
 	EditModal(:item="item")
-	//- p {{ $vuetify.breakpoint.name}}
 	v-row(justify="center")
 		v-col(cols="12" sm="11" md="8" lg="7" xl="6")
 			v-expansion-panels(flat accordion)
@@ -9,6 +8,7 @@ div
 					v-expansion-panel-header.elevation-6(class="white--text" rounded :color="cl(index)")
 						v-row
 							v-col.pb-0(cols="12") 
+								//-v-card-title.text-button.justify-center {{ durTitle(index) }} 
 								v-card-title.text-button.justify-center {{ createTitles(index) }} 
 							v-col.pa-0(cols="12") 
 								v-card-text.pa-md-4.title {{ getGroupDescription(index) }}
@@ -33,6 +33,9 @@ export default {
   components: { Period, EditModal },
 
   methods: {
+    durTitle(i) {
+      return this.durTitles[i];
+    },
     cl(i) {
       const colors = [
         "purple darken-3",
@@ -90,8 +93,6 @@ export default {
     editById(id) {
       this.setEditBool(true);
       const item = this.todos.find((o) => o.id === id);
-      console.log("LIST");
-      console.log(id);
       this.item = { ...item };
     },
     getGroup(nr) {
@@ -166,7 +167,7 @@ export default {
         small: this.bp.smAndUp,
       };
     },
-    ...mapGetters(["todos", "getDuration"]),
+    ...mapGetters(["todos", "getDuration", "durTitles"]),
   },
 };
 </script>

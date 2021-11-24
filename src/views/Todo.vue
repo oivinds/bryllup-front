@@ -1,6 +1,6 @@
 <template lang="pug">
 	v-container.my-8
-		v-btn( @click="doNew()" color="primary" 
+		v-btn( @click="setNewBool(true)" color="primary" 
 		:x-large="bp.xl" 
 		:large="bp.lg" 
 		:md="bp.md" 
@@ -28,10 +28,6 @@ export default {
   },
   methods: {
     ...mapMutations(["setNewBool"]),
-
-    doNew() {
-      this.setNewBool(true);
-    },
   },
   computed: {
     ...mapState(["newBool", "editBool"]),
