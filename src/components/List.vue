@@ -87,9 +87,11 @@ export default {
       const duration = (index * this.getDuration) / 6;
       return this.$moment().add(duration).format("MMMM YY");
     },
-    editById(title) {
+    editById(id) {
       this.setEditBool(true);
-      const item = this.todos.find((o) => o.title === title);
+      const item = this.todos.find((o) => o.id === id);
+      console.log("LIST");
+      console.log(id);
       this.item = { ...item };
     },
     getGroup(nr) {

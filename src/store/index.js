@@ -12,6 +12,13 @@ import todos9 from "./todos-9.json";
 import todos10 from "./todos-10.json";
 import todos11 from "./todos-11.json";
 
+const all = [...todos1, ...todos2, ...todos3, ...todos4, ...todos5, ...todos6, ...todos7, ...todos8, ...todos9, ...todos10, ...todos11]
+all.map((o, i) => {
+	return Object.assign(o, { id: i });
+});
+
+console.log(all);
+
 Vue.use(Vuex);
 import moment from "moment";
 moment.locale("nb");
@@ -19,12 +26,12 @@ Object.defineProperty(Vue.prototype, "$moment", { value: moment });
 
 export default new Vuex.Store({
 	state: {
-		todos: [...todos1, ...todos2, ...todos3, ...todos4, ...todos5, ...todos6, ...todos7, ...todos8, ...todos9, ...todos10, ...todos11],
+		todos: [...all],
 		name: "Kari",
 		owner: null,
 		partner: null,
 		weddingDate: moment().add(1, "year").toISOString().substring(0, 10),
-		timeBeforeWedding: null,//moment().add(1, "year").toISOString().substring(0, 10),
+		timeBeforeWedding: null, //moment().add(1, "year").toISOString().substring(0, 10),
 		editBool: false,
 		newBool: false,
 		delegates: [],
@@ -37,8 +44,8 @@ export default new Vuex.Store({
 			"Antrekk  og tilbehør",
 			"Gaver",
 			"Bryllupsreise",
-			"Hvetebrødsdagene"
-		]
+			"Hvetebrødsdagene",
+		],
 	},
 	mutations: {
 		setGroupTitles(state, titles) {
@@ -57,12 +64,14 @@ export default new Vuex.Store({
 			state.delegates.push(delegate);
 		},
 		removeDelegate(state, delegate) {
-			const usedDelegate = state.todos.find(e => e.delegate === delegate)
-			if (usedDelegate) { return };
+			const usedDelegate = state.todos.find((e) => e.delegate === delegate);
+			if (usedDelegate) {
+				return;
+			}
 			const reduce = (ac, item) => {
 				if (item !== delegate) {
-					ac.push(item)
-				};
+					ac.push(item);
+				}
 				return ac;
 			};
 			const delegates = state.delegates.reduce(reduce, []);
@@ -84,10 +93,7 @@ export default new Vuex.Store({
 			state.todos = [todo, ...state.todos];
 		},
 		editTodo(state, todo) {
-
-			const index = state.todos.findIndex((o) => o.title === todo.title);
-			console.log(index);
-			console.log(todo);
+			const index = state.todos.findIndex((o) => o.id === todo.id);
 			Vue.set(state.todos, index, todo);
 		},
 		// ?
@@ -97,8 +103,8 @@ export default new Vuex.Store({
 	},
 	actions: {
 		setGroupTitles({ commit }, titles) {
-			commit("setGroupTitles", [])
-			commit("setGroupTitles", titles)
+			commit("setGroupTitles", []);
+			commit("setGroupTitles", titles);
 		},
 		setDuration({ commit }, date) {
 			const now = moment();
@@ -108,7 +114,7 @@ export default new Vuex.Store({
 			commit("setDuration", duration);
 		},
 		setTimeBeforeWedding({ commit }, date) {
-			const now = moment().subtract(1, 'day');
+			const now = moment().subtract(1, "day");
 			const then = moment(date);
 			const year = then.diff(now, "year");
 			then.subtract(year, "year");
@@ -126,16 +132,19 @@ export default new Vuex.Store({
 			commit("deleteTodo", todos);
 		},
 
-		newAction({ commit }, task) {
-			/* const ids = getters.todos.map((o) => o.id);
+		newAction({ commit, getters }, task) {
+			const ids = getters.todos.map((o) => o.id);
 			const findMaxId = (acc, o) => Math.max(acc, o);
-			const id = ids.reduce(findMaxId, 0) + 1; */
+			const id = ids.reduce(findMaxId, 0) + 1;
 			const created = new Date().toISOString();
-			const newTask = { ...task, created, isCompleted: false, readOnly: false };
+			const newTask = { ...task, created, isCompleted: false, id };
 			commit("newTodo", newTask);
 			commit("setNewBool", false);
 		},
 		editAction({ commit }, task) {
+			// console.log("task");
+			// console.log(task);
+
 			commit("editTodo", task);
 			commit("setEditBool", false);
 		},
@@ -148,10 +157,10 @@ export default new Vuex.Store({
 			return state.duration;
 		},
 		getDelegates(state) {
-			let delegates = state.delegates.length ? state.delegates : []
+			let delegates = state.delegates.length ? state.delegates : [];
 			let owner = state.owner ? state.owner : "ikke satt";
 			let partner = state.partner ? state.partner : "ikke satt";
-			delegates = [owner, partner, ...delegates]
+			delegates = [owner, partner, ...delegates];
 			return [...delegates];
 		},
 		todos(state) {

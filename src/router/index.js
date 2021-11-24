@@ -4,7 +4,6 @@ import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
-
 const routes = [
   {
     path: "/",
@@ -17,8 +16,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "todo" */ "../views/Todo.vue"),
+    component: () => import(/* webpackChunkName: "todo" */ "../views/Todo.vue"),
   },
 ];
 
@@ -29,6 +27,6 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   window.scrollTo(0, 0);
   next();
-})
+});
 
 export default router;

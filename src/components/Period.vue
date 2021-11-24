@@ -36,7 +36,7 @@
         v-list-item
           v-list-item-content
           v-list-item-action.float-right
-            v-btn.mx-2(color="primary" @click="$emit('update:edit', item.title)") Rediger
+            v-btn.mx-2(color="primary" @click="$emit('update:edit', item.id)") Rediger
               v-icon(color="success") mdi-pencil
           v-list-item-action
             DeleteModal(:item="item")
