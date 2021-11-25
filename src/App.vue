@@ -38,47 +38,47 @@ import { mapState, mapGetters, mapActions } from "vuex";
 import { unsubscribe } from "./store/index";
 
 export default {
-  name: "App",
-  beforeCreate() {
-    // TODO: titles to store
-    // this.$store.commit("initialiseStore");
-  },
-  computed: {
-    ...mapState(["name", "editBool", "timeBeforeWedding", "weddingDate"]),
-    ...mapGetters(["todosDone", "todos"]),
-  },
-  methods: {
-    unsubscribe() {
-      unsubscribe();
-      localStorage.clear();
-      location.reload();
-    },
-    ...mapActions(["setDuration"]),
-  },
-  mounted() {
-    this.setDuration(this.weddingDate);
-  },
+	name: "App",
+	beforeCreate() {
+		// TODO: titles to store
+		// this.$store.commit("initialiseStore");
+	},
+	computed: {
+		...mapState(["name", "editBool", "timeBeforeWedding", "weddingDate"]),
+		...mapGetters(["todosDone", "todos"]),
+	},
+	methods: {
+		unsubscribe() {
+			unsubscribe();
+			localStorage.clear();
+			location.reload();
+		},
+		...mapActions(["setDuration"]),
+	},
+	mounted() {
+		this.setDuration(this.weddingDate);
+	},
 };
 </script>
 <style lang="scss">
 #app {
-  background-color: var(--v-background-base);
+	background-color: var(--v-background-base);
 }
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+	transition: opacity 0.5s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
+	opacity: 0;
 }
 
 .fadeSlide-enter-active,
 .fadeSlide-leave-active {
-  transition: all 0.5s;
+	transition: all 0.5s;
 }
 .fadeSlide-enter, .fadeSlide-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-  transform: translateX(100%);
+	opacity: 0;
+	transform: translateX(100%);
 }
 </style>

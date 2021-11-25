@@ -4,12 +4,12 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-      showGroup: true,
-    };
-  },
-  props: ["title", "description", "inc"],
-  methods: {},
+	data() {
+		return {
+			showGroup: true,
+		};
+	},
+	props: ["title", "description", "inc"],
+	methods: {},
 };
 </script>

@@ -7,9 +7,9 @@ import vuetify from "./plugins/vuetify";
 Vue.config.productionTip = false;
 
 new Vue({
-  el: "#app",
-  router,
-  store,
-  vuetify,
-  render: (h) => h(App),
+	el: "#app",
+	router,
+	store,
+	vuetify,
+	render: (h) => h(App),
 });

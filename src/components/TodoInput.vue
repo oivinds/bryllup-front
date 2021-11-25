@@ -69,67 +69,67 @@
 import { mapState, mapActions, mapGetters } from "vuex";
 
 export default {
-  props: ["todo"],
-  name: "TodoInput",
-  data() {
-    return {
-      commentEnabled: false,
-      todoErrorMessage: "",
-      tags: ["research", "nice to do", "need to do"],
-    };
-  },
+	props: ["todo"],
+	name: "TodoInput",
+	data() {
+		return {
+			commentEnabled: false,
+			todoErrorMessage: "",
+			tags: ["research", "nice to do", "need to do"],
+		};
+	},
 
-  methods: {
-    col(i) {
-      const test = ["red", "green"];
-      return test[i];
-    },
-    ...mapActions(["newAction", "editAction"]),
-    groupChange(e) {
-      this.todo.group = e;
-    },
-    tagChange(e) {
-      this.todo.tag = e;
-    },
-    categoryChange(e) {
-      this.todo.category = e;
-    },
-    delegateChange(e) {
-      this.todo.delegate = e;
-    },
-    submittodo() {
-      /* this.$v.todo.$touch(); */
-      /* if (this.$v.todo.$pending || this.$v.todo.$error) return; */
-      if (this.editBool) {
-        this.editAction(this.todo);
-      } else if (this.newBool) {
-        this.newAction(this.todo);
-      } else {
-        console.warn("TodoInput exception error ");
-      }
-      /* this.$v.todo.$reset(); */
-    },
-  },
-  computed: {
-    group() {
-      return this.getGroupTitles.map((item, index) => ({
-        text: item,
-        value: index + 1,
-      }));
-    },
+	methods: {
+		col(i) {
+			const test = ["red", "green"];
+			return test[i];
+		},
+		...mapActions(["newAction", "editAction"]),
+		groupChange(e) {
+			this.todo.group = e;
+		},
+		tagChange(e) {
+			this.todo.tag = e;
+		},
+		categoryChange(e) {
+			this.todo.category = e;
+		},
+		delegateChange(e) {
+			this.todo.delegate = e;
+		},
+		submittodo() {
+			/* this.$v.todo.$touch(); */
+			/* if (this.$v.todo.$pending || this.$v.todo.$error) return; */
+			if (this.editBool) {
+				this.editAction(this.todo);
+			} else if (this.newBool) {
+				this.newAction(this.todo);
+			} else {
+				console.warn("TodoInput exception error ");
+			}
+			/* this.$v.todo.$reset(); */
+		},
+	},
+	computed: {
+		group() {
+			return this.getGroupTitles.map((item, index) => ({
+				text: item,
+				value: index + 1,
+			}));
+		},
 
-    delegatesInput() {
-      if (this.getDelegates === [null]) {
-        return ["empty"];
-      } else {
-        return [...this.getDelegates];
-      }
-    },
-    //
-    ...mapState(["editBool", "newBool", "groupTitles", "categories"]),
-    ...mapGetters(["getDelegates", "getGroupTitles", "groupColors"]),
+		delegatesInput() {
+			if (this.getDelegates === [null]) {
+				return ["empty"];
+			} else {
+				return [...this.getDelegates];
+			}
+		},
+		//
+		...mapState(["editBool", "newBool", "groupTitles", "categories"]),
+		...mapGetters(["getDelegates", "getGroupTitles", "groupColors"]),
 
-    /* commentErrors: {
+		/* commentErrors: {
 			get: function () {
 				const errors = [];
 				if (!this.$v.todo.comment.$dirty) return errors;
@@ -148,7 +148,7 @@ export default {
 				return errors;
 			},
 		},*/
-    /* titleErrors: {
+		/* titleErrors: {
 			get: function () {
 				const errors = [];
 				if (!this.$v.todo.title.$dirty) return errors;
@@ -159,6 +159,6 @@ export default {
 				return errors;
 			},
 		}, */
-  },
+	},
 };
 </script>

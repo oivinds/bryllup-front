@@ -57,63 +57,63 @@ v-container.my-8
 import DatePicker from "../components/DatePicker";
 import { mapState, mapMutations } from "vuex";
 export default {
-  name: "Home",
-  data() {
-    return {
-      delegate: "",
-      ownerLocal: "",
-      partnerLocal: "",
-    };
-  },
-  components: { DatePicker },
-  methods: {
-    setDel(o) {
-      this.setDelegate(o);
-      this.delegate = "";
-    },
-    setOwnerLocal(o) {
-      this.setOwner(o);
-      this.ownerLocal = "";
-    },
-    setPartnerLocal(o) {
-      this.setPartner(o);
-      this.partnerLocal = "";
-    },
-    ...mapMutations([
-      "setDelegate",
-      "removeDelegate",
-      "setOwner",
-      "setPartner",
-    ]),
-  },
-  computed: {
-    andText() {
-      if (this.partner && this.owner) {
-        return "og";
-      }
-      return "";
-    },
-    ...mapState([
-      "owner",
-      "partner",
-      "editBool",
-      "timeBeforeWedding",
-      "delegates",
-    ]),
-  },
+	name: "Home",
+	data() {
+		return {
+			delegate: "",
+			ownerLocal: "",
+			partnerLocal: "",
+		};
+	},
+	components: { DatePicker },
+	methods: {
+		setDel(o) {
+			this.setDelegate(o);
+			this.delegate = "";
+		},
+		setOwnerLocal(o) {
+			this.setOwner(o);
+			this.ownerLocal = "";
+		},
+		setPartnerLocal(o) {
+			this.setPartner(o);
+			this.partnerLocal = "";
+		},
+		...mapMutations([
+			"setDelegate",
+			"removeDelegate",
+			"setOwner",
+			"setPartner",
+		]),
+	},
+	computed: {
+		andText() {
+			if (this.partner && this.owner) {
+				return "og";
+			}
+			return "";
+		},
+		...mapState([
+			"owner",
+			"partner",
+			"editBool",
+			"timeBeforeWedding",
+			"delegates",
+		]),
+	},
 };
 </script>
 
 <style lang="scss">
 .list-complete-item {
-  transition: all 0.4s;
+	transition: all 0.4s;
 }
 .list-complete-enter,
 .list-complete-leave-to {
-  opacity: 0;
-  transform: translateY(-100%);
+	opacity: 0;
+	transform: translateY(-100%);
 }
 .list-complete-leave-active {
-  position: absolute;
+	position: absolute;
 }
 </style>

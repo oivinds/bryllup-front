@@ -20,19 +20,19 @@
 <script>
 import { mapActions } from "vuex";
 export default {
-  props: ["item"],
+	props: ["item"],
 
-  data() {
-    return {
-      model: false,
-    };
-  },
-  methods: {
-    destroy(el) {
-      this.deleteAction(el);
-      this.model = false;
-    },
-    ...mapActions(["deleteAction"]),
-  },
+	data() {
+		return {
+			model: false,
+		};
+	},
+	methods: {
+		destroy(el) {
+			this.deleteAction(el);
+			this.model = false;
+		},
+		...mapActions(["deleteAction"]),
+	},
 };
 </script>

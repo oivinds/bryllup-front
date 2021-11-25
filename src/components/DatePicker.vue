@@ -14,59 +14,59 @@
 <script>
 import { mapState, mapActions } from "vuex";
 export default {
-  data() {
-    return {
-      modal: false,
-      date: "",
-    };
-  },
-  mounted() {
-    this.date = this.weddingDate;
-  },
-  methods: {
-    save() {
-      this.$refs.dialog.save(this.date);
-      this.setDuration(this.date);
-      this.setTimeBeforeWedding(this.date);
-    },
-    formatDate(date) {
-      return date ? this.$moment(date).format("LL") : "";
-    },
-    ...mapActions(["setDuration", "setTimeBeforeWedding"]),
-  },
-  computed: {
-    min() {
-      return this.$moment().add(3, "month").toISOString();
-    },
-    max() {
-      return this.$moment().add(5, "year").toISOString();
-    },
-    computedDateFormatted() {
-      return this.formatDate(this.date);
-    },
-    ...mapState(["timeBeforeWedding", "weddingDate"]),
-  },
+	data() {
+		return {
+			modal: false,
+			date: "",
+		};
+	},
+	mounted() {
+		this.date = this.weddingDate;
+	},
+	methods: {
+		save() {
+			this.$refs.dialog.save(this.date);
+			this.setDuration(this.date);
+			this.setTimeBeforeWedding(this.date);
+		},
+		formatDate(date) {
+			return date ? this.$moment(date).format("LL") : "";
+		},
+		...mapActions(["setDuration", "setTimeBeforeWedding"]),
+	},
+	computed: {
+		min() {
+			return this.$moment().add(3, "month").toISOString();
+		},
+		max() {
+			return this.$moment().add(5, "year").toISOString();
+		},
+		computedDateFormatted() {
+			return this.formatDate(this.date);
+		},
+		...mapState(["timeBeforeWedding", "weddingDate"]),
+	},
 };
 </script>
 
 <style lang="scss">
 .v-picker__title__btn.v-date-picker-title__date.v-picker__title__btn--active
-  > div {
-  font-family: $heading-font-family;
+	> div {
+	font-family: $heading-font-family;
 }
 #app
-  > div.v-application--wrap
-  > main
-  > div
-  > div
-  > div
-  > div.v-card.v-sheet.theme--dark.primary
-  > div
-  > div.v-input.title.v-input--is-label-active.v-input--is-dirty.v-input--is-readonly.theme--dark.v-text-field.v-text-field--is-booted
-  > div
-  > div.v-input__slot
-  > div.v-text-field__slot
-  > label {
-  font-family: $body-font-family;
+	> div.v-application--wrap
+	> main
+	> div
+	> div
+	> div
+	> div.v-card.v-sheet.theme--dark.primary
+	> div
+	> div.v-input.title.v-input--is-label-active.v-input--is-dirty.v-input--is-readonly.theme--dark.v-text-field.v-text-field--is-booted
+	> div
+	> div.v-input__slot
+	> div.v-text-field__slot
+	> label {
+	font-family: $body-font-family;
 }
 </style>

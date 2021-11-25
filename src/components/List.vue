@@ -24,144 +24,147 @@ import EditModal from "../components/EditModal";
 import { mapActions, mapGetters, mapMutations } from "vuex";
 let titleArray = [];
 export default {
-  data() {
-    return {
-      item: null,
-      bp: this.$vuetify.breakpoint,
-    };
-  },
-  components: { Period, EditModal },
+	data() {
+		return {
+			item: null,
+			bp: this.$vuetify.breakpoint,
+		};
+	},
+	components: { Period, EditModal },
 
-  methods: {
-    /* durTitle(i) {
-      return this.durTitles[i];
-    }, */
+	methods: {
+		createTitles(i) {
+			let title;
+			title = i;
+			if (i > 5) {
+				switch (i) {
+					case 6:
+						title = "En uke før";
+						break;
+					case 7:
+						title = "En dag før";
+						break;
+					case 8:
+						title = "Bryllupsdagen";
+						break;
+					case 9:
+						title = "I etterkant av bryllupet 1-3 mnd";
+						break;
+					case 10:
+						title = "Innen 6 måneder etter bryllupet";
+						break;
+				}
+			} else {
+				const duration = this.getDuration - (i * this.getDuration) / 6;
+				title = this.formatter(duration);
+			}
+			titleArray.push(title);
+			return title;
+		},
 
-    createTitles(i) {
-      let title;
-      title = i;
-      if (i > 5) {
-        switch (i) {
-          case 6:
-            title = "En uke før";
-            break;
-          case 7:
-            title = "En dag før";
-            break;
-          case 8:
-            title = "Bryllupsdagen";
-            break;
-          case 9:
-            title = "I etterkant av bryllupet 1-3 mnd";
-            break;
-          case 10:
-            title = "Innen 6 måneder etter bryllupet";
-            break;
-        }
-      } else {
-        const duration = this.getDuration - (i * this.getDuration) / 6;
-        title = this.formatter(duration);
-      }
-      titleArray.push(title);
-      return title;
-    },
+		...mapMutations(["setEditBool"]),
+		...mapActions(["setGroupTitles"]),
 
-    ...mapMutations(["setEditBool"]),
-    ...mapActions(["setGroupTitles"]),
+		dates(index) {
+			const duration = (index * this.getDuration) / 6;
+			return this.$moment().add(duration).format("MMMM YY");
+		},
+		editById(id) {
+			this.setEditBool(true);
+			const item = this.todos.find((o) => o.id === id);
+			this.item = { ...item };
+		},
+		getGroup(nr) {
+			const group = this.todos.filter((todo) => todo.group === nr);
+			return [...group];
+		},
+		getGroupDone(nr) {
+			const group = this.todos.filter((todo) => todo.group === nr);
+			const done = group.filter((o) => o.isCompleted);
+			return { done: done.length, count: group.length };
+		},
+		getGroupDescription(no) {
+			const desc = [
+				"Research-fasen. Hent inspirasjon og finn ut av deres stil, ønsker og behov for den store dagen.",
+				"Book det viktigste. Og etter det: Ha det gøy med planleggingsfasens morsomste research!",
+				"Nyt!! Kanskje en av de herligste periodene er nettopp nå: Gaveliste, brudekjoleprøving, gifteringer, forlovelsesfotografering mm!",
+				"Hold hodet kaldt! Dette er månedene hvor dere skal fikse alt det praktiske. Book inn det som gjenstår.",
+				"Kom i feststemning! Det er på tiden å legge vekt på de gøyale tingene ved bryllupet, festen og reisen.",
+				"Siste innkjøp. Bekreft til leverandører og senk skuldrene!",
+				"Det kribler! Site touch og pakking til både bryllupshelg, selve dagen og bryllupsreisen!",
+				"Pust med magen, nyt en manikyr og pedikyr - smil til hverandre og gå tidlig i seng.",
+				" ",
+				"Hvetebrødsdager og bryllupsreise <3",
+				"Rydd opp, si takk og se fremover",
+			];
+			return desc[no];
+		},
+		formatter(duration) {
+			let d = this.$moment.duration(duration);
+			d.add({ day: 2 });
 
-    dates(index) {
-      const duration = (index * this.getDuration) / 6;
-      return this.$moment().add(duration).format("MMMM YY");
-    },
-    editById(id) {
-      this.setEditBool(true);
-      const item = this.todos.find((o) => o.id === id);
-      this.item = { ...item };
-    },
-    getGroup(nr) {
-      const group = this.todos.filter((todo) => todo.group === nr);
-      return [...group];
-    },
-    getGroupDone(nr) {
-      const group = this.todos.filter((todo) => todo.group === nr);
-      const done = group.filter((o) => o.isCompleted);
-      return { done: done.length, count: group.length };
-    },
-    getGroupDescription(no) {
-      const desc = [
-        "Research-fasen. Hent inspirasjon og finn ut av deres stil, ønsker og behov for den store dagen.",
-        "Book det viktigste. Og etter det: Ha det gøy med planleggingsfasens morsomste research!",
-        "Nyt!! Kanskje en av de herligste periodene er nettopp nå: Gaveliste, brudekjoleprøving, gifteringer, forlovelsesfotografering mm!",
-        "Hold hodet kaldt! Dette er månedene hvor dere skal fikse alt det praktiske. Book inn det som gjenstår.",
-        "Kom i feststemning! Det er på tiden å legge vekt på de gøyale tingene ved bryllupet, festen og reisen.",
-        "Siste innkjøp. Bekreft til leverandører og senk skuldrene!",
-        "Det kribler! Site touch og pakking til både bryllupshelg, selve dagen og bryllupsreisen!",
-        "Pust med magen, nyt en manikyr og pedikyr - smil til hverandre og gå tidlig i seng.",
-        " ",
-        "Hvetebrødsdager og bryllupsreise <3",
-        "Rydd opp, si takk og se fremover",
-      ];
-      return desc[no];
-    },
-    formatter(duration) {
-      let d = this.$moment.duration(duration);
-      d.add({ day: 2 });
+			const years = d.years();
+			d.subtract({ years });
 
-      const years = d.years();
-      d.subtract({ years });
+			const months = d.months();
+			/* const months = d.months(); */
+			d.subtract({ months: Math.floor(months) });
 
-      const months = d.months();
-      /* const months = d.months(); */
-      d.subtract({ months: Math.floor(months) });
+			const weeks = d.weeks();
+			/* d = d.subtract({ weeks }); */
 
-      const weeks = d.weeks();
-      /* d = d.subtract({ weeks }); */
-
-      /* 
+			/* 
 			const days = d.days();
 			const asDays = d.asDays();
 			d = d.subtract({ days }); */
 
-      const ukePlur = weeks === 1 ? "uke" : "uker";
-      /* const dagPlur = days === 1 ? "dag" : "dager" */ let yearText =
-        years !== 0 ? `${years} år ` : "";
+			const ukePlur = weeks === 1 ? "uke" : "uker";
+			/* const dagPlur = days === 1 ? "dag" : "dager" */ let yearText =
+				years !== 0 ? `${years} år ` : "";
 
-      let monthText = months !== 0 ? `${months} mnd ` : "";
+			let monthText = months !== 0 ? `${months} mnd ` : "";
 
-      let weekText = weeks !== 0 ? `${weeks} ${ukePlur} ` : "";
+			let weekText = weeks !== 0 ? `${weeks} ${ukePlur} ` : "";
 
-      /* const dayText = asDays !== 0 ? `${days} ${dagPlur} ` : ""; */
+			/* const dayText = asDays !== 0 ? `${days} ${dagPlur} ` : ""; */
 
-      return yearText + monthText + weekText + " før";
-    },
-  },
-  watch: {
-    getDuration() {
-      titleArray = [];
-      this.$nextTick(function () {
-        const titles = [...titleArray];
-        this.setGroupTitles(titles);
-      });
-    },
-  },
-  mounted() {
-    const titles = [...titleArray];
-    this.setGroupTitles(titles);
-  },
-  computed: {
-    iconSize() {
-      return {
-        "x-small": this.bp.xs,
-        small: this.bp.smAndUp,
-      };
-    },
-    ...mapGetters(["todos", "getDuration", "durTitles", "groupColors"]),
-  },
+			return yearText + monthText + weekText + " før";
+		},
+	},
+	watch: {
+		getDuration() {
+			titleArray = [];
+			this.$nextTick(function () {
+				const titles = [...titleArray];
+				this.setGroupTitles(titles);
+			});
+		},
+	},
+	mounted() {
+		console.log(this.testTitles);
+		const titles = [...titleArray];
+		this.setGroupTitles(titles);
+	},
+	computed: {
+		iconSize() {
+			return {
+				"x-small": this.bp.xs,
+				small: this.bp.smAndUp,
+			};
+		},
+		...mapGetters([
+			"testTitles",
+			"todos",
+			"getDuration",
+			"durTitles",
+			"groupColors",
+		]),
+	},
 };
 </script>
 <style lang="scss" scoped>
 .expand-transition-enter-active,
 .expand-transition-leave-active {
-  transition: 1s ease-out !important;
+	transition: 1s ease-out !important;
 }
 </style>

@@ -46,25 +46,25 @@ import { mapState, mapActions } from "vuex";
 import DeleteModal from "../components/DeleteModal";
 
 export default {
-  props: ["todos", "title", "description", "iconSize", "dates"],
-  data() {
-    return {
-      selected: null,
-      item: {},
-      bp: this.$vuetify.breakpoint,
-    };
-  },
-  computed: {
-    ...mapState(["editBool", "newBool"]),
-  },
-  methods: {
-    isCompletedToggleAction(item) {
-      item.isCompleted = !item.isCompleted;
-      this.editAction(item);
-    },
-    ...mapActions(["editAction"]),
-  },
-  components: { DeleteModal },
+	props: ["todos", "title", "description", "iconSize", "dates"],
+	data() {
+		return {
+			selected: null,
+			item: {},
+			bp: this.$vuetify.breakpoint,
+		};
+	},
+	computed: {
+		...mapState(["editBool", "newBool"]),
+	},
+	methods: {
+		isCompletedToggleAction(item) {
+			item.isCompleted = !item.isCompleted;
+			this.editAction(item);
+		},
+		...mapActions(["editAction"]),
+	},
+	components: { DeleteModal },
 };
 </script>
 <style lang="scss" scoped>
@@ -72,14 +72,14 @@ $expansion-panel-header-padding: 100px 50px;
 
 .expand-transition-enter-active,
 .expand-transition-leave-active {
-  transition-duration: 0.4s !important;
+	transition-duration: 0.4s !important;
 }
 
 .moved-leave-active {
-  transition: all 0.5s;
+	transition: all 0.5s;
 }
 .moved-leave-to {
-  opacity: 0;
-  transform: translateX(100%);
+	opacity: 0;
+	transform: translateX(100%);
 }
 </style>

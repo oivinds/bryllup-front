@@ -1,9 +1,9 @@
 module.exports = {
-  transpileDependencies: ["vuetify"],
+	transpileDependencies: ["vuetify"],
 
-  pluginOptions: {
-    moment: {
-      locales: ["nb"],
-    },
-  },
+	pluginOptions: {
+		moment: {
+			locales: ["nb"],
+		},
+	},
 };
