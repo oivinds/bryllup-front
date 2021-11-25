@@ -172,7 +172,29 @@ const store = new Vuex.Store({
 		testTitles(state) {
 			const titles = [...Array(6)].map((o, i) => {
 				const singleDuration = state.duration - (i * state.duration) / 6;
-				return this.formatter(singleDuration);
+				let d = moment.duration(singleDuration);
+				d.add({ day: 2 });
+
+				const years = d.years();
+				d.subtract({ years });
+
+				const months = d.months();
+
+				d.subtract({ months: Math.floor(months) });
+
+				const weeks = d.weeks();
+
+
+				const ukePlur = weeks === 1 ? "uke" : "uker";
+				let yearText =
+					years !== 0 ? `${years} år ` : "";
+
+				let monthText = months !== 0 ? `${months} mnd ` : "";
+
+				let weekText = weeks !== 0 ? `${weeks} ${ukePlur} ` : "";
+
+				return yearText + monthText + weekText + " før";
+
 			});
 			const fixedTitles = ["En uke før", "En dag før", "Bryllupsdagen", "I etterkant av bryllupet 1-3 mnd", "Innen 6 måneder etter bryllupet"]
 			return [...titles, ...fixedTitles];
@@ -222,30 +244,7 @@ const store = new Vuex.Store({
 
 // DATE FORMATTER
 
-const formatter = (duration) => {
-	let d = moment.duration(duration);
-	d.add({ day: 2 });
 
-	const years = d.years();
-	d.subtract({ years });
-
-	const months = d.months();
-
-	d.subtract({ months: Math.floor(months) });
-
-	const weeks = d.weeks();
-
-
-	const ukePlur = weeks === 1 ? "uke" : "uker";
-	let yearText =
-		years !== 0 ? `${years} år ` : "";
-
-	let monthText = months !== 0 ? `${months} mnd ` : "";
-
-	let weekText = weeks !== 0 ? `${weeks} ${ukePlur} ` : "";
-
-	return yearText + monthText + weekText + " før";
-}
 
 // Subscribe to store updates
 export const unsubscribe = store.subscribe((mutation, state) => {
