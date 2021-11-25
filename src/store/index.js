@@ -24,7 +24,7 @@ import moment from "moment";
 moment.locale("nb");
 Object.defineProperty(Vue.prototype, "$moment", { value: moment });
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
 	state: {
 		todos: [...all],
 		name: "Kari",
@@ -48,6 +48,15 @@ export default new Vuex.Store({
 		],
 	},
 	mutations: {
+		initialiseStore(state) {
+			// Check if the ID exists
+			if (localStorage.getItem('store')) {
+				// Replace the state object with the stored item
+				this.replaceState(
+					Object.assign(state, JSON.parse(localStorage.getItem('store')))
+				);
+			}
+		},
 		setGroupTitles(state, titles) {
 			state.groupTitles = titles;
 		},
@@ -102,8 +111,9 @@ export default new Vuex.Store({
 		},
 	},
 	actions: {
+
 		setGroupTitles({ commit }, titles) {
-			commit("setGroupTitles", []);
+
 			commit("setGroupTitles", titles);
 		},
 		setDuration({ commit }, date) {
@@ -192,3 +202,14 @@ export default new Vuex.Store({
 		},
 	},
 });
+
+// Subscribe to store updates
+export const unsubscribe = store.subscribe((mutation, state) => {
+	// Store the state object as a JSON string
+	localStorage.setItem('store', JSON.stringify(state));
+});
+
+
+
+
+export default store;

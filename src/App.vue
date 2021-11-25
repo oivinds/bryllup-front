@@ -10,6 +10,8 @@ v-app#app
 						v-icon mdi-cog
 					v-tab(to='/todo')
 						v-icon mdi-calendar-check
+					//- v-tab(@click="unsubscribe()")
+					//- 	v-icon mdi-star
 		v-main
 			transition(name="fade" appear mode="out-in")
 				keep-alive
@@ -33,17 +35,24 @@ v-app#app
 
 <script>
 import { mapState, mapGetters, mapActions } from "vuex";
+import { unsubscribe } from "./store/index";
 
 export default {
   name: "App",
-  data: () => ({
-    //
-  }),
+  beforeCreate() {
+    // TODO: titles to store
+    // this.$store.commit("initialiseStore");
+  },
   computed: {
     ...mapState(["name", "editBool", "timeBeforeWedding", "weddingDate"]),
     ...mapGetters(["todosDone", "todos"]),
   },
   methods: {
+    unsubscribe() {
+      unsubscribe();
+      localStorage.clear();
+      location.reload();
+    },
     ...mapActions(["setDuration"]),
   },
   mounted() {
