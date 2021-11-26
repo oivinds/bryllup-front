@@ -2,17 +2,22 @@
 div
 	EditModal(:item="item")
 	v-row(justify="center")
-		v-col(cols="12" sm="11" md="8" lg="7" xl="6")
+		v-col(cols="11" sm="9" md="8" lg="7" xl="6")
 			v-expansion-panels(flat accordion)
-				v-expansion-panel.ma-2(:key="index" v-for="(group, index) in 11" )
-					v-expansion-panel-header.elevation-6(class="white--text" rounded :color="groupColors[index]")
+				v-expansion-panel.ma-2(:key="index" v-for="(group, index) in testTitles" )
+					v-expansion-panel-header.elevation-1.my-2(:ripple="{class:'white--text'}" class="accent--text"  rounded class="rounded-lg"
+					 :color="groupColors[index]"  )
 						v-row
-							v-col.pb-0(cols="12") 
-								v-card-title.text-button.justify-center {{ createTitles(index) }} 
 							v-col.pa-0(cols="12") 
-								v-card-text.pa-md-4.title {{ getGroupDescription(index) }}
-								v-card-text.pa-md-4.title {{ getGroupDone(index+1).done  }} / {{getGroupDone(index+1).count}} gjort
-					v-expansion-panel-content.py-4(color="background")
+								v-card-title.text-button.justify-center {{ testTitles[index] }} 
+							v-col.pa-0(cols="12") 
+								v-card-text.pa-md-4.title {{ description[index] }}
+							v-col.pa-0(cols="12") 
+								v-card-text.pa-md-4.text-button(v-if="!getGroupDone(index+1).allDone") {{ getGroupDone(index+1).done }} / {{ getGroupDone(index+1).count }} fullført
+								v-card-text(v-else)
+									v-avatar(color="background" size="32" )
+										v-icon.elevation-10(color="amber" ) mdi-star
+					v-expansion-panel-content.py-0(color="background")
 						Period(class="group-expand-item" :key="index"  :dates="dates(index+1)" :todos="getGroup(index+1)"  v-on:update:edit="editById($event)" :iconSize="iconSize")
 
 </template>
@@ -22,46 +27,30 @@ import Period from "../components/Period";
 import EditModal from "../components/EditModal";
 
 import { mapActions, mapGetters, mapMutations } from "vuex";
-let titleArray = [];
+
 export default {
 	data() {
 		return {
 			item: null,
 			bp: this.$vuetify.breakpoint,
+			description: [
+				"Research-fasen. Hent inspirasjon og finn ut av deres stil, ønsker og behov for den store dagen.",
+				"Book det viktigste. Og etter det: Ha det gøy med planleggingsfasens morsomste research!",
+				"Nyt!! Kanskje en av de herligste periodene er nettopp nå: Gaveliste, brudekjoleprøving, gifteringer, forlovelsesfotografering mm!",
+				"Hold hodet kaldt! Dette er månedene hvor dere skal fikse alt det praktiske. Book inn det som gjenstår.",
+				"Kom i feststemning! Det er på tiden å legge vekt på de gøyale tingene ved bryllupet, festen og reisen.",
+				"Siste innkjøp. Bekreft til leverandører og senk skuldrene!",
+				"Det kribler! Site touch og pakking til både bryllupshelg, selve dagen og bryllupsreisen!",
+				"Pust med magen, nyt en manikyr og pedikyr - smil til hverandre og gå tidlig i seng.",
+				" ",
+				"Hvetebrødsdager og bryllupsreise <3",
+				"Rydd opp, si takk og se fremover",
+			],
 		};
 	},
 	components: { Period, EditModal },
 
 	methods: {
-		createTitles(i) {
-			let title;
-			title = i;
-			if (i > 5) {
-				switch (i) {
-					case 6:
-						title = "En uke før";
-						break;
-					case 7:
-						title = "En dag før";
-						break;
-					case 8:
-						title = "Bryllupsdagen";
-						break;
-					case 9:
-						title = "I etterkant av bryllupet 1-3 mnd";
-						break;
-					case 10:
-						title = "Innen 6 måneder etter bryllupet";
-						break;
-				}
-			} else {
-				const duration = this.getDuration - (i * this.getDuration) / 6;
-				title = this.formatter(duration);
-			}
-			titleArray.push(title);
-			return title;
-		},
-
 		...mapMutations(["setEditBool"]),
 		...mapActions(["setGroupTitles"]),
 
@@ -81,24 +70,15 @@ export default {
 		getGroupDone(nr) {
 			const group = this.todos.filter((todo) => todo.group === nr);
 			const done = group.filter((o) => o.isCompleted);
-			return { done: done.length, count: group.length };
+			//const notDone = { done: , count: group.length };
+			const allDone = group.length === done.length;
+			const result = { count: group.length, done: done.length, allDone };
+			/* 	group.length === done.length
+					? "alle oppgaver fullført!"
+					: `${done.length} / ${group.length}`; */
+			return result;
 		},
-		getGroupDescription(no) {
-			const desc = [
-				"Research-fasen. Hent inspirasjon og finn ut av deres stil, ønsker og behov for den store dagen.",
-				"Book det viktigste. Og etter det: Ha det gøy med planleggingsfasens morsomste research!",
-				"Nyt!! Kanskje en av de herligste periodene er nettopp nå: Gaveliste, brudekjoleprøving, gifteringer, forlovelsesfotografering mm!",
-				"Hold hodet kaldt! Dette er månedene hvor dere skal fikse alt det praktiske. Book inn det som gjenstår.",
-				"Kom i feststemning! Det er på tiden å legge vekt på de gøyale tingene ved bryllupet, festen og reisen.",
-				"Siste innkjøp. Bekreft til leverandører og senk skuldrene!",
-				"Det kribler! Site touch og pakking til både bryllupshelg, selve dagen og bryllupsreisen!",
-				"Pust med magen, nyt en manikyr og pedikyr - smil til hverandre og gå tidlig i seng.",
-				" ",
-				"Hvetebrødsdager og bryllupsreise <3",
-				"Rydd opp, si takk og se fremover",
-			];
-			return desc[no];
-		},
+
 		formatter(duration) {
 			let d = this.$moment.duration(duration);
 			d.add({ day: 2 });
@@ -131,20 +111,7 @@ export default {
 			return yearText + monthText + weekText + " før";
 		},
 	},
-	watch: {
-		getDuration() {
-			titleArray = [];
-			this.$nextTick(function () {
-				const titles = [...titleArray];
-				this.setGroupTitles(titles);
-			});
-		},
-	},
-	mounted() {
-		console.log(this.testTitles);
-		const titles = [...titleArray];
-		this.setGroupTitles(titles);
-	},
+
 	computed: {
 		iconSize() {
 			return {
@@ -165,6 +132,10 @@ export default {
 <style lang="scss" scoped>
 .expand-transition-enter-active,
 .expand-transition-leave-active {
-	transition: 1s ease-out !important;
+	transition: 0.6s ease-out !important;
+}
+
+.theme--light.v-expansion-panels .v-expansion-panel {
+	background-color: var(--v-background-base);
 }
 </style>

@@ -1,7 +1,7 @@
 <template lang="pug">
 v-app#app
 	v-app
-		v-app-bar.elevation-4(app hide-on-scroll dense color="white" )
+		v-app-bar.elevation-4(app hide-on-scroll dense color="frame" )
 			.pa-0.ma-0.title.text-md-h6.text-lg-h5 Bryllupsplanleggeren
 			v-spacer
 			div
@@ -16,7 +16,7 @@ v-app#app
 			transition(name="fade" appear mode="out-in")
 				keep-alive
 					router-view
-		v-footer.elevation-3(app)
+		v-footer.elevation-3(app color="frame")
 			v-row
 				v-col(align-self="center")
 					v-card-actions.justify-center

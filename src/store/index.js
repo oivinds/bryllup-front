@@ -156,7 +156,8 @@ const store = new Vuex.Store({
 			const findMaxId = (acc, o) => Math.max(acc, o);
 			const id = ids.reduce(findMaxId, 0) + 1;
 			const created = new Date().toISOString();
-			const newTask = { ...task, created, isCompleted: false, id };
+			const tools = [];
+			const newTask = { ...task, created, isCompleted: false, id, tools };
 			commit("newTodo", newTask);
 			commit("setNewBool", false);
 		},
@@ -223,20 +224,18 @@ const store = new Vuex.Store({
 		},
 		groupColors() {
 			const colors = [
-				"purple darken-3",
-				"deep-purple darken-3",
-				"indigo darken-3",
-				"blue darken-3",
-				"cyan darken-3",
-				"teal darken-3",
-				"green darken-3",
-				"light-green darken-3",
-				"lime darken-3",
-				"amber darken-3",
-				"orange darken-3",
+				"#FF9AA2",
+				"#FFB7B2",
+				"#FFDAC1",
+				"#E2F0CB",
+				"#B5EAD7",
+				"#C7CEEA",
+				"#F3FFBD",
+				"#7BDFF2",
+				"#B2F7EF",
+				"#61C9A8",
+				"#FF9AA2"
 			];
-
-			colors.reverse();
 			return colors;
 		},
 	},

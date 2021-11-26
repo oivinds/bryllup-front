@@ -1,12 +1,14 @@
 <template lang="pug">
-	v-container.my-8
-		v-btn( @click="setNewBool(true)" color="primary" 
-		:x-large="bp.xl" 
-		:large="bp.lg" 
-		:md="bp.md" 
-		:sm="bp.sm" 
-		) lag ny todo
+	v-container
 		NewModal
+		v-btn( 
+		@click="setNewBool(true)" 
+		color="primary" 
+		fab
+		small
+		style="position:fixed;top:100px;right:100px;zIndex:2222;"
+		)
+			v-icon mdi-plus 
 		List
 </template>
 

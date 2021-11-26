@@ -29,20 +29,8 @@
 							multi-line
 							append-outer-icon="mdi-message-text-outline"
 							)
-							//- v-if="commentEnabled || todo.comment !== '' "
-							
-					//- categories
-					//- v-col(cols="6")
-					//-   v-select(:items="categories" :value="todo.category" @change="categoryChange" label="velg kategori")
-					
-					//- group TODO
-					//- v-col(cols="6")
-					//- 	v-select(:items="group"  :value="todo.group" @change="groupChange" label="velg periode for å utføre oppgaven")
-					//- 		template( v-slot:item="{ active, item, attrs, on }")
-					//- 			v-list-item( item-color="col(1)" v-on="on" v-bind="attrs" #default="{ active }")
-					//- 				v-list-item-content( ) {{item.text}}
-
-					v-col(cols="6")
+ 
+					v-col(cols="12")
 						v-select(:items="group" :value="todo.group" @change="groupChange" label="velg periode for å utføre oppgaven")
 					 
 					//- RESPONSABILITY
@@ -112,7 +100,7 @@ export default {
 	},
 	computed: {
 		group() {
-			return this.getGroupTitles.map((item, index) => ({
+			return this.testTitles.map((item, index) => ({
 				text: item,
 				value: index + 1,
 			}));
@@ -127,7 +115,12 @@ export default {
 		},
 		//
 		...mapState(["editBool", "newBool", "groupTitles", "categories"]),
-		...mapGetters(["getDelegates", "getGroupTitles", "groupColors"]),
+		...mapGetters([
+			"getDelegates",
+			"testTitles",
+			"getGroupTitles",
+			"groupColors",
+		]),
 
 		/* commentErrors: {
 			get: function () {
