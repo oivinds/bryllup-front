@@ -19,6 +19,8 @@ div
 										v-icon.elevation-10(color="amber" ) mdi-star
 					v-expansion-panel-content.py-0(color="background")
 						Period(class="group-expand-item" :key="index"  :dates="dates(index+1)" :todos="getGroup(index+1)"  v-on:update:edit="editById($event)" :iconSize="iconSize")
+						//- template(v-slot:default="{ attrs }" )
+						//- 	p  {{ attrs  }}
 
 </template>
 
@@ -132,7 +134,7 @@ export default {
 <style lang="scss" scoped>
 .expand-transition-enter-active,
 .expand-transition-leave-active {
-	transition: 0.6s ease-out !important;
+	transition: 0.6s ease-in-out !important;
 }
 
 .theme--light.v-expansion-panels .v-expansion-panel {

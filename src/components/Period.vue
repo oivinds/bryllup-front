@@ -31,7 +31,7 @@ v-row.justify-center
 							v-icon mdi-comment-text-outline
 						v-list-item-title.text-button Mine notater:
 					v-list-item
-						v-list-item-text.body-1 {{item.comment}}
+						v-list-item-title.body-1 {{item.comment}}
 					v-list-item(v-if="item.tools.length")
 						v-list-item-icon
 							v-icon mdi-tools

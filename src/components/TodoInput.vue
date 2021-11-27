@@ -31,15 +31,20 @@
 							)
  
 					v-col(cols="12")
-						v-select(:items="group" :value="todo.group" @change="groupChange" label="velg periode for å utføre oppgaven")
+						v-select( :items="group" :value="todo.group" toggle-keys="[13,32]" @change="groupChange" label="velg periode for å utføre oppgaven")
+							template( v-slot:selection="{ item, index}")
+								v-btn.mt-2( block tile dense :color="item.color" elevation="0") {{item.text}}
+							template(v-slot:item="{ on, active, item, attrs }" ) 
+								v-btn(block tile dense v-bind="attrs" :color="item.color" elevation="0") {{ item.text }} 
 					 
 					//- RESPONSABILITY
 					v-col(cols="6" v-if="getDelegates.length > 1")
 						v-select(:items="getDelegates" :value="todo.delegate" @change="delegateChange" label="velg ansvarlig")
-					//- COMPLETED
-					//- TAG
+					
+					//- TAG / PRIORITY
 					v-col(cols="6")
 						v-select(:items="tags" @change="tagChange" label="sett viktighet")
+					
 					//- COMPLETED
 					//- v-col(cols="6")
 					//-   v-checkbox(v-model="todo.isCompleted" :label="todo.isCompleted ? 'fullført!' : 'Uferdig'")
@@ -103,6 +108,7 @@ export default {
 			return this.testTitles.map((item, index) => ({
 				text: item,
 				value: index + 1,
+				color: this.groupColors[index],
 			}));
 		},
 
@@ -114,13 +120,8 @@ export default {
 			}
 		},
 		//
-		...mapState(["editBool", "newBool", "groupTitles", "categories"]),
-		...mapGetters([
-			"getDelegates",
-			"testTitles",
-			"getGroupTitles",
-			"groupColors",
-		]),
+		...mapState(["editBool", "newBool", "categories"]),
+		...mapGetters(["getDelegates", "testTitles", "groupColors"]),
 
 		/* commentErrors: {
 			get: function () {
