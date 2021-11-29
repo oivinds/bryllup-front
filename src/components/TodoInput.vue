@@ -40,11 +40,14 @@
 					//- RESPONSABILITY
 					v-col(cols="6" v-if="getDelegates.length > 1")
 						v-select(:items="getDelegates" :value="todo.delegate" @change="delegateChange" label="velg ansvarlig")
-					
+							
 					//- TAG / PRIORITY
 					v-col(cols="6")
-						v-select(:items="tags" @change="tagChange" label="sett viktighet")
-					
+						v-select(:items="tagColors" :value="todo.tag" @change="tagChange" label="sett viktighet")
+							template( v-slot:selection="{ item, index}")
+								v-btn.mt-2( block tile dense :color="item.color" elevation="0") {{item.text}}
+							template(v-slot:item="{ on, active, item, attrs }" ) 
+								v-btn(block tile dense v-bind="attrs" :color="item.color" elevation="0") {{ item.text }} 
 					//- COMPLETED
 					//- v-col(cols="6")
 					//-   v-checkbox(v-model="todo.isCompleted" :label="todo.isCompleted ? 'fullført!' : 'Uferdig'")
@@ -68,7 +71,6 @@ export default {
 		return {
 			commentEnabled: false,
 			todoErrorMessage: "",
-			tags: ["research", "nice to do", "need to do"],
 		};
 	},
 
@@ -120,7 +122,7 @@ export default {
 			}
 		},
 		//
-		...mapState(["editBool", "newBool", "categories"]),
+		...mapState(["editBool", "newBool", "categories", "tagColors"]),
 		...mapGetters(["getDelegates", "testTitles", "groupColors"]),
 
 		/* commentErrors: {

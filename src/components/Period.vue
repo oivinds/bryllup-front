@@ -17,10 +17,11 @@ v-row.justify-center
 						v-list-item-content
 							v-list-item-title.text-subtitle-1.justify-center {{ item.title }}
 						v-list-item-action(v-if="item.delegate && item.delegate !== 'ikke satt'")
-							v-chip.pa-4(dark color="grey") {{ item.delegate }}
-						
+							v-chip.pa-4(small dark color="grey-darken4") {{ item.delegate }}
 						v-list-item-action
-							v-list-item-title.text-subtitle-2(v-text="dates")
+							v-list-item-title.text-subtitle-2.pa-4(v-text="dates")
+						v-list-item-action
+							v-icon.pa-4(:color="tagColors[item.tag].color" small) mdi-circle
 				
 				v-expansion-panel-content.pa-4(:key="item.description")
 					v-list-item(v-if="item.readonly")
@@ -61,7 +62,7 @@ export default {
 		};
 	},
 	computed: {
-		...mapState(["editBool", "newBool"]),
+		...mapState(["editBool", "newBool", "tagColors"]),
 	},
 	methods: {
 		isCompletedToggleAction(item) {

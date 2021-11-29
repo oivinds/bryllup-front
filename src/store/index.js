@@ -26,7 +26,7 @@ const all = [
 	...todos11,
 ];
 all.map((o, i) => {
-	return Object.assign(o, { id: i });
+	return Object.assign(o, { id: i, tag: Math.floor(Math.random() * 3) });
 });
 
 Vue.use(Vuex);
@@ -47,6 +47,7 @@ const store = new Vuex.Store({
 		delegates: [],
 		duration: null,
 		groupTitles: [],
+		tagColors: [{ text: "research", color: "green", value: 0 }, { text: "nice-to do", color: "yellow", value: 1 }, { text: "need to do", color: "red", value: 2 }],
 		categories: [
 			"Praktisk",
 			"Festen",
