@@ -17,22 +17,23 @@ v-row.justify-center
 						v-list-item-content
 							v-list-item-title.text-subtitle-1.justify-center {{ item.title }}
 						v-list-item-action(v-if="item.delegate && item.delegate !== 'ikke satt'")
-							v-chip.pa-4(small dark color="grey-darken4") {{ item.delegate }}
+							v-chip.pa-4(small dark color="grey-lighten4") {{ item.delegate }}
 						v-list-item-action
 							v-list-item-title.text-subtitle-2.pa-4(v-text="dates")
-						v-list-item-action
-							v-icon.pa-4(:color="tagColors[item.tag].color" small) mdi-circle
+						//- v-list-item-action
+						//- 	v-icon.pa-4(:color="tagColors[item.tag].color" small) mdi-circle
 				
 				v-expansion-panel-content.pa-4(:key="item.description")
 					v-list-item(v-if="item.readonly")
 						v-list-item-content.title.font-italic {{ item.content}}
-					v-divider.py-4(v-if="item.readonly")
-					v-list-item(v-if="item.comment !== ''" )
+					v-divider.ma-4(v-if="item.readonly")
+					v-list-item
 						v-list-item-icon
 							v-icon mdi-comment-text-outline
 						v-list-item-title.text-button Mine notater:
 					v-list-item
-						v-list-item-title.body-1 {{item.comment}}
+						.body-1 {{item.comment}}
+					v-divider.ma-4
 					v-list-item(v-if="item.tools.length")
 						v-list-item-icon
 							v-icon mdi-tools

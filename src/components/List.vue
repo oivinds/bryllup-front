@@ -2,7 +2,7 @@
 div
 	EditModal(:item="item")
 	v-row(justify="center")
-		v-col(cols="11" sm="9" md="8" lg="7" xl="6")
+		v-col(cols="12" sm="9" md="8" lg="8" xl="6")
 			v-expansion-panels(flat accordion)
 				v-expansion-panel.ma-2(:key="index" v-for="(group, index) in testTitles" )
 					v-expansion-panel-header.elevation-1.my-2(:ripple="{class:'white--text'}" class="accent--text"  rounded class="rounded-lg"
@@ -10,8 +10,8 @@ div
 						v-row
 							v-col.pa-0(cols="12") 
 								v-card-title.text-button.justify-center {{ testTitles[index] }} 
-							v-col.pa-0(cols="12") 
-								v-card-text.pa-md-4.title {{ description[index] }}
+							v-col(cols="12") 
+								v-card-title.pa-md-4.title.justify-center {{ description[index] }}
 							v-col.pa-0(cols="12") 
 								v-card-text.pa-md-4.text-button(v-if="!getGroupDone(index+1).allDone") {{ getGroupDone(index+1).done }} / {{ getGroupDone(index+1).count }} fullført
 								v-card-text(v-else)
@@ -19,8 +19,6 @@ div
 										v-icon.elevation-10(color="amber" ) mdi-star
 					v-expansion-panel-content.py-0(color="background")
 						Period(class="group-expand-item" :key="index"  :dates="dates(index+1)" :todos="getGroup(index+1)"  v-on:update:edit="editById($event)" :iconSize="iconSize")
-						//- template(v-slot:default="{ attrs }" )
-						//- 	p  {{ attrs  }}
 
 </template>
 
@@ -139,5 +137,10 @@ export default {
 
 .theme--light.v-expansion-panels .v-expansion-panel {
 	background-color: var(--v-background-base);
+}
+
+.v-card__text,
+.v-card__title {
+	word-break: normal; /* maybe !important  */
 }
 </style>

@@ -199,8 +199,8 @@ const store = new Vuex.Store({
 				"En uke før",
 				"En dag før",
 				"Bryllupsdagen",
-				"I etterkant av bryllupet 1-3 mnd",
-				"Innen 6 måneder etter bryllupet",
+				"Etter bryllupet 1-3 mnd",
+				"Før 6 mnd. etter bryllupet",
 			];
 			return [...titles, ...fixedTitles];
 		},

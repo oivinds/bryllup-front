@@ -30,24 +30,30 @@
 							append-outer-icon="mdi-message-text-outline"
 							)
  
-					v-col(cols="12")
+					v-col(cols="7")
 						v-select( :items="group" :value="todo.group" toggle-keys="[13,32]" @change="groupChange" label="velg periode for å utføre oppgaven")
 							template( v-slot:selection="{ item, index}")
-								v-btn.mt-2( block tile dense :color="item.color" elevation="0") {{item.text}}
+								v-btn(height="22"  block  dense :color="item.color" elevation="0") {{item.text}}
 							template(v-slot:item="{ on, active, item, attrs }" ) 
 								v-btn(block tile dense v-bind="attrs" :color="item.color" elevation="0") {{ item.text }} 
 					 
 					//- RESPONSABILITY
-					v-col(cols="6" v-if="getDelegates.length > 1")
-						v-select(:items="getDelegates" :value="todo.delegate" @change="delegateChange" label="velg ansvarlig")
+					v-col(cols="5" v-if="getDelegates.length > 1")
+						v-select( :items="getDelegates" :value="todo.delegate" @change="delegateChange" label="velg ansvarlig")
+							//- template( v-slot:selection="{ item, index}")
+							//- 	v-btn.mt-2(height="22"  block  dense  elevation="0") {{item}}
+							//- template(v-slot:item="{ on, active, item, attrs }" ) 
+							//- 	v-btn(height="22" block tile dense v-bind="attrs" elevation="0") {{ item }} 
 							
 					//- TAG / PRIORITY
-					v-col(cols="6")
-						v-select(:items="tagColors" :value="todo.tag" @change="tagChange" label="sett viktighet")
-							template( v-slot:selection="{ item, index}")
-								v-btn.mt-2( block tile dense :color="item.color" elevation="0") {{item.text}}
-							template(v-slot:item="{ on, active, item, attrs }" ) 
-								v-btn(block tile dense v-bind="attrs" :color="item.color" elevation="0") {{ item.text }} 
+					//- v-col(cols="6")
+					//- 	v-select(:items="tagColors" :value="todo.tag" @change="tagChange" label="sett viktighet")
+					//- 		template( v-slot:selection="{ item, index}")
+					//- 			v-btn.mt-2( block tile dense :color="item.color" elevation="0") {{item.text}}
+					//- 		template(v-slot:item="{ on, active, item, attrs }")
+					//- 			v-btn(block tile dense v-bind="attrs" :color="item.color" elevation="0") {{ item.text }} 
+
+
 					//- COMPLETED
 					//- v-col(cols="6")
 					//-   v-checkbox(v-model="todo.isCompleted" :label="todo.isCompleted ? 'fullført!' : 'Uferdig'")
@@ -83,9 +89,9 @@ export default {
 		groupChange(e) {
 			this.todo.group = e;
 		},
-		tagChange(e) {
-			this.todo.tag = e;
-		},
+		// tagChange(e) {
+		// 	this.todo.tag = e;
+		// },
 		categoryChange(e) {
 			this.todo.category = e;
 		},
