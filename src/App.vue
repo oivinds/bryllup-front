@@ -1,11 +1,11 @@
 <template lang="pug">
 v-app#app
 	v-app
-		v-app-bar.elevation-4(app hide-on-scroll dense color="frame" )
-			.pa-0.ma-0.title.text-md-h6.text-lg-h5 Bryllupsplanleggeren
+		v-app-bar.elevation-1(app hide-on-scroll dense color="frame" )
+			.pa-0.ma-0.pa-lg-16.title.text-md-h6.text-lg-h5 Bryllupsplanleggeren
 			v-spacer
 			div
-				v-tabs.px-4.pa-0(color="primary" hide-slider)
+				v-tabs.pa-0.pa-lg-16(color="primary" hide-slider)
 					v-tab(to='/' color="primary")
 						v-icon mdi-cog
 					v-tab(to='/todo')

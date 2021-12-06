@@ -15,9 +15,9 @@ v-row.justify-center
 						v-list-item-action(v-if="!item.readonly")
 							h2.pr-4 👰🏽 🤵🏾
 						v-list-item-content
-							v-list-item-title.text-subtitle-1.justify-center {{ item.title }}
+							v-list-item-title.body-1.justify-center {{ item.title }}
 						v-list-item-action(v-if="item.delegate && item.delegate !== 'ikke satt'")
-							v-chip.pa-4(small dark color="grey-lighten4") {{ item.delegate }}
+							v-chip.pa-2(small dark color="primary lighten-1") {{ item.delegate.length > 7  ? item.delegate.substr(0,5) + ' ..' : item.delegate }}
 						v-list-item-action
 							v-list-item-title.text-subtitle-2.pa-4(v-text="dates")
 						//- v-list-item-action
@@ -25,19 +25,19 @@ v-row.justify-center
 				
 				v-expansion-panel-content.pa-4(:key="item.description")
 					v-list-item(v-if="item.readonly")
-						v-list-item-content.title.font-italic {{ item.content}}
+						v-list-item-content.body-1.font-italic {{ item.content}}
 					v-divider.ma-4(v-if="item.readonly")
 					v-list-item
 						v-list-item-icon
 							v-icon mdi-comment-text-outline
-						v-list-item-title.text-button Mine notater:
+						v-list-item-title.overline Mine notater:
 					v-list-item
 						.body-1 {{item.comment}}
 					v-divider.ma-4
 					v-list-item(v-if="item.tools.length")
 						v-list-item-icon
 							v-icon mdi-tools
-						v-list-item-title.text-button Verktøy:
+						v-list-item-title.overline Til inspirasjon:
 					v-list-item
 						v-list-item-action(v-for="(e, i) in item.tools" :key="i")
 							a.mx-auto(:href="'//https://'+e" target="_blank" ) {{e}}

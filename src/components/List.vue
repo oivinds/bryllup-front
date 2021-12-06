@@ -2,11 +2,11 @@
 div
 	EditModal(:item="item")
 	v-row(justify="center")
-		v-col(cols="12" sm="9" md="8" lg="8" xl="6")
-			v-expansion-panels(flat accordion)
+		v-col(cols="12" sm="9" md="8" lg="7" xl="6")
+			v-expansion-panels(flat accordion hover )
 				v-expansion-panel.ma-2(:key="index" v-for="(group, index) in testTitles" )
-					v-expansion-panel-header.elevation-1.my-2(:ripple="{class:'white--text'}" class="accent--text"  rounded class="rounded-lg"
-					 :color="groupColors[index]"  )
+					v-expansion-panel-header.my-2(:ripple="{class:'white--text'}" 
+					class="accent--text" class="rounded-lg" :color="groupColors[index]" rounded)
 						v-row
 							v-col.pa-0(cols="12") 
 								v-card-title.text-button.justify-center {{ testTitles[index] }} 
@@ -56,7 +56,7 @@ export default {
 
 		dates(index) {
 			const duration = (index * this.getDuration) / 6;
-			return this.$moment().add(duration).format("MMMM YY");
+			return this.$moment().add(duration).format("MMM YY");
 		},
 		editById(id) {
 			this.setEditBool(true);

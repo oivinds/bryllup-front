@@ -11,13 +11,13 @@
 							label="tittel"
 							required)
 					v-col(v-else)
-						.headline {{ todo.title}}
+						.body-1 {{ todo.title}}
 
 						
 				v-row
 					//- CONTENT
 					v-col(v-if="todo.readonly")
-						.title {{ todo.content}}
+						.body-2 {{ todo.content}}
 				v-row
 					v-col(cols="12")
 						v-textarea(
@@ -31,11 +31,11 @@
 							)
  
 					v-col(cols="7")
-						v-select( :items="group" :value="todo.group" toggle-keys="[13,32]" @change="groupChange" label="velg periode for å utføre oppgaven")
+						v-select( :items="group" :value="todo.group" toggle-keys="[13,32]" @change="groupChange" label="Periode for å utføre oppgaven")
 							template( v-slot:selection="{ item, index}")
 								v-btn(height="22"  block  dense :color="item.color" elevation="0") {{item.text}}
-							template(v-slot:item="{ on, active, item, attrs }" ) 
-								v-btn(block tile dense v-bind="attrs" :color="item.color" elevation="0") {{ item.text }} 
+							template(v-slot:item="{ active, item }" ) 
+								v-btn(block tile dense  :color="item.color" elevation="0") {{ item.text }} 
 					 
 					//- RESPONSABILITY
 					v-col(cols="5" v-if="getDelegates.length > 1")

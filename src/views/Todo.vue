@@ -1,14 +1,16 @@
 <template lang="pug">
 	v-container
 		NewModal
-		v-btn( 
-		@click="setNewBool(true)" 
-		color="primary" 
-		fab
-		small
-		style="position:fixed;top:100px;right:100px;zIndex:2222;"
-		)
-			v-icon mdi-plus 
+		transition(name="fade")
+			v-btn(
+			v-show="!newBool && !editBool" 
+			@click="setNewBool(true)" 
+			color="primary" 
+			fab
+			small
+			style="position:fixed;top:67px;right:40px;zIndex:2222;"
+			)
+				v-icon mdi-plus 
 		List
 </template>
 
