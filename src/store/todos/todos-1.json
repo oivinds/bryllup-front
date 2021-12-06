@@ -5,7 +5,9 @@
 		"comment": "",
 		"tag": "",
 		"category": "Praktisk",
-		"emoji": "💰",
+		"emoji": [
+			"17-money-bag_1f4b0"
+		],
 		"content": "Det aller viktigste og første! Skisser et budsjett ",
 		"tools": [
 			"mal for budsjett",
@@ -22,7 +24,10 @@
 		"comment": "",
 		"tag": "",
 		"category": "Praktisk",
-		"emoji": "🕺💃",
+		"emoji": [
+			"18-man-dancing_1f57a",
+			"18-woman-dancing_1f483"
+		],
 		"content": "Ah - hvem vil dere dele den store dagen med?",
 		"tools": [
 			"gjestelisteoversikt"
@@ -30,120 +35,5 @@
 		"readonly": true,
 		"isCompleted": false,
 		"created": "2021-10-16T23:01:13.506Z"
-	},
-	{
-		"title": "Bestem tema for bryllupet",
-		"group": 1,
-		"comment": "",
-		"tag": "",
-		"category": "Praktisk",
-		"emoji": "🎉",
-		"content": "Vil dere ha romantisk, boho- avslappet? Det er gøy å starte å få inspirasjon og kanskje bestemme seg for tema nå",
-		"tools": [
-			"tema på Pinterest"
-		],
-		"readonly": true,
-		"isCompleted": false,
-		"created": "2021-10-16T23:01:13.506Z"
-	},
-	{
-		"title": "Velg forlovere! ",
-		"group": 1,
-		"comment": "",
-		"tag": "",
-		"category": "Praktisk",
-		"emoji": "🎉",
-		"content": "Finn ut hvem du ønsker skal være din forlover - og overrask vedkommende med en liten gaveeske, kort eller et brev hvor du uttrykker hva vedkommende betyr for deg.",
-		"tools": [],
-		"readonly": true,
-		"isCompleted": false,
-		"created": "2021-10-16T23:01:13.506Z"
-	},
-	{
-		"title": "Sett dato for bryllupet",
-		"comment": "",
-		"tag": "",
-		"category": "Praktisk",
-		"emoji": "📆",
-		"group": 1,
-		"content": "Når datoen er satt - da er det bare å begynne å glede seg!!",
-		"tools": [],
-		"readonly": true,
-		"isCompleted": false,
-		"created": "2021-10-16T23:01:13.506Z"
-	},
-	{
-		"title": "Research: lokale",
-		"group": 1,
-		"comment": "",
-		"tag": "",
-		"category": "Praktisk",
-		"emoji": "🔍",
-		"tools": [
-			"Link til søkemotorer som kan være til hjelp"
-		],
-		"content": "Ok, nå kan dere virkelig begynne å se for dere hvordan bryllupet kan se ut. Bare å sette i gang googlesøk, eller dra på besøk til det stedet dere kanskje har snakket om",
-		"readonly": true,
-		"isCompleted": false
-	},
-	{
-		"title": "Research: catering/Mat",
-		"group": 1,
-		"comment": "",
-		"tag": "",
-		"category": "Festen",
-		"emoji": "🔍",
-		"content": "Let them eat cake! Enten om det er å gå gjennom menyen til de ulike lokalene dere vurderer ",
-		"tools": [],
-		"readonly": true,
-		"isCompleted": false
-	},
-	{
-		"title": "Research: DJ/Musikk",
-		"group": 1,
-		"comment": "",
-		"tag": "",
-		"category": "Festen",
-		"emoji": "🔍",
-		"tools": [],
-		"content": "Hvem- eller hvilken musikk kan skape skikkelig bra stemning i bryllupet deres?",
-		"readonly": true,
-		"isCompleted": false
-	},
-	{
-		"title": "Research:Blomsterleverandører",
-		"group": 1,
-		"comment": "",
-		"tag": "",
-		"category": "Praktisk",
-		"emoji": "📷",
-		"tools": [],
-		"content": "Til borddekorasjoner, bukett og som dekorasjon under vielsen?",
-		"readonly": true,
-		"isCompleted": false
-	},
-	{
-		"title": "Research: Fotograf",
-		"group": 1,
-		"comment": "",
-		"tag": "",
-		"category": "Praktisk",
-		"emoji": "🔍",
-		"tools": [],
-		"content": "Hvem skal få den store æren av å ta vakre bilder av dere?",
-		"readonly": true,
-		"isCompleted": false
-	},
-	{
-		"title": "Research: leie av møbler",
-		"group": 1,
-		"comment": "",
-		"tag": "",
-		"category": "Dekorasjon",
-		"emoji": "🔍",
-		"tools": [],
-		"content": "Hvis lokalet dere ønsker å leie ikke har møbler er det mange gode leie-alternativer",
-		"readonly": true,
-		"isCompleted": false
 	}
 ]

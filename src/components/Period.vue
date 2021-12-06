@@ -10,12 +10,17 @@ v-row.justify-center
 							:color="item.isCompleted ? 'green' : 'grey lighten-1'"
 							v-bind="iconSize")
 								v-icon(:color="item.isCompleted ? 'white' : 'grey lighten-4'") mdi-check
-						v-list-item-action(v-if="item.emoji")
-							h2.pr-4 {{ item.emoji}}
+						v-list-item-action(v-for="(emo, i) in item.emoji" :key="i")
+							img.px-1(height="22" :src="require(`@/assets/emojis/${emo}.png`)")
+							//-p(v-for="(emo, i) in item.emoji" height="22" ) {{ emo }}
+							
 						v-list-item-action(v-if="!item.readonly")
-							h2.pr-4 👰🏽 🤵🏾
+							img.px-1(height="22" :src="require(`@/assets/emojis/person-with-veil_medium-skin-tone_1f470-1f3fd_1f3fd.png`)")
+						v-list-item-action(v-if="!item.readonly")
+							img.px-1(height="22" :src="require(`@/assets/emojis/person-in-tuxedo_medium-dark-skin-tone_1f935-1f3fe_1f3fe.png`)")
 						v-list-item-content
 							v-list-item-title.body-1.justify-center {{ item.title }}
+							v-list-item-title.text-subtitle-1.justify-center.pl-4 {{ item.title }}
 						v-list-item-action(v-if="item.delegate && item.delegate !== 'ikke satt'")
 							v-chip.pa-2(small dark color="primary lighten-1") {{ item.delegate.length > 7  ? item.delegate.substr(0,5) + ' ..' : item.delegate }}
 						v-list-item-action
@@ -77,6 +82,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 $expansion-panel-header-padding: 100px 50px;
+
+.image-container {
+	display: flex;
+	justify-content: center;
+}
 
 .expand-transition-enter-active,
 .expand-transition-leave-active {
