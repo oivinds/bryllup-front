@@ -19,8 +19,7 @@ v-row.justify-center
 						v-list-item-action(v-if="!item.readonly")
 							img.px-1(height="22" :src="require(`@/assets/emojis/person-in-tuxedo_medium-dark-skin-tone_1f935-1f3fe_1f3fe.png`)")
 						v-list-item-content
-							v-list-item-title.body-1.justify-center {{ item.title }}
-							v-list-item-title.text-subtitle-1.justify-center.pl-4 {{ item.title }}
+							v-list-item-title.body-1.justify-center.pl-4 {{ item.title }}
 						v-list-item-action(v-if="item.delegate && item.delegate !== 'ikke satt'")
 							v-chip.pa-2(small dark color="primary lighten-1") {{ item.delegate.length > 7  ? item.delegate.substr(0,5) + ' ..' : item.delegate }}
 						v-list-item-action

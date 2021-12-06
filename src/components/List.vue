@@ -7,11 +7,6 @@ div
 				v-expansion-panel.ma-2(:key="index" v-for="(group, index) in testTitles" )
 					v-expansion-panel-header.my-2(:ripple="{class:'white--text'}" 
 					class="accent--text" class="rounded-lg" :color="groupColors[index]" rounded)
-		v-col(cols="12" sm="9" md="8" lg="8" xl="6")
-			v-expansion-panels(flat accordion)
-				v-expansion-panel.ma-2(:key="index" v-for="(group, index) in 1" )
-					v-expansion-panel-header.elevation-1.my-2(:ripple="{class:'white--text'}" class="accent--text"  rounded class="rounded-lg"
-					 :color="groupColors[index]")
 						v-row
 							v-col.pa-0(cols="12") 
 								v-card-title.text-button.justify-center {{ testTitles[index] }} 
