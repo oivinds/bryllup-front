@@ -1,236 +1,337 @@
 [
-  {
-    "title": "Book seremonileder/vigsler ",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "👩‍⚖️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Book lokale for ønsket dato",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "🏰",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Book inn leverandør for mat om dere skal ha dette",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Festen",
-    "emoji": "🥡",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Book hotell / Bosted for gjestene",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "🛏️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Book fotograf/videograf",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "Husk å booke inn for forlovelsesfotografering og vurder om dere også ønsker videograf.",
-    "category": "Praktisk",
-    "emoji": "📷",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Velg frisør og make-up artist",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Antrekk  og tilbehør",
-    "emoji": "💇",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Blomsterdekoratør eller -stylist?",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "Dersom dere ønsker profesjonelle til å fikse blomster, kan dette være lurt å booke inn nå slik at de holder av datoen.",
-    "category": "Dekorasjon",
-    "emoji": "✨",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Lage, trykke opp og sende Save The Date",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "Husk å ta utgangspunkt i bryllupstemaet dere har valgt i utformingen av STD-kort. Psst: Spar tid og miljøet og velg digitale STD-kort. ",
-    "category": "Dekorasjon",
-    "emoji": "✉️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Brudekjoleprøving!",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "Sett opp prøvetimer i ønskede salonger. Psst: Det er innafor å spørre forloveren sin om hjelp her!",
-    "category": "Antrekk  og tilbehør",
-    "emoji": "👰",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Lage hjemmeside",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "Det er like greit å få opp en nettside eller Facebook-gruppe først som sist! En idé er også å lage en egen epostkonto for bryllupet for å skille dette fra din private epost.",
-    "category": "Praktisk",
-    "emoji": "🔍",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Research: Gifteringer",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "DAntrekk  og tilbehørekorasjon",
-    "emoji": "🔍",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Research: Transport",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "🔍",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Research: Tilbehør",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "Orienter deg om sko og tilbehør til dagen",
-    "category": "Antrekk  og tilbehør",
-    "emoji": "🔍",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Brudepikekjoler",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Antrekk  og tilbehør",
-    "emoji": "🎀",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Legg en plan for drikke-og alkoholservering",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Festen",
-    "emoji": "🥂",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Research: Invitasjoner",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "Lag skisser på hvordan dere ønsker dem - husk å beholde tematikken fra Save The Date",
-    "category": "Dekorasjon",
-    "emoji": "✉️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Research hvilke aktiviteter som kan være gøy ",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Festen",
-    "emoji": "🎉",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Research: Dekorasjon",
-    "group": 2,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Dekorasjon",
-    "emoji": "🎈",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  }
+	{
+		"title": "Book seremonileder/vigsler ",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "Hvordan ønsker dere at det store øyeblikket skal gjennomføres og hvem skal vie dere?",
+		"category": "Praktisk",
+		"emoji": [
+			"33-balance-scale_2696-fe0f",
+			"33-woman_1f469"
+		],
+		"tools": [
+			{
+				"title": "Les om de ulike formene for vielse her",
+				"url": "https://dittbryllup.no/category/planlegger/vielsen/"
+			},
+			{
+				"title": "Vurdert vielse på en fjelltopp? Ja, det er mulig! ",
+				"url": "https://dittbryllup.no/elopement-i-norge-slik-gar-du-frem/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Book lokale for ønsket dato",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "På tide å booke inn lokalet! Det er mye som er gjort når denne oppgaven er gjennomført :)",
+		"category": "Praktisk",
+		"emoji": [
+			"34-castle_1f3f0"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Book inn leverandører for mat",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "Catering eller andre leveranører er ofte travle - og det kan være lurt å legge inn en bestilling tidlig slik at dere er sikret den dere ønsker å bruke.",
+		"category": "Festen",
+		"emoji": [
+			"35-takeout-box_1f961"
+		],
+		"tools": [
+			{
+				"title": "Alt du trenger å vite om catering til bryllup",
+				"url": "https://dittbryllup.no/hvordan-fungerer-egentlig-catering-til-bryllup/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Book hotell / Bosted for gjestene",
+		"group": 2,
+		"comment": "Trenger gjestene et sted å bo? Book hotell eller annen type bo-løsning for gjestene:) Her kan det være lurt å prøve å få forhandlet noen rabatter på vegne av gjestene :)",
+		"tag": "",
+		"content": "",
+		"category": "Praktisk",
+		"emoji": [
+			"36-bed_1f6cf-fe0f"
+		],
+		"tools": [
+			{
+				"title": "",
+				"url": ""
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Book fotograf/videograf",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "Husk å booke inn for forlovelsesfotografering og vurder om dere også ønsker videograf.",
+		"category": "Praktisk",
+		"emoji": [
+			"37-camera_1f4f7"
+		],
+		"tools": [
+			{
+				"title": "Bryllupsfotografen forklarer og gir gode tips til en vakker forlovelsesfotografering",
+				"url": "https://dittbryllup.no/forlovelsesfotografering-hva-er-egentlig-det/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Velg frisør og make-up artist",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "Det vil bli mange kameraer vendt din vei denne dagen, og det kan være lurt å ha en sminke og frisyre som sitter som et skudd fra morgen til de sene nattetimer.",
+		"category": "Antrekk  og tilbehør",
+		"emoji": [
+			"38-86-person-getting-haircut_1f487"
+		],
+		"tools": [
+			{
+				"title": "Husk at du alltid kan få gode tips av andre brides to be i gruppen Brudeprat ",
+				"url": "https://www.facebook.com/groups/1824605724218468"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Blomsterdekoratør eller -stylist?",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "Dersom dere ønsker profesjonelle til å fikse blomster, kan dette være lurt å booke inn nå slik at de holder av datoen.",
+		"category": "Dekorasjon",
+		"emoji": [
+			"39-sparkles_2728"
+		],
+		"tools": [
+			{
+				"title": "Husk at du alltid kan få gode tips av andre brides to be i gruppen Brudeprat",
+				"url": "https://www.facebook.com/groups/1824605724218468"
+			},
+			{
+				"title": "Bli inspirert av denne bruden som fikset alt av blomsterdekorasjoner selv",
+				"url": "https://dittbryllup.no/bryllup-og-korona-en-drommedag-pa-manefisken/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Lage, trykke opp og sende Save The Date",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "Husk å ta utgangspunkt i bryllupstemaet dere har valgt i utformingen av STD-kort. Psst: Spar tid og miljøet og velg digitale STD-kort.",
+		"category": "Dekorasjon",
+		"emoji": [
+			"40-envelope_2709-fe0f"
+		],
+		"tools": [
+			{
+				"title": "Her er alt dere trenger å vite om Save the date-kort",
+				"url": "https://dittbryllup.no/alt-dere-trenger-a-vite-om-save-the-date-kort-til-bryllup/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Brudekjoleprøving!",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "Sett opp prøvetimer i ønskede salonger. Psst: Det er innafor å spørre forloveren sin om hjelp her!",
+		"category": "Antrekk  og tilbehør",
+		"emoji": [
+			"41-person-with-veil_1f470"
+		],
+		"tools": [
+			{
+				"title": "Slik går du frem for å finne riktig kjole til din kropp",
+				"url": "https://dittbryllup.no/brudekjole-til-din-kroppsfasong/"
+			},
+			{
+				"title": "Slik velger du riktig brudesalong i Oslo ",
+				"url": "https://dittbryllup.no/slik-velger-du-riktig-brudesalong-i-oslo/ "
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Lage hjemmeside",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "Det er like greit å få opp en nettside eller Facebook-gruppe først som sist! En idé er også å lage en egen epostkonto for bryllupet for å skille dette fra din private epost.",
+		"category": "Praktisk",
+		"emoji": [
+			"42-information_2139-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Research: Gifteringer",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "Dette er ringen dere skal ha resten av livet - ønsker dere noe klassisk, moderne, unikt eller noe helt annet?",
+		"category": "Antrekk  og tilbehørekorasjon",
+		"emoji": [
+			"43-magnifying-glass-tilted-left_1f50d-1"
+		],
+		"tools": [
+			{
+				"title": "Slik finner dere perfekte gifteringer ",
+				"url": "https://dittbryllup.no/slik-finner-dere-perfekte-gifteringer/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Research: Transport",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "Transport til bryllup gjelder så mangt: Dere skal komme dere til og fra, gjestene må kanskje transporteres fra vielse til lokalet - og husk også på utstyr, leverandører og medhjelpere! ",
+		"category": "Praktisk",
+		"emoji": [
+			"43-magnifying-glass-tilted-left_1f50d-1"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Research: Tilbehør",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "Orienter deg om sko og tilbehør til dagen",
+		"category": "Antrekk  og tilbehør",
+		"emoji": [
+			"43-magnifying-glass-tilted-left_1f50d-1"
+		],
+		"tools": [
+			{
+				"title": "La deg inspirere av dette vakre tilbehøret ",
+				"url": "https://dittbryllup.no/tilbehor-brud/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Brudepikekjoler",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "Skal dere ha brudepiker, få målene og legg inn bestilling på dette ",
+		"category": "Antrekk  og tilbehør",
+		"emoji": [
+			"46-ribbon_1f380"
+		],
+		"tools": [
+			{
+				"title": "Brudepikekjoler - 30 favoritter til venninnegjengen",
+				"url": "https://dittbryllup.no/brudepikekjoler-30-favoritter-til-venninnegjengen/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Legg en plan for drikke-og alkoholservering",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "Det er ofte her budsjettet ryker, så det er vel verdt å bruke litt tid til å tenke på dette. Skal dere ha medbrakt alkohol, fri bar eller skal gjestene betale?",
+		"category": "Festen",
+		"emoji": [
+			"47-clinking-glasses_1f942"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Research: Invitasjoner",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "Lag skisser på hvordan dere ønsker dem - husk å beholde tematikken fra Save The Date",
+		"category": "Dekorasjon",
+		"emoji": [
+			"43-magnifying-glass-tilted-left_1f50d-1"
+		],
+		"tools": [
+			{
+				"title": "Slik går dere frem for å lage bryllupsinvitasjoner ",
+				"url": "https://dittbryllup.no/slik-lager-dere-bryllupsinvitasjoner/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Research hvilke aktiviteter som kan være gøy ",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "Det er alltid gøy med noe underholdning på den store dagen! Hva ønsker dere? Kanskje kjenner dere noen som kan bidra? ",
+		"category": "Festen",
+		"emoji": [
+			"19-party-popper_1f389"
+		],
+		"tools": [
+			{
+				"title": "Skal dere ha barn i bryllupet? Her er gode aktivitetsforslag for de små",
+				"url": "https://dittbryllup.no/aktiviteter-til-barn-i-bryllup-fem-steg-til-en-magisk-dag-for-sma-gjester/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Research: Dekorasjon",
+		"group": 2,
+		"comment": "",
+		"tag": "",
+		"content": "Her er det mye inspirasjon å hente og mange valg. Velg noen hovedelementer og krydre med ekstra",
+		"category": "Dekorasjon",
+		"emoji": [
+			"43-magnifying-glass-tilted-left_1f50d-1"
+		],
+		"tools": [
+			{
+				"title": "Finn inspirasjon i Ditt Bryllups Pinterest-univers",
+				"url": "https://no.pinterest.com/DittBryllup/_saved/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	}
 ]

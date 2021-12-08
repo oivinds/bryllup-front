@@ -1,119 +1,140 @@
 [
-  {
-    "title": "Handle drikke til bryllupet",
-    "group": 6,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Festen",
-    "emoji": "🥂",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Kjøp inn de siste detaljene (vaser, servietter, lys, såpe +++)",
-    "group": 6,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Festen",
-    "emoji": "🎈",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Legg en plan for hvor du skal ha blomster, kjole osv og hvordan du skal frakte det til stedet",
-    "group": 6,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "📋",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Natten før/Morgenrutinen",
-    "group": 6,
-    "comment": "",
-    "tag": "",
-    "content": "Skal du ha sminkebilder/overnatting osv bør dette planlegges nå. Kjøp inn spruddel sov",
-    "category": "Praktisk",
-    "emoji": "✨",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Legg en plan for aktiviteter, leker og underholdningen for dagen",
-    "group": 6,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Festen",
-    "emoji": "✨",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Skriv ekteskapsløfter",
-    "group": 6,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "✍️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Planlegg taler eller ord du/dere vil si på dagen",
-    "group": 6,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "✍️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Bekreft antall gjester til lokalet, catering, restaurant osv",
-    "group": 6,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Festen",
-    "emoji": "🧾",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Siste touch på takkegaver",
-    "group": 6,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Gaver",
-    "emoji": "🎁",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  }
+	{
+		"title": "Handle drikke til bryllupet",
+		"group": 6,
+		"comment": "",
+		"tag": "",
+		"content": "Dersom dere skal ha medbrakt alkohol er det lurt å begynne hamstringen nå.",
+		"category": "Festen",
+		"emoji": [
+			"47-clinking-glasses_1f942"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Kjøp inn de siste detaljene (vaser, servietter, lys, såpe +++)",
+		"group": 6,
+		"comment": "",
+		"tag": "",
+		"content": "Husk at Finn.no og Tise er supre steder hvor du kan spare mye.",
+		"category": "Festen",
+		"emoji": [
+			"50-balloon_1f388"
+		],
+		"tools": [
+			{
+				"title": "I tillegg må du gjerne ta kontakt med andre brides to be i gruppen Brudeprat ",
+				"url": "https://www.facebook.com/groups/1824605724218468"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Legg en plan for hvor du skal ha blomster, kjole osv og hvordan du skal frakte det til stedet",
+		"group": 6,
+		"comment": "",
+		"tag": "",
+		"content": "Her stiller nok forlover og mor gjerne opp!",
+		"category": "Praktisk",
+		"emoji": [
+			"82-memo_1f4dd"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Natten før / Morgenrutinen",
+		"group": 6,
+		"comment": "",
+		"tag": "",
+		"content": "Tenk gjenno hva du ønsker å gjøre.",
+		"category": "Praktisk",
+		"emoji": [
+			"39-sparkles_2728"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Legg en plan for aktiviteter, leker og underholdningen for dagen",
+		"group": 6,
+		"comment": "",
+		"tag": "",
+		"content": "Og inkluder gjerne klokkeslett og ansvar! ",
+		"category": "Festen",
+		"emoji": [
+			"39-sparkles_2728"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Skriv ekteskapsløfter",
+		"group": 6,
+		"comment": "",
+		"tag": "",
+		"content": "Sett av god tid, kanskje noe godt i glasset og noe fin musikk - og visualiser deg selve dagen og din kjære. Hva vil du si til vedkommende? ",
+		"category": "Praktisk",
+		"emoji": [
+			"119-writing-hand_270d-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Planlegg taler eller ord du/dere vil si på dagen",
+		"group": 6,
+		"comment": "",
+		"tag": "",
+		"content": "Er det andre ting du ønsker å få formidlet på den store dagen?",
+		"category": "Praktisk",
+		"emoji": [
+			"119-writing-hand_270d-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Bekreft antall gjester til lokalet, catering, restaurant osv",
+		"group": 6,
+		"comment": "",
+		"tag": "",
+		"content": "Det er nå siste mulighet for å bli med på tidenes fest!",
+		"category": "Festen",
+		"emoji": [
+			"receipt_1f9fe"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Siste touch på takkegaver",
+		"group": 6,
+		"comment": "",
+		"tag": "",
+		"content": "Dette vil nok forlovere og gjester sette stor pris på, inkluder gjerne noen personlige ord til hver. ",
+		"category": "Gaver",
+		"emoji": [
+			[
+				"57-wrapped-gift_1f381"
+			]
+		],
+		"tools": [
+			{
+				"title": "23 budsjettvennlige gaver til bryllupsgjester ",
+				"url": "https://dittbryllup.no/gaver-til-bryllupsgjester-til-bade-budsjett-og-diy/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	}
 ]

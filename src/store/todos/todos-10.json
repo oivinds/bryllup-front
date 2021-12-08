@@ -1,132 +1,142 @@
 [
-  {
-    "title": "NYT HVETEBRØDSDAGENE <3 ",
-    "group": 10,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Hvetebrødsdagene",
-    "emoji": "💖",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Bryllupsreise!",
-    "group": 10,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Bryllupsreise",
-    "emoji": "🏝️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Ta vare på blomsterbuketten!",
-    "group": 10,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Dekorasjon",
-    "emoji": "💐",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Rens brudekjolen og dressen til brudgommen",
-    "group": 10,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Antrekk og tilbehør",
-    "emoji": "🧼",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Mimretid: Få bilder fra fotograf, velg ut og sett opp til takkekort, album og kanskje noe til veggen eller sosiale medier?",
-    "group": 10,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Festen",
-    "emoji": "🖼️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Nyt gavene - og få oversikt",
-    "group": 10,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Gaver",
-    "emoji": "🎁",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Retur og bytting av gaver",
-    "group": 10,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Gaver",
-    "emoji": "↩️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Returnering av annet lånt til bryllupet",
-    "group": 10,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Dekorasjon",
-    "emoji": "↩️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Legg ut på Finn og Tise det du ikke lenger ønsker - gi bort!",
-    "group": 10,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Dekorasjon",
-    "emoji": "👛",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Endre navn formelt",
-    "group": 10,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "📝",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  }
+	{
+		"title": "NYT HVETEBRØDSDAGENE <3 ",
+		"group": 10,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Hvetebrødsdagene",
+		"emoji": [
+			"152-sparkling-heart_1f496"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Bryllupsreise!",
+		"group": 10,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Bryllupsreise",
+		"emoji": [
+			"89-desert-island_1f3dd-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Ta vare på blomsterbuketten!",
+		"group": 10,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Dekorasjon",
+		"emoji": [
+			"154-bouquet_1f490"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Rens brudekjolen og dressen til brudgommen",
+		"group": 10,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Antrekk og tilbehør",
+		"emoji": [
+			"155-soap_1f9fc"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Mimretid: Få bilder fra fotograf, velg ut og sett opp til takkekort, album og kanskje noe til veggen eller sosiale medier?",
+		"group": 10,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Festen",
+		"emoji": [
+			"156-framed-picture_1f5bc-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Nyt gavene - og få oversikt",
+		"group": 10,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Gaver",
+		"emoji": [
+			"57-wrapped-gift_1f381"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Retur og bytting av gaver",
+		"group": 10,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Gaver",
+		"emoji": [
+			"158-right-arrow-curving-left_21a9-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Returnering av annet lånt til bryllupet",
+		"group": 10,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Dekorasjon",
+		"emoji": [
+			"158-right-arrow-curving-left_21a9-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Legg ut på Finn og Tise det du ikke lenger ønsker - gi bort!",
+		"group": 10,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Dekorasjon",
+		"emoji": [
+			"160-purse_1f45b"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Endre navn formelt",
+		"group": 10,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Praktisk",
+		"emoji": [
+			"161-memo_1f4dd"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	}
 ]

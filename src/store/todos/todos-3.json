@@ -1,184 +1,258 @@
 [
-  {
-    "title": "Registrere Gaveønsker",
-    "group": 3,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Gaver",
-    "emoji": "🎁",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Booke fredag/søndagsaktiviteter",
-    "group": 3,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Festen",
-    "emoji": "🎉",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Booke/reservere møbler",
-    "group": 3,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Dekorasjon",
-    "emoji": "",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Book inn møte med vigsler/seremonileder",
-    "group": 3,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "👰",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Kjøpe brudekjole",
-    "group": 3,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Antrekk  og tilbehør",
-    "emoji": "👰",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Kjøpe giftering",
-    "group": 3,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Antrekk  og tilbehør",
-    "emoji": "💍",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Velg toastmaster",
-    "group": 3,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Festen",
-    "emoji": " ",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Forlovelsesfotografering",
-    "group": 3,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "📷",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Bestill opp invitasjoner",
-    "group": 3,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Dekorasjon",
-    "emoji": "✉️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Bestill brudepikekjoler og tilbehør",
-    "group": 3,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Antrekk  og tilbehør",
-    "emoji": "🎀",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Samle inn adresser og tlfnr til alle gjester",
-    "group": 3,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "📱",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Research: brudgommens antrekk",
-    "group": 3,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Antrekk  og tilbehør",
-    "emoji": "🔍",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Research: Bryllupsreise",
-    "group": 3,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Bryllupsreise",
-    "emoji": "🔍",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Research - Bryllupskake",
-    "group": 3,
-    "comment": "",
-    "tag": "",
-    "content": "Finn stil, leverandører og book prøvesmakinger",
-    "category": "Festen",
-    "emoji": "🔍",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  }
+	{
+		"title": "Registrere Gaveønsker",
+		"group": 3,
+		"comment": "",
+		"tag": "",
+		"content": "Jippi - dette er et morsomt punkt! Men hvor i all verden skal dere begynne? Tenk gjennom om dere ønsker opplevelser, praktiske ting, kunst eller kanskje ingenting? ",
+		"category": "Gaver",
+		"emoji": [
+			"57-wrapped-gift_1f381"
+		],
+		"tools": [
+			{
+				"title": "Disse 7 tingene bør dere vurdere å ha med på listen ",
+				"url": "https://dittbryllup.no/gaveliste-til-bryllup-disse-6-tingene-bor-dere-ha-pa-listen/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Booke fredag/søndagsaktiviteter",
+		"group": 3,
+		"comment": "",
+		"tag": "",
+		"content": " Det er alltid fint å ha noen hyggelige rammer for den store dagen, og det kan derfor være lurt å legge opp noen hyggelige aktiviteter både dagen før og etter. Skal dere ha bryllup over en helg, er det viktig å legge en slagplan også for disse dagene både for dere og gjestene.",
+		"category": "Festen",
+		"emoji": [
+			"19-party-popper_1f389"
+		],
+		"tools": [
+			{
+				"title": "Drømmer du om en bryllupshelg? Slik går du frem i planleggingen.",
+				"url": "https://dittbryllup.no/drommer-du-om-en-bryllupshelg-slik-gar-du-frem-i-planleggingen/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Booke/reservere møbler",
+		"group": 3,
+		"comment": "",
+		"tag": "",
+		"content": "Dersom dere skal leie et lokale for bryllupet er det viktig med noen fine møbler som kler både stilen deres og lokalet. Sjekk ut Finn, utleiefirmaer, venner og kjente!",
+		"category": "Dekorasjon",
+		"emoji": [
+			"chair_1fa91"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Book inn møte med vigsler/seremonileder",
+		"group": 3,
+		"comment": "",
+		"tag": "",
+		"content": "Ja, også vigslere har en travel kalender, og tenk så synd dersom det skal stå på han eller henne for å gjennomføre drømmedagen.",
+		"category": "Praktisk",
+		"emoji": [
+			"33-woman_1f469",
+			"33-balance-scale_2696-fe0f"
+		],
+		"tools": [
+			{
+				"title": "Les om de ulike formene for vielse her ",
+				"url": "https://dittbryllup.no/category/planlegger/vielsen/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Kjøpe brudekjole",
+		"group": 3,
+		"comment": "",
+		"tag": "",
+		"content": "Brudekjolen er et vanskelig valg for mange - men gud så deilig når det er i boks! Husk å legge inn bestilling tidlig. Det er nemlig ofte lang leveringstid på brudekjoler. Og i tillegg trenger svært mange å få den justert hos skredder i etterkant. ",
+		"category": "Antrekk  og tilbehør",
+		"emoji": [
+			"41-person-with-veil_1f470"
+		],
+		"tools": [
+			{
+				"title": "Få inspirasjon til brudekjoler her",
+				"url": "https://dittbryllup.no/category/brudepar/brud/brudekjoler/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Kjøpe giftering",
+		"group": 3,
+		"comment": "",
+		"tag": "",
+		"content": "Det er dags å legge inn bestilling på tidenes mest romantiske smykke! Har dere landet gravering? ",
+		"category": "Antrekk  og tilbehør",
+		"emoji": [
+			"62-ring_1f48d"
+		],
+		"tools": [
+			{
+				"title": "Få gode tips til gravering her",
+				"url": "https://dittbryllup.no/slik-finner-dere-perfekte-gifteringer/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Velg toastmaster",
+		"group": 3,
+		"comment": "",
+		"tag": "",
+		"content": "Ikke undervurder toastmasterens rolle! Har du en gøyal venn eller slektning? Eller kanskje dere skal vurdere å leie en profesjonell?",
+		"category": "Festen",
+		"emoji": [
+			"63-superhero_1f9b8"
+		],
+		"tools": [
+			{
+				"title": "Profesjonell eller en bekjent? Her er gode tips til valg av toastmaster",
+				"url": "https://dittbryllup.no/toastmaster-til-bryllup/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Forlovelsesfotografering",
+		"group": 3,
+		"comment": "",
+		"tag": "",
+		"content": "Nå er det snart på tide med forlovelsesfotograferingen! What to wear og hvor bør dere ha den? Få tipsene her:",
+		"category": "Praktisk",
+		"emoji": [
+			"37-camera_1f4f7"
+		],
+		"tools": [
+			{
+				"title": "Forlovelsesfotografering, hva er egentlig det?",
+				"url": "https://dittbryllup.no/forlovelsesfotografering-hva-er-egentlig-det/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Bestill opp invitasjoner",
+		"group": 3,
+		"comment": "",
+		"tag": "",
+		"content": "Husk å sjekke antall, stil og konvolutter. Og PS: Det kan være lurt å bestille noen ekstra;)",
+		"category": "Dekorasjon",
+		"emoji": [
+			"40-envelope_2709-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Bestill brudepikekjoler og tilbehør",
+		"group": 3,
+		"comment": "",
+		"tag": "",
+		"content": "Skal dere betale for brudepikekjolene eller brudepikene selv? Det kan være greit å ha en åpen dialog rundt dette da alle har ulike prispreferanser. Uansett hvem som skal ta kostnaden -det er nå dags å legge inn bestillingen!",
+		"category": "Antrekk  og tilbehør",
+		"emoji": [
+			"46-ribbon_1f380"
+		],
+		"tools": [
+			{
+				"title": "Brudepikekjoler - 30 favoritter til venninnegjengen",
+				"url": "https://dittbryllup.no/brudepikekjoler-30-favoritter-til-venninnegjengen/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Samle inn adresser og tlfnr til alle gjester",
+		"group": 3,
+		"comment": "",
+		"tag": "",
+		"content": "Invitasjonene er på vei til dere - men for at de skal nå alle gjestene deres kreves en liten innsats på adressefronten;) Lag dere et godt system i Excel eller lignende hvor dere skriver navn, adresse og kan notere RSVP.",
+		"category": "Praktisk",
+		"emoji": [
+			"67-mobile-phone_1f4f1"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Research: brudgommens antrekk",
+		"group": 3,
+		"comment": "",
+		"tag": "",
+		"content": "Brudgommen kommer ofte litt i siste rekke, men antrekket hans er like viktig! Sett av litt tid sammen og gå gjennom ulike stiler og varianter. Husk at den bør stå i stil med brudekjolen, så gi hverandre små hint eller føringer her uten å røpe for mye!",
+		"category": "Antrekk  og tilbehør",
+		"emoji": [
+			"22-magnifying-glass-tilted-left_1f50d"
+		],
+		"tools": [
+			{
+				"title": "Dette er de største trendene innen dress ",
+				"url": "https://dittbryllup.no/brudgom-i-ar-dette-er-trendene-som-gjelder-for-dress/"
+			},
+			{
+				"title": "Vurdert å leie dress til bryllupet?",
+				"url": "https://dittbryllup.no/leie-dress-brudgom-slik-gjor-dere-det/ "
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Research: Bryllupsreise",
+		"group": 3,
+		"comment": "",
+		"tag": "",
+		"content": "Oh la la - livets vakreste reise står for tur! Ønsker dere noe lokalt, aktivt eller avslappende? Eller hva med en miks av alt?",
+		"category": "Bryllupsreise",
+		"emoji": [
+			"22-magnifying-glass-tilted-left_1f50d"
+		],
+		"tools": [
+			{
+				"title": "Start researchen her",
+				"url": "https://dittbryllup.no/category/bryllupsreise/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Research - Bryllupskake",
+		"group": 3,
+		"comment": "",
+		"tag": "",
+		"content": "Finn stil, leverandører og book prøvesmakinger. Nammi!",
+		"category": "Festen",
+		"emoji": [
+			"22-magnifying-glass-tilted-left_1f50d"
+		],
+		"tools": [
+			{
+				"title": "Bryllupskake og pris - slik finner dere riktig match ",
+				"url": "https://dittbryllup.no/bryllupskake-og-pris-slik-finner-dere-riktig-match/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	}
 ]

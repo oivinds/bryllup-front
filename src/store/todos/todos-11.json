@@ -1,67 +1,76 @@
 [
-  {
-    "title": "Lag ferdig takkekortene og bestill dette + konvolutter",
-    "group": 11,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "✉️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Send ut takkekort",
-    "group": 11,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "✉️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Bestill fotoalbum og annet trykk fra bryllupsbildene",
-    "group": 11,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "🖼️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Slett nettsiden og andre grupper til bryllupet",
-    "group": 11,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "🗑️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Fremtidsplaner: Legg noen hyggelige planer for dere som ektepar!",
-    "group": 11,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "💌",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  }
+	{
+		"title": "Lag ferdig takkekortene og bestill dette + konvolutter",
+		"group": 11,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Praktisk",
+		"emoji": [
+			"40-envelope_2709-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Send ut takkekort",
+		"group": 11,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Praktisk",
+		"emoji": [
+			"40-envelope_2709-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false,
+		"created": "2021-10-16T23:01:13.506Z"
+	},
+	{
+		"title": "Bestill fotoalbum og annet trykk fra bryllupsbildene",
+		"group": 11,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Praktisk",
+		"emoji": [
+			"156-framed-picture_1f5bc-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false,
+		"created": "2021-10-16T23:01:13.506Z"
+	},
+	{
+		"title": "Slett nettsiden og andre grupper til bryllupet",
+		"group": 11,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Praktisk",
+		"emoji": [
+			"168-wastebasket_1f5d1-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false,
+		"created": "2021-10-16T23:01:13.506Z"
+	},
+	{
+		"title": "Fremtidsplaner: Legg noen hyggelige planer for dere som ektepar!",
+		"group": 11,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Praktisk",
+		"emoji": [
+			"169-love-letter_1f48c"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false,
+		"created": "2021-10-16T23:01:13.506Z"
+	}
 ]

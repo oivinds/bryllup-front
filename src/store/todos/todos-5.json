@@ -1,119 +1,161 @@
 [
-  {
-    "title": "Sett opp en kjøreplan for bryllupsdagen/-helgen",
-    "group": 5,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "⌚",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Velg musikk og evt live-musikere eller DJ",
-    "group": 5,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Festen",
-    "emoji": "🎵",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Finn og kjøp morgengave til hverdandre",
-    "group": 5,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Gaver",
-    "emoji": "🎁",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Bordkart",
-    "group": 5,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Festen",
-    "emoji": "🍽️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Start å kjøpe inn dekorasjoner, spesielt på nett",
-    "group": 5,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Dekorasjon",
-    "emoji": "🎈",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Trykksaker til festen, klargjør og bestill (meny, velkommen, program osv)",
-    "group": 5,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Dekorasjon",
-    "emoji": "✉️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Send forslag til hvem forlovere kan invitere til utdrikningslaget",
-    "group": 5,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "🥳",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Book inn de du vil tilbringe kvelden med i forkant, book hotell osv",
-    "group": 5,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "🧘",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Book inn aktiviteter og restauranter for reisen",
-    "group": 5,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Bryllupsreise",
-    "emoji": "🏝️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  }
+	{
+		"title": "Sett opp en kjøreplan for bryllupsdagen/-helgen",
+		"group": 5,
+		"comment": "",
+		"tag": "",
+		"content": "Viktig! Noter klokkeslett og hvem som er ansvarlig for hva - print ut og del med alle dine hjelpere! ",
+		"category": "Praktisk",
+		"emoji": [
+			"98-watch_231a"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Velg musikk og evt live-musikere eller DJ",
+		"group": 5,
+		"comment": "",
+		"tag": "",
+		"content": "Dette er så avgjørende for god stemning og bør absolutt ikke undervurderes! Husk også musikk til vielse, til mingling, middag og festen - pluss kanskje et gøyalt innslag underveis?",
+		"category": "Festen",
+		"emoji": [
+			"99-musical-note_1f3b5"
+		],
+		"tools": [
+			{
+				"title": "DJ eller live-musikk? Slik skaper du stemning i bryllupet (annonse)",
+				"url": "https://dittbryllup.no/dj-og-live-musikk-slik-skaper-du-stemning-i-bryllupet/"
+			},
+			{
+				"title": "Sanger til kirken - perfekte sanger til innmarsj og utmarsj",
+				"url": "https://dittbryllup.no/sanger-til-kirken-disse-sangene-er-perfekte-til-bade-inn-og-utmarsj-i-bryllup/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Finn og kjøp morgengave til hverandre",
+		"group": 5,
+		"comment": "",
+		"tag": "",
+		"content": "Her er det bare kreativiteten som setter grenser! En opplevelse, et smykke, noe som har gått i arv? ",
+		"category": "Gaver",
+		"emoji": [
+			"79-wrapped-gift_1f381"
+		],
+		"tools": [
+			{
+				"title": "Slik velger dere perfekte morgengaver",
+				"url": "https://dittbryllup.no/slik-velger-dere-perfekt-morgengave/"
+			},
+			{
+				"title": "Få inspirasjon fra hva andre par har gitt hverandre her ",
+				"url": "https://dittbryllup.no/category/inspirasjon/bryllupshistorier/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Bordkart",
+		"group": 5,
+		"comment": "",
+		"tag": "",
+		"content": "Tegn opp og skisser - og husk å lage en alternativ plan dersom det kommer restriksjoner som 1 meters-regelen.",
+		"category": "Festen",
+		"emoji": [
+			"fork-and-knife-with-plate_1f37d-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Start å kjøpe inn dekorasjoner, spesielt på nett",
+		"group": 5,
+		"comment": "",
+		"tag": "",
+		"content": "Det kan være fint å tenke på dekorasjon til stoler, bord og noe som kan henge fra tak eller vegger - det vil gi en umiddelbar stemningsfaktor",
+		"category": "Dekorasjon",
+		"emoji": [
+			"50-balloon_1f388"
+		],
+		"tools": [
+			{
+				"title": "Finn deres bryllupsstil her",
+				"url": "https://no.pinterest.com/DittBryllup/_saved/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Trykksaker til festen, klargjør og bestill (meny, velkommen, program osv)",
+		"group": 5,
+		"comment": "",
+		"tag": "",
+		"content": "Dette gjelder meny, program, bordkort osv.",
+		"category": "Dekorasjon",
+		"emoji": [
+			"40-envelope_2709-fe0f"
+		],
+		"tools": [
+			{
+				"title": "Få inspirasjon til fantastiske skilt til bryllup ",
+				"url": "https://dittbryllup.no/skilt-til-bryllup/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Send forslag til hvem forlovere kan invitere til utdrikningslaget",
+		"group": 5,
+		"comment": "",
+		"tag": "",
+		"content": "Dette vil nok forloveren sette stor pris på - og du slipper å få noen ubehagelige overraskelser - i allefall når det kommer til gjestene!",
+		"category": "Praktisk",
+		"emoji": [
+			"partying-face_1f973"
+		],
+		"tools": [
+			{
+				"title": "Tips forloveren din om denne siden som er proppfull av gode tips til utdrikningslaget",
+				"url": "https://dittbryllup.no/category/gjest/utdrikningslag/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Book inn de du vil tilbringe kvelden med i forkant, book hotell osv",
+		"group": 5,
+		"comment": "",
+		"tag": "",
+		"content": "Ja, for du skal kanskje sove borte fra din kommende mann denne natten? Husk å booke hotell, nok rom for gjestene dine og kjøpe inn det dere skal ha av drikke, aktiviteter og lignende! Husk denne nattessøvnen er alfa omega! ",
+		"category": "Praktisk",
+		"emoji": [
+			"105-person-in-lotus-position_1f9d8"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Book inn aktiviteter for reisen og restauranter for reisen",
+		"group": 5,
+		"comment": "",
+		"tag": "",
+		"content": "Det er på tide å bestille og betale for det meste på reisen - slik får dere en avslappende og samtidig opplevelsesrik tur. For ja, dere kommer til å være litt slitne med en gang dere ankommer, og en god plan vil garantert være velkomment! ",
+		"category": "Bryllupsreise",
+		"emoji": [
+			"89-desert-island_1f3dd-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	}
 ]

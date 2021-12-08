@@ -44,7 +44,7 @@ v-row.justify-center
 						v-list-item-title.overline Til inspirasjon:
 					v-list-item
 						v-list-item-action(v-for="(e, i) in item.tools" :key="i")
-							a.mx-auto(:href="'//https://'+e" target="_blank" ) {{e}}
+							a.mx-auto(:href="e.url" target="_blank" ) {{e.title}}
 					v-list-item
 						v-list-item-content
 						v-list-item-action.float-right

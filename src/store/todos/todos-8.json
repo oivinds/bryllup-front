@@ -1,41 +1,44 @@
 [
-  {
-    "title": "Manikyr og pedikyr",
-    "group": 8,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Antrekk og tilbehør",
-    "emoji": "💅",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Planlegg for kvelden etter bryllupet: Klær, bagasje, transport",
-    "group": 8,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "📋",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Tidlig i seng! ",
-    "group": 8,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "😴",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  }
+	{
+		"title": "Manikyr og pedikyr",
+		"group": 8,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Antrekk og tilbehør",
+		"emoji": [
+			"143-nail-polish_1f485"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Planlegg for kvelden etter bryllupet: Klær, bagasje, transport",
+		"group": 8,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Praktisk",
+		"emoji": [
+			"116-clipboard_1f4cb"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Tidlig i seng! ",
+		"group": 8,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Praktisk",
+		"emoji": [
+			"145-sleeping-face_1f634"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	}
 ]

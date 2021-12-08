@@ -42,7 +42,7 @@ export default {
 				"Siste innkjøp. Bekreft til leverandører og senk skuldrene!",
 				"Det kribler! Site touch og pakking til både bryllupshelg, selve dagen og bryllupsreisen!",
 				"Pust med magen, nyt en manikyr og pedikyr - smil til hverandre og gå tidlig i seng.",
-				" ",
+				"Kooos dere med den store dagen",
 				"Hvetebrødsdager og bryllupsreise <3",
 				"Rydd opp, si takk og se fremover",
 			],

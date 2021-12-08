@@ -1,197 +1,257 @@
 [
-  {
-    "title": "Booke transport til og fra vielse, fest til gjester",
-    "group": 4,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "🚌",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Kjøpe inn sko, jakke, smykker og annet tilbehør til dagen",
-    "group": 4,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Antrekk  og tilbehør",
-    "emoji": "👠👞",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Kjøp inn takkegaver til gjestene",
-    "group": 4,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Dekorasjon",
-    "emoji": "🎁",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Send ut invitasjoner",
-    "group": 4,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "✉️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Bestill bryllupskaken",
-    "group": 4,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Festen",
-    "emoji": "🍰",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Fiks egenerklæring",
-    "group": 4,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "📝",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Fiks forlovererklæring",
-    "group": 4,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "📝",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Meld i fra om evt navnebytte",
-    "group": 4,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "📝",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Hvis navneendring - bestill nytt pass!",
-    "group": 4,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Praktisk",
-    "emoji": "🆔",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Book time hos frisør i forkant av bryllupet",
-    "group": 4,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Antrekk  og tilbehør",
-    "emoji": "💇",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Bestill skredder for tilpassing av brudekjolen",
-    "group": 4,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Antrekk  og tilbehør",
-    "emoji": "👰",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Gravering av giftering",
-    "group": 4,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Antrekk  og tilbehør",
-    "emoji": "💍",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Bestill fly og evt hotell for bryllupsreisen",
-    "group": 4,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Bryllupsreise",
-    "emoji": "🏝️",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Bestill brudgommens antrekk",
-    "group": 4,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Antrekk  og tilbehør",
-    "emoji": "🤵",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  },
-  {
-    "title": "Research: aktiviteter og restauranter til bryllupsreisen",
-    "group": 4,
-    "comment": "",
-    "tag": "",
-    "content": "",
-    "category": "Bryllupsreise",
-    "emoji": "🔍",
-    "tools": [],
-    "readonly": true,
-    "isCompleted": false,
-    "created": "2021-10-16T23:01:13.506Z"
-  }
+	{
+		"title": "Booke transport til og fra vielse og festen for gjestene",
+		"group": 4,
+		"comment": "",
+		"tag": "",
+		"content": "Husk å forhøre dere også med leverandører og hjelpere - som fotograf, catering m.m. I disse covid-tider kan det også være lurt å ha en back up-plan dersom dere må holde 1 meters-regelen (da trengs for eksempel dobbelt så mange busser).",
+		"category": "Praktisk",
+		"emoji": [
+			"77-bus_1f68c"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Kjøpe inn sko, jakke, smykker og annet tilbehør til dagen",
+		"group": 4,
+		"comment": "",
+		"tag": "",
+		"content": "Ingen enkel oppgave, men også litt gøy. Som brud trenger du en liten veske til å ha på bordet, en større vekse som forloveren din kan passe på, sko - kanskje to par eller tre, en jakke eller noe å ha over skuldrene og ikke minst smykker!",
+		"category": "Antrekk  og tilbehør",
+		"emoji": [
+			"78-high-heeled-shoe_1f460",
+			"78-mans-shoe_1f45e"
+		],
+		"tools": [
+			{
+				"title": "Husk å få med \"something borrowed, something blue\" også!",
+				"url": "https://dittbryllup.no/hva-betyr-egentlig-uttrykket-something-old-something-new/"
+			},
+			{
+				"title": "Er en av disse 27 skoene meant to be til deg?",
+				"url": "https://dittbryllup.no/hostens-hotteste-brudesko/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Kjøp inn takkegaver til gjestene",
+		"group": 4,
+		"comment": "",
+		"tag": "",
+		"content": "Vurder hvem og hvilken prisklasse dere skal legge dere på.",
+		"category": "Dekorasjon",
+		"emoji": [
+			"79-wrapped-gift_1f381"
+		],
+		"tools": [
+			{
+				"title": "23 budsjettvennlige gaver til bryllupsgjester ",
+				"url": "https://dittbryllup.no/gaver-til-bryllupsgjester-til-bade-budsjett-og-diy/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Send ut invitasjoner",
+		"group": 4,
+		"comment": "",
+		"tag": "",
+		"content": "Ready, send, go!",
+		"category": "Praktisk",
+		"emoji": [
+			"40-envelope_2709-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Bestill bryllupskaken",
+		"group": 4,
+		"comment": "",
+		"tag": "",
+		"content": "Husk at de aller fleste ender opp med for mye kake!",
+		"category": "Festen",
+		"emoji": [
+			"81-shortcake_1f370"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Fiks egenerklæring",
+		"group": 4,
+		"comment": "",
+		"tag": "",
+		"content": "Få nyttig informasjon hos Skatteetaten",
+		"category": "Praktisk",
+		"emoji": [
+			"82-memo_1f4dd"
+		],
+		"tools": [
+			{
+				"title": "Veien til ekteskapet",
+				"url": "https://www.skatteetaten.no/person/folkeregister/ekteskap/ekteskap/i-norge/veien-til-ekteskapet/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Fiks forlovererklæring",
+		"group": 4,
+		"comment": "",
+		"tag": "",
+		"content": "Forloverne deres må fylle ut en digital forlovereklæring.",
+		"category": "Praktisk",
+		"emoji": [
+			"82-memo_1f4dd"
+		],
+		"tools": [
+			{
+				"title": "Slik går dere frem",
+				"url": "https://www.skatteetaten.no/skjema/q-0151-forlovererklaring/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Meld i fra om navnebytte",
+		"group": 4,
+		"comment": "",
+		"tag": "",
+		"content": "Skal dere endre etternavn? ",
+		"category": "Praktisk",
+		"emoji": [
+			"82-memo_1f4dd"
+		],
+		"tools": [
+			{
+				"title": "Slik går dere frem",
+				"url": "https://dittbryllup.no/endre-navn-slik-gjor-dere-det/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Hvis navneendring - bestill nytt pass!",
+		"group": 4,
+		"comment": "",
+		"tag": "",
+		"content": "Viktig med tanke på bryllupsreisen!",
+		"category": "Praktisk",
+		"emoji": [
+			"85-id-button_1f194"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Book time hos frisør i forkant av bryllupet",
+		"group": 4,
+		"comment": "",
+		"tag": "",
+		"content": "Kanskje skal du også unne deg en prøvetime?",
+		"category": "Antrekk  og tilbehør",
+		"emoji": [
+			"38-86-person-getting-haircut_1f487"
+		],
+		"tools": [
+			{
+				"title": "Husk at du alltid kan få gode tips av andre brides to be i gruppen Brudeprat",
+				"url": "https://www.facebook.com/groups/1824605724218468"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Bestill skredder for tilpassing av brudekjolen",
+		"group": 4,
+		"comment": "",
+		"tag": "",
+		"content": "De aller fleste trenger å gjøre noen justeringer på kjolen for å få den til å sitte som et skudd.",
+		"category": "Antrekk  og tilbehør",
+		"emoji": [
+			"41-person-with-veil_1f470"
+		],
+		"tools": [
+			{
+				"title": "Slik går du frem for å tilpasse brudekjolen hos en skredder",
+				"url": "https://dittbryllup.no/tilpassing-av-brudekjole-hos-skredder/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Gravering av giftering",
+		"group": 4,
+		"comment": "",
+		"tag": "",
+		"content": "Hva i all verden skal det stå gjemt inni ringene? ",
+		"category": "Antrekk  og tilbehør",
+		"emoji": [
+			"62-ring_1f48d"
+		],
+		"tools": [
+			{
+				"title": "Få gode tips til gravering her",
+				"url": "https://dittbryllup.no/slik-finner-dere-perfekte-gifteringer/"
+			}
+		],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Bestill fly og evt hotell for bryllupsreisen",
+		"group": 4,
+		"comment": "",
+		"tag": "",
+		"content": "Tenk - snart er dere der!",
+		"category": "Bryllupsreise",
+		"emoji": [
+			"89-desert-island_1f3dd-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Bestill brudgommens antrekk",
+		"group": 4,
+		"comment": "",
+		"tag": "",
+		"content": "Husk at også dressen nok trenger noen justeringer før den store dagen.",
+		"category": "Antrekk  og tilbehør",
+		"emoji": [
+			"90-person-in-tuxedo_1f935"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Research: aktiviteter og restauranter til bryllupsreisen",
+		"group": 4,
+		"comment": "",
+		"tag": "",
+		"content": "Det kan være lurt å ha lagt opp noen hyggelige aktiviteter til bryllupsreisen, og jo næremre dere kommer avreisedagen, jo mer travle blir dere. Gjør det derfor nå i ro og mak. Og husk for all del å legge opp til hvile og avslapning også! ",
+		"category": "Bryllupsreise",
+		"emoji": [
+			"43-magnifying-glass-tilted-left_1f50d-1"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	}
 ]
