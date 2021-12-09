@@ -1,9 +1,10 @@
 <template lang="pug">
 v-container.my-8
 	v-row.py-2(justify="center")
-		v-col(cols="12" sm="11" md="10" lg="9")
+		v-col(cols="12" sm="11" md="9" lg="7")
 			v-card.pa-8.justify-center(shaped class="rounded-xl")
 				v-card-title.justify-center.headline Velkommen til  bryllupsplanleggeren {{ owner }} {{ andText }}  {{  partner}}
+				
 				v-card-text.body-1
 					li Start med å skrive inn navnene på brudeparet
 					li Sett bryllupsdatoen
@@ -11,17 +12,19 @@ v-container.my-8
 					v-btn(x-large to="/todo" color="primary") todo listen.
 						v-icon mdi-ray-start-arrow
 	v-row(justify="center")
-		v-col(cols="12"  sm="7" md="7" lg="6")
+		v-col(cols="12"  sm="6" md="5" lg="4")
 			v-card.justify-center(  rounded class="rounded-xl")
 				v-col.px-8(cols="12" align-self="center")
 					v-card-title.title Hva er Brudeparets navn?
 					v-card-actions
-						v-text-field(placeholder="Skriv ditt fornavn" label="meg" v-model="ownerLocal")
+						v-text-field(placeholder="Skriv ditt fornavn" label="meg" v-model="ownerLocal") 
+						v-spacer
 						v-btn.mx-auto.x-small( @click="setOwnerLocal(ownerLocal)" color="primary" ) legg til
 					v-card-actions
 						v-text-field( placeholder="Skriv fornavn" label="brudgom / brud" v-model="partnerLocal")
+						v-spacer
 						v-btn.mx-auto(@click="setPartnerLocal(partnerLocal)" color="primary" ) legg til
-		v-col(cols="12" sm="4" md="3" lg="3")
+		v-col(cols="12" sm="5" md="4" lg="3")
 			v-card.justify-center(  rounded class="rounded-xl" )
 				v-col.px-8(cols="12" align-self="center")
 					v-card-title.title Bryllupsdato
