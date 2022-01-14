@@ -1,0 +1,16 @@
+[
+	{
+		"title": "Se kjøreplan for dagen her.",
+		"group": 9,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Festen",
+		"emoji": [
+			"150-bell_1f514"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	}
+]

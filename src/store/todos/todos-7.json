@@ -1,0 +1,115 @@
+[
+	{
+		"title": "Siste oppdatering til på ant gjester til matservering mm",
+		"group": 7,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Festen",
+		"emoji": [
+			"129-pot-of-food_1f372"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Pakk til bryllupsreisen",
+		"group": 7,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Bryllupsreise",
+		"emoji": [
+			"luggage_1f9f3"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Pakk til overnatting ifm bryllupshelgen",
+		"group": 7,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Antrekk og tilbehør",
+		"emoji": [
+			"luggage_1f9f3"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Planlegg antrekk: Kvelden før, bryllupsdag, dagen derpå",
+		"group": 7,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Antrekk og tilbehør",
+		"emoji": [
+			"132-dress_1f457",
+			"132-necktie_1f454"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Gi ringene til forloverne",
+		"group": 7,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Antrekk og tilbehør",
+		"emoji": [
+			"62-ring_1f48d"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Øv på talen",
+		"group": 7,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Praktisk",
+		"emoji": [
+			"119-writing-hand_270d-fe0f"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Siste finish på brudekjole, dress",
+		"group": 7,
+		"comment": "",
+		"tag": "",
+		"content": "Gå over med steamer, klesrulle og heng det klart.",
+		"category": "Antrekk og tilbehør",
+		"emoji": [
+			"41-person-with-veil_1f470"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	},
+	{
+		"title": "Siste touch morgengaven til hverandre og husk å pakke den med!",
+		"group": 7,
+		"comment": "",
+		"tag": "",
+		"content": "",
+		"category": "Gaver",
+		"emoji": [
+			"57-wrapped-gift_1f381"
+		],
+		"tools": [],
+		"readonly": true,
+		"isCompleted": false
+	}
+]
