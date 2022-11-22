@@ -110,33 +110,5 @@
 		"tools": [],
 		"readonly": true,
 		"isCompleted": false
-	},
-	{
-		"title": "Legg ut på Finn og Tise det du ikke lenger ønsker - gi bort!",
-		"group": 10,
-		"comment": "",
-		"tag": "",
-		"content": "",
-		"category": "Dekorasjon",
-		"emoji": [
-			"160-purse_1f45b"
-		],
-		"tools": [],
-		"readonly": true,
-		"isCompleted": false
-	},
-	{
-		"title": "Endre navn formelt",
-		"group": 10,
-		"comment": "",
-		"tag": "",
-		"content": "",
-		"category": "Praktisk",
-		"emoji": [
-			"161-memo_1f4dd"
-		],
-		"tools": [],
-		"readonly": true,
-		"isCompleted": false
-	}
+	} 
 ]

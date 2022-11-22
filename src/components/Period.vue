@@ -22,10 +22,8 @@ v-row.justify-center
 							v-list-item-title.body-1.justify-center.pl-4 {{ item.title }}
 						v-list-item-action(v-if="item.delegate && item.delegate !== 'ikke satt'")
 							v-chip.pa-2(small dark color="primary lighten-1") {{ item.delegate.length > 7  ? item.delegate.substr(0,5) + ' ..' : item.delegate }}
-						v-list-item-action
-							v-list-item-title.text-subtitle-2.pa-4(v-text="dates")
-						//- v-list-item-action
-						//- 	v-icon.pa-4(:color="tagColors[item.tag].color" small) mdi-circle
+						//-v-list-item-action
+							//-v-icon.pa-4(:color="tagColors[item.tag].color" small) mdi-circle
 				
 				v-expansion-panel-content.pa-4(:key="item.description")
 					v-list-item(v-if="item.readonly")

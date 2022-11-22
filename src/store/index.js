@@ -40,14 +40,18 @@ const store = new Vuex.Store({
 		name: "Kari",
 		owner: null,
 		partner: null,
-		weddingDate: moment().add(1, "year").toISOString().substring(0, 10),
+		weddingDate: null,
 		timeBeforeWedding: null, //moment().add(1, "year").toISOString().substring(0, 10),
 		editBool: false,
 		newBool: false,
 		delegates: [],
 		duration: null,
 		groupTitles: [],
-		tagColors: [{ text: "research", color: "green", value: 0 }, { text: "nice-to do", color: "yellow", value: 1 }, { text: "need to do", color: "red", value: 2 }],
+		tagColors: [
+			{ text: "research", color: "green", value: 0 },
+			{ text: "nice-to do", color: "yellow", value: 1 },
+			{ text: "need to do", color: "red", value: 2 },
+		],
 		categories: [
 			"Praktisk",
 			"Festen",
@@ -59,7 +63,7 @@ const store = new Vuex.Store({
 		],
 	},
 	mutations: {
-		initialiseStore(state) {
+		initializeStore(state) {
 			// Check if the ID exists
 			if (localStorage.getItem("store")) {
 				// Replace the state object with the stored item

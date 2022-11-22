@@ -2,21 +2,22 @@
 div
 	EditModal(:item="item")
 	v-row(justify="center")
-		v-col(cols="12" sm="9" md="8" lg="7" xl="6")
+		v-col(cols="12" )
 			v-expansion-panels(flat accordion hover )
 				v-expansion-panel.ma-2(:key="index" v-for="(group, index) in testTitles" )
-					v-expansion-panel-header.my-2(:ripple="{class:'white--text'}" 
-					class="accent--text" class="rounded-lg" :color="groupColors[index]" rounded)
+					v-expansion-panel-header.my-2(:ripple="{class:'white--text'}" class="accent--text" class="rounded-lg" :color="groupColors[index]" rounded)
 						v-row
 							v-col.pa-0(cols="12") 
-								v-card-title.text-button.justify-center {{ testTitles[index] }} 
+								v-card-title.text-button.justify-center {{ group }} 
 							v-col(cols="12") 
 								v-card-title.pa-md-4.title.justify-center {{ description[index] }}
-							v-col.pa-0(cols="12") 
-								v-card-text.pa-md-4.text-button(v-if="!getGroupDone(index+1).allDone") {{ getGroupDone(index+1).done }} / {{ getGroupDone(index+1).count }} fullført
-								v-card-text(v-else)
-									v-avatar(color="background" size="32" )
-										v-icon.elevation-10(color="amber" ) mdi-star
+							v-col.pa-0(cols="12")
+							transition(name="fadeSlide" mode="out-in") 
+								v-rating(v-if="!getGroupDone(index + 1).allDone" readonly model="rating" :value="getGroupDone(index + 1).done" :length="getGroup(index+1).length")
+								div(v-else style="width:100%;  text-align:center")
+									v-avatar( color="background" size="32" )
+										v-icon.elevation-10(color="amber") mdi-star
+											.caption Fullført!
 					v-expansion-panel-content.py-0(color="background")
 						Period(class="group-expand-item" :key="index"  :dates="dates(index+1)" :todos="getGroup(index+1)"  v-on:update:edit="editById($event)" :iconSize="iconSize")
 
@@ -53,7 +54,6 @@ export default {
 	methods: {
 		...mapMutations(["setEditBool"]),
 		...mapActions(["setGroupTitles"]),
-
 		dates(index) {
 			const duration = (index * this.getDuration) / 6;
 			return this.$moment().add(duration).format("MMM YY");
@@ -70,9 +70,9 @@ export default {
 		getGroupDone(nr) {
 			const group = this.todos.filter((todo) => todo.group === nr);
 			const done = group.filter((o) => o.isCompleted);
-			//const notDone = { done: , count: group.length };
+			//const notDone = { done: , length: group.length };
 			const allDone = group.length === done.length;
-			const result = { count: group.length, done: done.length, allDone };
+			const result = { length: group.length, done: done.length, allDone };
 			/* 	group.length === done.length
 					? "alle oppgaver fullført!"
 					: `${done.length} / ${group.length}`; */

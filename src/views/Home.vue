@@ -1,15 +1,17 @@
 <template lang="pug">
 v-container.my-8
+	transition(name="fade" appear)
+		//h1.d-flex.justify-center.align-center.big {{  (owner && partner) ? owner 	+' & '+ partner : '' }}
 	v-row.py-2(justify="center")
 		v-col(cols="12" sm="11" md="9" lg="7")
 			v-card.pa-8.justify-center(shaped class="rounded-xl")
-				v-card-title.justify-center.headline Velkommen til  bryllupsplanleggeren {{ owner }} {{ andText }}  {{  partner}}
+				v-card-title.justify-center.headline Velkommen {{ owner }} {{ andText }}  {{  partner}}
 				
 				v-card-text.body-1
-					li Start med å skrive inn navnene på brudeparet
-					li Sett bryllupsdatoen
+					li(:style="(owner && partner) ? 'text-decoration:line-through;' :'' " ) Start med å skrive inn navnene på brudeparet 
+					li(:style="$store.state.duration ? 'text-decoration:line-through;' :'' ") Sett bryllupsdatoen
 				v-card-actions
-					v-btn(x-large to="/todo" color="primary") todo listen.
+					v-btn(v-if="$store.state.duration && (owner && partner)" large to="/todo" color="primary") todo listen.
 						v-icon mdi-ray-start-arrow
 	v-row(justify="center")
 		v-col(cols="12"  sm="6" md="5" lg="4")
@@ -19,11 +21,11 @@ v-container.my-8
 					v-card-actions
 						v-text-field(placeholder="Skriv ditt fornavn" label="meg" v-model="ownerLocal") 
 						v-spacer
-						v-btn.mx-auto.x-small( @click="setOwnerLocal(ownerLocal)" color="primary" ) legg til
+						v-btn.mx-auto.x-small( @click="setOwnerLocal(ownerLocal)" color="primary" ) +
 					v-card-actions
 						v-text-field( placeholder="Skriv fornavn" label="brudgom / brud" v-model="partnerLocal")
 						v-spacer
-						v-btn.mx-auto(@click="setPartnerLocal(partnerLocal)" color="primary" ) legg til
+						v-btn.mx-auto(@click="setPartnerLocal(partnerLocal)" color="primary" ) +
 		v-col(cols="12" sm="5" md="4" lg="3")
 			v-card.justify-center(  rounded class="rounded-xl" )
 				v-col.px-8(cols="12" align-self="center")
@@ -106,8 +108,16 @@ export default {
 	},
 };
 </script>
-
 <style lang="scss">
+.big {
+	opacity: 0.5;
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	transform: scale(3);
+}
 .list-complete-item {
 	transition: all 0.4s;
 }

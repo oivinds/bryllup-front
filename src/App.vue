@@ -10,8 +10,8 @@ v-app#app
 						v-icon mdi-cog
 					v-tab(to='/todo')
 						v-icon mdi-calendar-check
-					//- v-tab(@click="unsubscribe()")
-					//- 	v-icon mdi-star
+					v-tab(@click="unsubscribe()")
+						v-icon mdi-trash-can
 		v-main
 			transition(name="fade" appear mode="out-in")
 				keep-alive
@@ -41,7 +41,7 @@ export default {
 	name: "App",
 	beforeCreate() {
 		// TODO: titles to store
-		// this.$store.commit("initialiseStore");
+		this.$store.commit("initializeStore");
 	},
 	computed: {
 		...mapState(["name", "editBool", "timeBeforeWedding", "weddingDate"]),
@@ -79,6 +79,6 @@ export default {
 }
 .fadeSlide-enter, .fadeSlide-leave-to /* .fade-leave-active below version 2.1.8 */ {
 	opacity: 0;
-	transform: translateX(100%);
+	transform: translateX(-100%);
 }
 </style>

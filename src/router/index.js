@@ -1,7 +1,8 @@
+
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-
+import store from "../store/index";
 Vue.use(VueRouter);
 
 const routes = [
@@ -25,6 +26,10 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
+	if (!store.state.duration && to.path === '/todo') {
+		next({path:'/'});
+	}
+	console.log(store);
 	window.scrollTo(0, 0);
 	next();
 });
