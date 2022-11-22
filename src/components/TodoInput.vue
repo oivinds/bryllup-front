@@ -1,6 +1,6 @@
 <template lang="pug">
 
-		v-card.pa-8(color="grey lighten-3" )
+		v-card.pa-8(dark  )
 			v-form(v-if="newBool || editBool")
 				//- TITLE
 				v-row

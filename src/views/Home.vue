@@ -4,8 +4,9 @@ v-container.my-8
 		//h1.d-flex.justify-center.align-center.big {{  (owner && partner) ? owner 	+' & '+ partner : '' }}
 	v-row.py-2(justify="center")
 		v-col(cols="12" sm="11" md="9" lg="7")
-			v-card.pa-8.justify-center(shaped class="rounded-xl")
+			v-card.pa-8.justify-center(color="green darken-4" shaped class="rounded-xl")
 				v-card-title.justify-center.headline Velkommen {{ owner }} {{ andText }}  {{  partner}}
+				v-card-text.title En todo-liste for deg og din partner. Fordel oppgaver og kryss av for utført.
 				
 				v-card-text.body-1
 					li(:style="(owner && partner) ? 'text-decoration:line-through;' :'' " ) Start med å skrive inn navnene på brudeparet 
@@ -15,7 +16,7 @@ v-container.my-8
 						v-icon mdi-ray-start-arrow
 	v-row(justify="center")
 		v-col(cols="12"  sm="6" md="5" lg="4")
-			v-card.justify-center(  rounded class="rounded-xl")
+			v-card.justify-center(color="green darken-2"  rounded class="rounded-xl")
 				v-col.px-8(cols="12" align-self="center")
 					v-card-title.title Hva er Brudeparets navn?
 					v-card-actions
@@ -27,7 +28,7 @@ v-container.my-8
 						v-spacer
 						v-btn.mx-auto(@click="setPartnerLocal(partnerLocal)" color="primary" ) +
 		v-col(cols="12" sm="5" md="4" lg="3")
-			v-card.justify-center(  rounded class="rounded-xl" )
+			v-card.justify-center(color="green"  rounded class="rounded-xl" )
 				v-col.px-8(cols="12" align-self="center")
 					v-card-title.title Bryllupsdato
 					v-card-actions

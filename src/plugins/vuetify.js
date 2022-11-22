@@ -5,17 +5,18 @@ Vue.use(Vuetify);
 
 export default new Vuetify({
 	theme: {
-		dark: false,
+		dark: true,
 		options: { customProperties: true },
 		themes: {
-			light: {
+			dark: {
 				weddingTeal: "#88d8c6", // teal.lighten2
 				weddingPink: "#fff1ed", // deepOrange.lighten5
-				primary: colors.teal.accent4,
+				primary: colors.grey,
 				secondary: colors.deepOrange,
-				tertiary: colors.pink,
+				tertiary: colors.pink.lighten3,
 				accent: colors.grey.darken3,
-				background: colors.grey.lighten4,
+				background: colors.purple.darken2,
+				background2: colors.pink.darken2,
 				frame: "#ffffff",
 				info: colors.teal.lighten1,
 				warning: colors.amber.base,

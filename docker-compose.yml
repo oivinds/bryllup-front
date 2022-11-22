@@ -2,8 +2,8 @@ version: "3.1"
 
 services:
   web:
-    # build:
-    #   context: ./build
+    build:
+      context: ./build
     image: bryllup-img:latest
     container_name: bryllup-front
     restart: always

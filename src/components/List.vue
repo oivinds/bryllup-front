@@ -4,17 +4,18 @@ div
 	v-row(justify="center")
 		v-col(cols="12" )
 			v-expansion-panels(flat accordion hover )
-				v-expansion-panel.ma-2(:key="index" v-for="(group, index) in testTitles" )
+				v-expansion-panel.ma-2(:key="index" v-for="(group, index) in testTitles"  )
 					v-expansion-panel-header.my-2(:ripple="{class:'white--text'}" class="accent--text" class="rounded-lg" :color="groupColors[index]" rounded)
 						v-row
 							v-col.pa-0(cols="12") 
 								v-card-title.text-button.justify-center {{ group }} 
-							v-col(cols="12") 
-								v-card-title.pa-md-4.title.justify-center {{ description[index] }}
+							v-col(cols="12" style="text-align:center") 
+								v-card-title.pa-md-2.justify-center {{ description[index].head }}
+								v-card-text.pa-md-1.justify-center {{ description[index].bread }}
 							v-col.pa-0(cols="12")
 							transition(name="fadeSlide" mode="out-in") 
 								v-rating(v-if="!getGroupDone(index + 1).allDone" readonly model="rating" :value="getGroupDone(index + 1).done" :length="getGroup(index+1).length")
-								div(v-else style="width:100%;  text-align:center")
+								div.pb-2(v-else style="width:100%;  text-align:center")
 									v-avatar( color="background" size="32" )
 										v-icon.elevation-10(color="amber") mdi-star
 											.caption Fullført!
@@ -35,17 +36,17 @@ export default {
 			item: null,
 			bp: this.$vuetify.breakpoint,
 			description: [
-				"Research-fasen. Hent inspirasjon og finn ut av deres stil, ønsker og behov for den store dagen.",
-				"Book det viktigste. Og etter det: Ha det gøy med planleggingsfasens morsomste research!",
-				"Nyt!! Kanskje en av de herligste periodene er nettopp nå: Gaveliste, brudekjoleprøving, gifteringer, forlovelsesfotografering mm!",
-				"Hold hodet kaldt! Dette er månedene hvor dere skal fikse alt det praktiske. Book inn det som gjenstår.",
-				"Kom i feststemning! Det er på tiden å legge vekt på de gøyale tingene ved bryllupet, festen og reisen.",
-				"Siste innkjøp. Bekreft til leverandører og senk skuldrene!",
-				"Det kribler! Site touch og pakking til både bryllupshelg, selve dagen og bryllupsreisen!",
-				"Pust med magen, nyt en manikyr og pedikyr - smil til hverandre og gå tidlig i seng.",
-				"Kooos dere med den store dagen",
-				"Hvetebrødsdager og bryllupsreise <3",
-				"Rydd opp, si takk og se fremover",
+				{head:"Research-fasen", bread:" Hent inspirasjon og finn ut av deres stil, ønsker og behov for den store dagen."},
+				{head:"Book det viktigste", bread:" Og etter det: Ha det gøy med planleggingsfasens morsomste research!"},
+				{head:"Nyt!!", bread:" Kanskje en av de herligste periodene er nettopp nå: Gaveliste, brudekjoleprøving, gifteringer, forlovelsesfotografering mm!"},
+				{head:"Hold hodet kaldt!", bread:" Dette er månedene hvor dere skal fikse alt det praktiske. Book inn det som gjenstår."},
+				{head:"Kom i feststemning! ", bread:"Det er på tiden å legge vekt på de gøyale tingene ved bryllupet, festen og reisen."},
+				{head:"Siste innkjøp. ", bread:"Bekreft til leverandører og senk skuldrene!"},
+				{head:"Det kribler! ", bread:"Site touch og pakking til både bryllupshelg, selve dagen og bryllupsreisen!"},
+				{head:"Pust med magen", bread:" nyt en manikyr og pedikyr - smil til hverandre og gå tidlig i seng."},
+				{head:"Kooos dere med den store dagen", bread:""},
+				{head:"Hvetebrødsdager og bryllupsreise <3", bread:""},
+				{head:"Rydd opp, si takk og se fremover", bread:""}
 			],
 		};
 	},
@@ -135,7 +136,7 @@ export default {
 	transition: 0.6s ease-in-out !important;
 }
 
-.theme--light.v-expansion-panels .v-expansion-panel {
+.theme--dark.v-expansion-panels .v-expansion-panel {
 	background-color: var(--v-background-base);
 }
 

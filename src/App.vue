@@ -1,28 +1,28 @@
 <template lang="pug">
 v-app#app
 	v-app
-		v-app-bar.elevation-1(app hide-on-scroll dense color="frame" )
+		v-app-bar.elevation-1(app dark hide-on-scroll dense )
 			.pa-0.ma-0.pa-lg-16.title.text-md-h6.text-lg-h5 Bryllupsplanleggeren
 			v-spacer
-			div
-				v-tabs.pa-0.pa-lg-16(color="primary" hide-slider)
-					v-tab(to='/' color="primary")
-						v-icon mdi-cog
-					v-tab(to='/todo')
-						v-icon mdi-calendar-check
-					v-tab(@click="unsubscribe()")
-						v-icon mdi-trash-can
+			
+			v-tabs.pa-0( hide-slider right)
+				v-tab(to='/' )
+					v-icon mdi-cog
+				v-tab(to='/todo')
+					v-icon mdi-calendar-check
+				v-tab(@click="unsubscribe()")
+					v-icon mdi-trash-can
 		v-main
 			transition(name="fade" appear mode="out-in")
 				keep-alive
 					router-view
-		v-footer.elevation-3(app color="frame")
+		v-footer.elevation-3(app dark )
 			v-row
 				v-col(align-self="center")
 					v-card-actions.justify-center
-						v-progress-linear(height="40" :value="todosDone" :buffer-value="todos.length")
+						v-progress-linear(style="widht:100%" height="40" :value="(todosDone/todos.length*100)" :buffer-value="100")
 							template( v-slot:default="{ value }")
-								.body-2 {{ value}} av {{todos.length}} gjort
+								.body-2 {{ todosDone }} av {{todos.length}} gjort
 					
 				v-col(align-self="center")
 					transition(name="fade" mode="out-in" appear)
@@ -56,7 +56,7 @@ export default {
 		...mapActions(["setDuration"]),
 	},
 	mounted() {
-		this.setDuration(this.weddingDate);
+		//this.setDuration(this.timeBeforeWedding);
 	},
 };
 </script>
