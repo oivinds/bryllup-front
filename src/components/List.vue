@@ -5,7 +5,7 @@ div
 		v-col(cols="12" )
 			v-expansion-panels(flat accordion hover )
 				v-expansion-panel.ma-2(:key="index" v-for="(group, index) in testTitles"  )
-					v-expansion-panel-header.my-2(:ripple="{class:'white--text'}" class="accent--text" class="rounded-lg" :color="groupColors[index]" rounded)
+					v-expansion-panel-header.my-2(:ripple="{class:'red--text'}" class="accent--text" class="rounded-lg" :color="groupColors[index]" rounded)
 						v-row
 							v-col.pa-0(cols="12") 
 								v-card-title.text-button.justify-center {{ group }} 
@@ -18,7 +18,7 @@ div
 								div.pb-2(v-else style="width:100%;  text-align:center")
 									v-avatar( color="background" size="32" )
 										v-icon.elevation-10(color="amber") mdi-star
-											.caption Fullført!
+									.caption Fullført !
 					v-expansion-panel-content.py-0(color="background")
 						Period(class="group-expand-item" :key="index"  :dates="dates(index+1)" :todos="getGroup(index+1)"  v-on:update:edit="editById($event)" :iconSize="iconSize")
 
