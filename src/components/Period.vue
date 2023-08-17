@@ -4,20 +4,18 @@ v-row.justify-center
 		v-expansion-panels.pb-8(popout hover)
 			v-expansion-panel(v-for="(item, i) in todos" :key="item.title" :class="item.isCompleted ? 'grey lighten-2' : 'white' ")
 				v-expansion-panel-header.px-1.px-sm-4(:key="item.title")
-					v-list-item.overflow-hidden 
+					v-list-item.overflow-hidden
 						v-list-item-action
-							v-btn.elevation-1(@click.stop="isCompletedToggleAction(item)" fab 
+							v-btn.elevation-1(@click.stop="isCompletedToggleAction(item)" fab
 							:color="item.isCompleted ? 'green' : 'grey lighten-1'"
 							v-bind="iconSize")
 								v-icon(:color="item.isCompleted ? 'white' : 'grey lighten-4'") mdi-check
 						v-list-item-action(v-for="(emo, i) in item.emoji" :key="i")
-							img.px-1(height="22" :src="require(`@/assets/emojis/${emo}.png`)")
+							img.px-1(height="22" :src="`img/${emo}.png`")
 							//-p(v-for="(emo, i) in item.emoji" height="22" ) {{ emo }}
-							
+
 						v-list-item-action(v-if="!item.readonly")
-							img.px-1(height="22" :src="require(`@/assets/emojis/person-with-veil_medium-skin-tone_1f470-1f3fd_1f3fd.png`)")
-						v-list-item-action(v-if="!item.readonly")
-							img.px-1(height="22" :src="require(`@/assets/emojis/person-in-tuxedo_medium-dark-skin-tone_1f935-1f3fe_1f3fe.png`)")
+							img.px-1(height="22" src="img/person-with-veil_medium-skin-tone_1f470-1f3fd_1f3fd.png")
 						v-list-item-content
 							v-list-item-title.body-1.justify-center.pl-4 {{ item.title }}
 						v-list-item-action(v-if="item.delegate && item.delegate !== 'ikke satt'")
@@ -26,7 +24,7 @@ v-row.justify-center
 							v-list-item-title.text-subtitle-2.pa-4(v-text="dates")
 						//- v-list-item-action
 						//- 	v-icon.pa-4(:color="tagColors[item.tag].color" small) mdi-circle
-				
+
 				v-expansion-panel-content.pa-4(:key="item.description")
 					v-list-item(v-if="item.readonly")
 						v-list-item-content.body-1.font-italic {{ item.content}}
