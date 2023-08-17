@@ -7,7 +7,10 @@ services:
     image: bryllup-img:latest
     container_name: bryllup-front
     restart: always
-    env_file: .env
+    environment:
+      VIRTUAL_HOST: bryllup.ml
+      LETSENCRYPT_HOST: bryllup.ml
+      LETSENCRYPT_EMAIL: drawpostmaster@gmail.com
 networks:
   default:
     external:
